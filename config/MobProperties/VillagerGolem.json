@@ -1,6 +1,46 @@
 {
   "_name": "VillagerGolem",
-  "drops": [],
+  "drops": [
+		   
+		{
+          "_comment": "Remove Iron Ingots",
+          "function": "remove",
+          "id": "iron_ingot"
+        },
+		
+		{
+          "_comment": "Add Crushed Iron",
+          "function": "add",
+          "id": "gregtech:gt.meta.crushed",
+		  "damage": "260",
+		  "count": "0~1"
+        },
+		
+		{
+          "_comment": "Add Tiny Iron Dusts",
+          "function": "add",
+          "id": "gregtech:gt.meta.dustTiny",
+		  "damage": "260",
+		  "count": "0~1"
+        },
+		
+		{
+          "_comment": "Add Iron Chunks",
+          "function": "add",
+          "id": "gregtech:gt.meta.chunkGt",
+		  "damage": "260",
+		  "count": "0~1"
+        },
+		
+		{
+          "_comment": "Add Small Iron Dusts",
+          "function": "add",
+          "id": "gregtech:gt.meta.dustSmall",
+		  "damage": "260",
+		  "count": "0~1"
+        }
+		   
+	],
   "pre_stats": [],
     "stats": [
         {
