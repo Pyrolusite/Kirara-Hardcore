@@ -61,19 +61,7 @@ val HVRobotArm = <grindcore:item.HVRobotArm>;
 val EVRobotArm = <grindcore:item.EVRobotArm>;
 val IVRobotArm = <grindcore:item.IVRobotArm>;
 
-val ULVHull = <grindcore:tile.HullULV>;
-val LVHull = <grindcore:tile.HullLV>;
-val MVHull = <grindcore:tile.HullMV>;
-val HVHull = <grindcore:tile.HullHV>;
-val EVHull = <grindcore:tile.HullEV>;
-val IVHull = <grindcore:tile.HullIV>;
-val LuVHull = <grindcore:tile.HullLuV>;
-val ZPMHull = <grindcore:tile.HullZPM>;
-val MAXHull = <grindcore:tile.HullMAX>;
-val UVHull = <grindcore:tile.HullUV>;
-
 val Stick = <ore:stickWood>;
-val Transistor = <ore:oc:materialTransistor>;
 
 val RubberRod = <ore:stickRubber>;
 val IronRod = <ore:stickAnyIron>;
@@ -94,10 +82,6 @@ val OsRod = <ore:stickOsmium>;
 val LongRubberRod = <ore:stickLongRubber>;
 
 val FineCopperWire = <ore:wireFineCopper>;
-val FineGoldWire = <ore:wireFineGold>;
-val FineSilverWire = <ore:wireFineSilver>;
-val FinePlatinumWire = <ore:wireFinePlatinum>;
-val FineBronzeWire = <ore:wireFineBronze>;
 val FineSteelWire = <ore:wireFineSteel>;
 val FineAlWire = <ore:wireFineAluminium>;
 val FineSSteelWire = <ore:wireFineStainlessSteel>;
@@ -108,16 +92,11 @@ val OsWire = <ore:wireMediumOsmium>;
 val ThickOsWire = <ore:wireThickOsmium>;
 
 val RubberPlate = <ore:plateRubber>;
-val IronPlate = <ore:plateAnyIron>;
 val SteelPlate = <ore:plateSteel>;
 val AlPlate = <ore:plateAluminium>;
 val SSteelPlate = <ore:plateStainlessSteel>;
 val TiPlate = <ore:plateTitanium>;
 val TSteelPlate = <ore:plateTungstenSteel>;
-val ChromePlate = <ore:plateChrome>;
-val IridiumPlate = <ore:plateIridium>;
-val OsmiumPlate = <ore:plateOsmium>;
-val NeutronPlate = <ore:plateNeutronium>;
 
 val SmallBronzeGear = <ore:gearGtSmallBronze>;
 val SmallSteelGear = <ore:gearGtSmallSteel>;
@@ -132,18 +111,6 @@ val SteelScrew = <ore:screwSteel>;
 val SSteelScrew = <ore:screwStainlessSteel>;
 val TiScrew = <ore:screwTitanium>;
 
-val SteelItemCasing = <ore:casingSmallSteel>;
-val AlItemCasing = <ore:casingSmallAluminium>;
-val SSteelItemCasing = <ore:casingSmallStainlessSteel>;
-val TiItemCasing = <ore:casingSmallTitanium>;
-val TSteelItemCasing = <ore:casingSmallTungstenSteel>;
-val ChromeItemCasing = <ore:casingSmallChrome>;
-val IridiumItemCasing = <ore:casingSmallIridium>;
-val OsmiumItemCasing = <ore:casingSmallOsmium>;
-
-val RedAlloyDust = <ore:dustRedAlloy>;
-val RedAlloyWire = <RedLogic:redlogic.wire>;
-val NANDGate = <RedLogic:redlogic.gates:6>;
 val RubberRing = <ore:ringRubber>;
 
 val Screwdriver = <ore:craftingToolScrewdriver>;
@@ -162,14 +129,14 @@ val EnderPearl = <ore:gemEnderPearl>;
 val EnderEye = <ore:gemEnderEye>;
 val NetherStar = <ore:gemNetherStar>;
 
-val DataOrb = <grindcore:item.DataOrb>;
-val EFlowCircuit = <grindcore:item.EnergyFlowCircuit>;
-val DataControlCircuit = <grindcore:item.DataControlCircuit>;
-val DataCircuit = <grindcore:item.DataCircuit>;
-val AdvCircuit = <grindcore:item.AdvancedCircuit>;
-val GoodCircuit = <grindcore:item.GoodCircuit>;
-val BasicCircuit = <grindcore:item.BasicCircuit>;
-val NANDChip = <grindcore:item.NANDChip>;
+val DataOrb = <ore:circuitUltimate>;
+val EFlowCircuit = <ore:circuitMaster>;
+val DataControlCircuit = <ore:circuitElite>;
+val DataCircuit= <ore:circuitData>;
+val AdvCircuit = <ore:circuitAdvanced>;
+val GoodCircuit = <ore:circuitGood>;
+val BasicCircuit = <ore:circuitBasic>;
+val NANDChip = <ore:circuitPrimitive>;
 
 oreDict.circuitUltimate.add(<grindcore:item.DataOrb>);
 oreDict.circuitMaster.add(<grindcore:item.EnergyFlowCircuit>);
@@ -437,111 +404,6 @@ recipes.addShaped(IVEmitter, [
 [DataOrb, FineTSteelWire, OsRod]]);
 
 
-// --- NAND Chip
-recipes.addShaped(NANDChip, [
-[FineCopperWire, RedAlloyDust, FineCopperWire],
-[RedAlloyDust, SteelItemCasing, RedAlloyDust],
-[FineCopperWire, RedAlloyDust, FineCopperWire]]);
 
-// --- Basic Circuit
-recipes.addShaped(BasicCircuit, [
-[FineGoldWire, Transistor, FineGoldWire],
-[RedAlloyDust, AlItemCasing, RedAlloyDust],
-[FineGoldWire, Transistor, FineGoldWire]]);
+// #======= Hiding Stuff =======#
 
-// --- Good Circuit
-recipes.addShaped(GoodCircuit, [
-[FineSilverWire, NANDChip, FineSilverWire],
-[RedAlloyDust, SSteelItemCasing, RedAlloyDust],
-[FineSilverWire, NANDChip, FineSilverWire]]);
-
-// --- Advanced Circuit
-recipes.addShaped(AdvCircuit, [
-[FinePlatinumWire, BasicCircuit, FinePlatinumWire],
-[RedAlloyWire, TiItemCasing, RedAlloyWire],
-[FinePlatinumWire, BasicCircuit, FinePlatinumWire]]);
-
-// --- Data Circuit
-recipes.addShaped(DataCircuit, [
-[FineSSteelWire, GoodCircuit, FineSSteelWire],
-[RedAlloyWire, TSteelItemCasing, RedAlloyWire],
-[FineSSteelWire, GoodCircuit, FineSSteelWire]]);
-
-// --- Data Control Circuit
-recipes.addShaped(DataControlCircuit, [
-[FineTiWire, AdvCircuit, FineTiWire],
-[RedAlloyWire, ChromeItemCasing, RedAlloyWire],
-[FineTiWire, AdvCircuit, FineTiWire]]);
-
-// --- Energy Flow Circuit
-recipes.addShaped(EFlowCircuit, [
-[FineTSteelWire, DataCircuit, FineTSteelWire],
-[NANDGate, IridiumItemCasing, NANDGate],
-[FineTSteelWire, DataCircuit, FineTSteelWire]]);
-
-// --- Data Orb
-recipes.addShaped(DataOrb, [
-[FineOsWire, DataControlCircuit, FineOsWire],
-[NANDGate, OsmiumItemCasing, NANDGate],
-[FineOsWire, DataControlCircuit, FineOsWire]]);
-
-
-// --- ULV Hull
-recipes.addShaped(ULVHull, [
-[IronPlate, IronPlate, IronPlate],
-[IronPlate, Wrench, IronPlate],
-[IronPlate, IronPlate, IronPlate]]);
-
-// --- LV Hull
-recipes.addShaped(LVHull, [
-[SteelPlate, SteelPlate, SteelPlate],
-[SteelPlate, Wrench, SteelPlate],
-[SteelPlate, SteelPlate, SteelPlate]]);
-
-// --- MV Hull
-recipes.addShaped(MVHull, [
-[AlPlate, AlPlate, AlPlate],
-[AlPlate, Wrench, AlPlate],
-[AlPlate, AlPlate, AlPlate]]);
-
-// --- HV Hull
-recipes.addShaped(HVHull, [
-[SSteelPlate, SSteelPlate, SSteelPlate],
-[SSteelPlate, Wrench, SSteelPlate],
-[SSteelPlate, SSteelPlate, SSteelPlate]]);
-
-// --- EV Hull
-recipes.addShaped(EVHull, [
-[TiPlate, TiPlate, TiPlate],
-[TiPlate, Wrench, TiPlate],
-[TiPlate, TiPlate, TiPlate]]);
-
-// --- IV Hull
-recipes.addShaped(IVHull, [
-[TSteelPlate, TSteelPlate, TSteelPlate],
-[TSteelPlate, Wrench, TSteelPlate],
-[TSteelPlate, TSteelPlate, TSteelPlate]]);
-
-// --- LuV Hull
-recipes.addShaped(LuVHull, [
-[ChromePlate, ChromePlate, ChromePlate],
-[ChromePlate, Wrench, ChromePlate],
-[ChromePlate, ChromePlate, ChromePlate]]);
-
-// --- ZPM Hull
-recipes.addShaped(ZPMHull, [
-[IridiumPlate, IridiumPlate, IridiumPlate],
-[IridiumPlate, Wrench, IridiumPlate],
-[IridiumPlate, IridiumPlate, IridiumPlate]]);
-
-// --- MAX Hull
-recipes.addShaped(MAXHull, [
-[OsmiumPlate, OsmiumPlate, OsmiumPlate],
-[OsmiumPlate, Wrench, OsmiumPlate],
-[OsmiumPlate, OsmiumPlate, OsmiumPlate]]);
-
-// --- UV Hull
-recipes.addShaped(UVHull, [
-[NeutronPlate, NeutronPlate, NeutronPlate],
-[NeutronPlate, Wrench, NeutronPlate],
-[NeutronPlate, NeutronPlate, NeutronPlate]]);

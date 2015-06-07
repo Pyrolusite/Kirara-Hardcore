@@ -56,12 +56,6 @@ val TannedLeather = <Backpack:tannedLeather>;
 val Chest = <minecraft:chest>;
 val MVMotor = <grindcore:item.MVMotor>;
 
-val CamelPackTwentyFive = <enviromine:camelPack>.withTag({isCamelPack: 1 as byte, camelPackFill: 25, camelPackMax: 100});
-val CamelPackFifty = <enviromine:camelPack>.withTag({isCamelPack: 1 as byte, camelPackFill: 50, camelPackMax: 100});
-val CamelPackSeventyFive = <enviromine:camelPack>.withTag({isCamelPack: 1 as byte, camelPackFill: 75, camelPackMax: 100});
-val CamelPackFull = <enviromine:camelPack>.withTag({isCamelPack: 1 as byte, camelPackFill: 100, camelPackMax: 100});
-val WaterBottle = <ore:bottleWater>;
-
 val Wrench = <ore:craftingToolWrench>;
 val Screwdriver = <ore:craftingToolScrewdriver>;
 
@@ -183,12 +177,3 @@ recipes.addShaped(Fertilizer, [
 [RottenFood, Dirt, RottenFood],
 [Dirt, RottenFood, Dirt],
 [RottenFood, Dirt, RottenFood]]);
-
-// --- Camel Pack Filling Recipes
-recipes.addShapeless(CamelPackTwentyFive, [CamelPack, WaterBottle]);
-// -
-recipes.addShapeless(CamelPackFifty, [CamelPack, WaterBottle, WaterBottle]);
-// -
-recipes.addShapeless(CamelPackSeventyFive, [CamelPack, WaterBottle, WaterBottle, WaterBottle]);
-// -
-recipes.addShapeless(CamelPackFull, [CamelPack, WaterBottle, WaterBottle, WaterBottle, WaterBottle]);
