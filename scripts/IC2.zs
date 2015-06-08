@@ -199,12 +199,39 @@ val RubberLog = <minecraft:log:3>;
 val JunglePlanks = <minecraft:planks:3>;
 
 val SteelPlate = <ore:plateSteel>;
+val AlPlate = <ore:plateAluminium>;
+val SSteelPlate = <ore:plateStainlessSteel>;
+val TiPlate = <ore:plateTitanium>;
+val IridiumPlate = <ore:plateIridium>;
+
+val SSteelGear = <ore:gearStainlessSteel>;
+val TiGear = <ore:gearTitanium>;
+
+val BronzeBurningBox = <gregtech:gt.multitileentity:1102>;
+
+val BasicBattery = <ore:batteryBasic>;
+val FineCopperWire = <ore:wireFineCopper>;
+val AlItemCasing = <ore:casingSmallAluminium>;
 
 val LVMotor = <grindcore:item.LVMotor>;
 val LVHull = <grindcore:tile.HullLV>;
 val LVPiston = <grindcore:item.LVPiston>;
 
+val MVHull = <grindcore:tile.HullMV>;
+val MVPump = <grindcore:item.MVPump>;
+
+val HVMotor = <grindcore:item.HVMotor>;
+val HVHull = <grindcore:tile.HullHV>;
+
+val ZPMHull = <grindcore:tile.HullZPM>;
+
+val TiRotor = <ore:rotorTitanium>;
+
+val IronShaft = <IC2:itemRecipePart:12>;
+
 val BasicCircuit = <ore:circuitBasic>;
+
+val TankWall = <Railcraft:machine.beta:13>;
 
 
 // *======= Removing Recipes =======*
@@ -404,6 +431,36 @@ recipes.addShaped(Compressor, [
 [SteelPlate, BasicCircuit, SteelPlate],
 [LVPiston, LVHull, LVPiston],
 [SteelPlate, LVMotor, SteelPlate]]);
+
+// --- Generator
+recipes.addShaped(Gen, [
+[SteelPlate, FineCopperWire, SteelPlate],
+[BasicBattery, LVHull, LVMotor],
+[SteelPlate, BronzeBurningBox, SteelPlate]]);
+
+// --- Kinetic Wind Generator
+recipes.addShaped(KUWindGen, [
+[SteelPlate, SSteelGear, IronShaft],
+[TiPlate, HVHull, TiRotor],
+[SteelPlate, SSteelGear, IronShaft]]);
+
+// --- Radioisotope Thermoelectric Generator
+recipes.addShaped(IsotopeGen, [
+[IridiumPlate, ReactorChamber, IridiumPlate],
+[ReactorChamber, ZPMHull, ReactorChamber],
+[IridiumPlate, Gen, IridiumPlate]]);
+
+// --- Semi-Fluid Generator
+recipes.addShaped(SemiFluidGen, [
+[AlPlate, AlItemCasing, AlPlate],
+[TankWall, MVHull, TankWall],
+[AlPlate, Gen, AlPlate]]);
+
+// --- Geothermal Generator
+recipes.addShaped(ThermalGen, [
+[SSteelPlate, Coil, SSteelPlate],
+[MVPump, MVHull, MVPump],
+[SSteelPlate, Gen, SSteelPlate]]);
 
 
 

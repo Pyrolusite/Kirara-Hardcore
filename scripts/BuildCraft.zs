@@ -143,9 +143,11 @@ val GoodCircuit = <ore:circuitGood>;
 val AdvCircuit = <ore:circuitAdvanced>;
 
 val ClayBlock = <minecraft:clay>;
+val Plank = <ore:plankWood>;
 
 val Wrench = <ore:craftingToolWrench>;
 val SoftHammer = <ore:craftingToolSoftHammer>;
+val Saw = <ore:craftingToolSaw>;
 
 
 
@@ -367,6 +369,12 @@ recipes.remove(GateCopier);
 
 // *======= Adding Back Recipes =======*
 
+
+// --- Wooden Gear
+recipes.addShaped(WoodGear, [
+[Stick, Plank, Stick],
+[Plank, Saw, Plank],
+[Stick, Plank, Stick]]);
 
 // --- Wooden Transport Pipe
 recipes.addShaped(PipeWood, [

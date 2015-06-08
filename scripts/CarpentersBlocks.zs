@@ -25,6 +25,8 @@ val MCDaylightSensor = <minecraft:daylight_detector>;
 val Stick = <minecraft:stick>;
 val Redstone = <ore:dustRedstone>;
 
+val IronScrew = <ore:screwAnyIron>;
+
 
 
 // *======= Removing Recipes =======*
@@ -45,6 +47,32 @@ recipes.remove(DaylightSensor);
 
 
 // *======= Adding Back Recipes =======*
+
+
+// --- Carpenter's Chisel
+recipes.addShaped(Chisel, [
+[<ore:plateAnyIron>, Hammer, null],
+[CarpentersBlock, <ore:screwAnyIron>, Screwdriver],
+[CarpentersBlock, null, null]]);
+
+// --- Carpenter's Hammer
+recipes.addShaped(ChiselHammer, [
+[<ore:stickAnyIron>, <ore:plateAnyIron>, <ore:ingotAnyIron>],
+[<ore:stickAnyIron>, CarpentersBlock, Hammer],
+[IronScrew, CarpentersBlock, Screwdriver]]);
+
+// --- Carpenter's Safe
+recipes.addShaped(Safe, [
+[CarpentersBlock, CarpentersBlock, CarpentersBlock],
+[CarpentersBlock, IC2Safe, CarpentersBlock],
+[CarpentersBlock, CarpentersBlock, CarpentersBlock]]);
+
+// --- Carpenter's Daylight Sensor
+recipes.addShaped(DaylightSensor, [
+[IronScrew, Screwdriver, IronScrew],
+[CarpentersBlock, MCDaylightSensor, CarpentersBlock],
+[CarpentersBlock, Redstone, CarpentersBlock]]);
+
 
 
 // #======= Hiding Stuff =======#
