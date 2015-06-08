@@ -60,6 +60,7 @@ val CobbleStructure = <BuildCraft|Transport:item.buildcraftPipe.pipestructurecob
 
 val Laser = <BuildCraft|Silicon:laserBlock>;
 val BCTank = <BuildCraft|Factory:tankBlock>;
+val Quarry = <BuildCraft|Factory:machineBlock>;
 
 val RubberPlate = <ore:plateRubber>;
 val IronPlate = <ore:plateIron>;
@@ -138,7 +139,15 @@ val FilterBuffer = <BuildCraft|Transport:filteredBufferBlock>;
 
 val LVTransformer = <IC2:blockElectric:3>;
 
+val SteelPlate = <ore:plateSteel>;
+
+val LVMotor = <grindcore:item.LVMotor>;
 val LVPiston = <grindcore:item.LVPiston>;
+val LVHull = <grindcore:tile.HullLV>;
+
+val AlDrillTip = <ore:toolHeadDrillAluminium>;
+
+val BasicCircuit = <ore:circuitBasic>;
 val GoodCircuit = <ore:circuitGood>;
 val AdvCircuit = <ore:circuitAdvanced>;
 
@@ -161,7 +170,7 @@ val Saw = <ore:craftingToolSaw>;
 recipes.remove(MiningWell);
 
 // --- Quarry
-recipes.remove(<BuildCraft|Factory:machineBlock>);
+recipes.remove(Quarry);
 
 // --- Pump
 recipes.remove(<BuildCraft|Factory:pumpBlock>);
@@ -377,7 +386,7 @@ recipes.addShaped(WoodGear, [
 [Stick, Plank, Stick]]);
 
 // --- Wooden Transport Pipe
-recipes.addShaped(PipeWood, [
+recipes.addShaped(PipeWood * 4, [
 [CarpentersBlock, BronzeGear, CarpentersBlock],
 [GlassPane, Wrench, GlassPane],
 [CarpentersBlock, BronzeGear, CarpentersBlock]]);
@@ -405,7 +414,7 @@ recipes.addShaped(PipeWoodKinesis, [
 [RubberRod, FineCopperWire, RubberRod]]);
 
 // --- Cobblestone Transport Pipe
-recipes.addShaped(PipeCobble, [
+recipes.addShaped(PipeCobble * 4, [
 [Cobblestone, BronzeGear, Cobblestone],
 [GlassPane, Wrench, GlassPane],
 [Cobblestone, BronzeGear, Cobblestone]]);
@@ -433,7 +442,7 @@ recipes.addShaped(PipeCobbleKinesis, [
 [RubberRod, FineCopperWire, RubberRod]]);
 
 // --- Stone Transport Pipe
-recipes.addShaped(PipeStone, [
+recipes.addShaped(PipeStone * 4, [
 [Stone, SteelGear, Stone],
 [GlassPane, Wrench, GlassPane],
 [Stone, SteelGear, Stone]]);
@@ -461,7 +470,7 @@ recipes.addShaped(PipeStoneKinesis, [
 [RubberRod, FineGoldWire, RubberRod]]);
 
 // --- Quartz Transport Pipe
-recipes.addShaped(PipeQuartz, [
+recipes.addShaped(PipeQuartz * 4, [
 [Quartzite, AlGear, Quartzite],
 [GlassPane, Wrench, GlassPane],
 [Quartzite, AlGear, Quartzite]]);
@@ -489,7 +498,7 @@ recipes.addShaped(PipeQuartzKinesis, [
 [RubberRod, FinePlatinumWire, RubberRod]]);
 
 // --- Iron Transport Pipe
-recipes.addShaped(PipeIron, [
+recipes.addShaped(PipeIron * 4, [
 [IronPlate, AlGear, IronPlate],
 [GlassPane, Wrench, GlassPane],
 [IronPlate, AlGear, IronPlate]]);
@@ -527,7 +536,7 @@ recipes.addShaped(PipeIronKinesis, [
 [RubberRod, FinePlatinumWire, RubberRod]]);
 
 // --- Sandstone Transport Pipe
-recipes.addShaped(PipeSandstone, [
+recipes.addShaped(PipeSandstone * 4, [
 [Sandstone, SteelGear, Sandstone],
 [GlassPane, Wrench, GlassPane],
 [Sandstone, SteelGear, Sandstone]]);
@@ -565,7 +574,7 @@ recipes.addShaped(PipeSandstoneKinesis, [
 [RubberRod, FineGoldWire, RubberRod]]);
 
 // --- Golden Transport Pipe
-recipes.addShaped(PipeGold, [
+recipes.addShaped(PipeGold * 4, [
 [GoldPlate, SSteelGear, GoldPlate],
 [GlassPane, Wrench, GlassPane],
 [GoldPlate, SSteelGear, GoldPlate]]);
@@ -593,7 +602,7 @@ recipes.addShaped(PipeGoldKinesis, [
 [RubberRod, FineSSteelWire, RubberRod]]);
 
 // --- Emerald Transport Pipe
-recipes.addShaped(PipeEmerald, [
+recipes.addShaped(PipeEmerald * 4, [
 [EmeraldPlate, SSteelGear, EmeraldPlate],
 [GlassPane, Wrench, GlassPane],
 [EmeraldPlate, SSteelGear, EmeraldPlate]]);
@@ -621,12 +630,12 @@ recipes.addShaped(PipeEmeraldKinesis, [
 [RubberRod, FineSSteelWire, RubberRod]]);
 
 // --- Diamond Transport Pipe
-recipes.addShaped(PipeDiamond, [
+recipes.addShaped(PipeDiamond * 4, [
 [DiamondPlate, TiGear, DiamondPlate],
 [GlassPane, Wrench, GlassPane],
 [DiamondPlate, SSteelGear, DiamondPlate]]);
 // - Alternate Recipe
-recipes.addShaped(PipeDiamond, [
+recipes.addShaped(PipeDiamond * 4, [
 [DiamondPlate, SSteelGear, DiamondPlate],
 [GlassPane, Wrench, GlassPane],
 [DiamondPlate, TiGear, DiamondPlate]]);
@@ -654,71 +663,71 @@ recipes.addShaped(PipeDiamondKinesis, [
 [RubberRod, FineTiWire, RubberRod]]);
 
 // --- Obsidian Transport Pipe
-recipes.addShaped(PipeObsidian, [
+recipes.addShaped(PipeObsidian * 4, [
 [ObsidianPlate, AlRotor, ObsidianPlate],
 [GlassPane, Wrench, GlassPane],
 [ObsidianPlate, AlRotor, ObsidianPlate]]);
 
 // --- Lapis Transport Pipe
-recipes.addShaped(PipeLapis, [
+recipes.addShaped(PipeLapis * 4, [
 [LapisPlate, SSteelGear, LapisPlate],
 [GlassPane, Wrench, GlassPane],
 [LapisPlate, AdvCircuit, LapisPlate]]);
 // - Alternate Recipe
-recipes.addShaped(PipeLapis, [
+recipes.addShaped(PipeLapis * 4, [
 [LapisPlate, AdvCircuit, LapisPlate],
 [GlassPane, Wrench, GlassPane],
 [LapisPlate, SSteelGear, LapisPlate]]);
 
 // --- Daizuli Transport Pipe
-recipes.addShaped(PipeDaizuli, [
+recipes.addShaped(PipeDaizuli * 4, [
 [LapisPlate, SSteelGear, DiamondPlate],
 [GlassPane, Wrench, GlassPane],
 [DiamondPlate, GoodCircuit, LapisPlate]]);
 // - Alternate Recipe
-recipes.addShaped(PipeDaizuli, [
+recipes.addShaped(PipeDaizuli * 4, [
 [LapisPlate, GoodCircuit, DiamondPlate],
 [GlassPane, Wrench, GlassPane],
 [DiamondPlate, SSteelGear, LapisPlate]]);
 // -
-recipes.addShaped(PipeDaizuli, [
+recipes.addShaped(PipeDaizuli * 4, [
 [DiamondPlate, SSteelGear, LapisPlate],
 [GlassPane, Wrench, GlassPane],
 [LapisPlate, GoodCircuit, DiamondPlate]]);
 // -
-recipes.addShaped(PipeDaizuli, [
+recipes.addShaped(PipeDaizuli * 4, [
 [DiamondPlate, GoodCircuit, LapisPlate],
 [GlassPane, Wrench, GlassPane],
 [LapisPlate, SSteelGear, DiamondPlate]]);
 
 // --- Emzuli Transport Pipe
-recipes.addShaped(PipeEmzuli, [
+recipes.addShaped(PipeEmzuli * 4, [
 [LapisPlate, AlGear, EmeraldPlate],
 [GlassPane, Wrench, GlassPane],
 [EmeraldPlate, GoodCircuit, LapisPlate]]);
 // - Alternate Recipe
-recipes.addShaped(PipeEmzuli, [
+recipes.addShaped(PipeEmzuli * 4, [
 [LapisPlate, GoodCircuit, EmeraldPlate],
 [GlassPane, Wrench, GlassPane],
 [EmeraldPlate, AlGear, LapisPlate]]);
 // -
-recipes.addShaped(PipeEmzuli, [
+recipes.addShaped(PipeEmzuli * 4, [
 [EmeraldPlate, AlGear, LapisPlate],
 [GlassPane, Wrench, GlassPane],
 [LapisPlate, GoodCircuit, EmeraldPlate]]);
 // -
-recipes.addShaped(PipeEmzuli, [
+recipes.addShaped(PipeEmzuli * 4, [
 [EmeraldPlate, GoodCircuit, LapisPlate],
 [GlassPane, Wrench, GlassPane],
 [LapisPlate, AlGear, EmeraldPlate]]);
 
 // --- Void Transport Pipe
-recipes.addShaped(PipeVoid, [
+recipes.addShaped(PipeVoid * 4, [
 [ObsidianPlate, LVPiston, ObsidianPlate],
 [GlassPane, Wrench, LVPiston],
 [ObsidianPlate, LVPiston, ObsidianPlate]]);
 // - Alternate Recipe
-recipes.addShaped(PipeVoid, [
+recipes.addShaped(PipeVoid * 4, [
 [ObsidianPlate, LVPiston, ObsidianPlate],
 [LVPiston, Wrench, GlassPane],
 [ObsidianPlate, LVPiston, ObsidianPlate]]);
@@ -735,18 +744,30 @@ recipes.addShaped(PipeVoidFluid, [
 [RubberRod, RubberPlate, RubberRod]]);
 
 // --- Stripes Transport Pipe
-recipes.addShaped(PipeStripes, [
+recipes.addShaped(PipeStripes * 4, [
 [FactoryBlock, SteelGear, FactoryBlock],
 [GlassPane, Wrench, GlassPane],
 [FactoryBlock, SteelGear, FactoryBlock]]);
 
 // --- Clay Transport Pipe
-recipes.addShaped(PipeClay, [
+recipes.addShaped(PipeClay * 4, [
 [ClayBlock, AlGear, ClayBlock],
 [GlassPane, Wrench, GlassPane],
 [ClayBlock, AlGear, ClayBlock]]);
 
 
+// ||||||| Blocks |||||||
+
+// --- Quarry
+recipes.addShaped(Quarry, [
+[IronPlate, BasicCircuit, IronPlate],
+[LVMotor, LVHull, LVPiston],
+[SteelPlate, AlDrillTip, SteelPlate]]);
+
+
 
 // #======= Hiding & Renaming Stuff =======#
 
+
+
+NEI.overrideName(Quarry, "Single-Use Quarry");

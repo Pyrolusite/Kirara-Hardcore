@@ -122,6 +122,7 @@ val TSteelGear = <ore:gearTungstenSteel>;
 val BronzeRing = <ore:ringAnyBronze>;
 val DiamondLens = <ore:lensDiamond>;
 
+val GlassPane = <ore:paneGlass>;
 val Track = <minecraft:rail>;
 val Leather =  <minecraft:leather>;
 val Brick = <minecraft:brick>;
@@ -146,7 +147,7 @@ val TannedLeather = <Backpack:tannedLeather>;
 val SnowSlab = <Railcraft:slab:3>;
 
 val Screwdriver = <ore:craftingToolScrewdriver>;
-val HHammer = <ore:craftingToolHardHammer>;
+val HardHammer = <ore:craftingToolHardHammer>;
 val Saw = <ore:craftingToolSaw>;
 val File = <ore:craftingToolFile>;
 val Wrench = <ore:craftingToolWrench>;
@@ -304,12 +305,10 @@ recipes.remove(<Railcraft:machine.alpha:9>);
 recipes.remove(<Railcraft:machine.alpha:10>);
 
 // --- Iron Tank Wall ---
-recipes.removeShaped(<Railcraft:machine.beta>);
-//-
-recipes.removeShaped(<Railcraft:machine.beta>);
+recipes.remove(<Railcraft:machine.beta>);
 
 // --- Iron Tank Gauge ---
-//recipes.removeShaped(IronTankGauge);
+//recipes.remove(IronTankGauge);
 
 // --- Iron Tank Valve ---
 recipes.removeShaped(<Railcraft:machine.beta:2>);
@@ -500,82 +499,82 @@ recipes.remove(<Railcraft:machine.epsilon:3>);
 // --- Wood Post ---
 recipes.remove(<Railcraft:post>);
 
-// --- Stone Post ---
+// --- Stone Post
 recipes.remove(<Railcraft:post:1>);
 
-// --- Wood Plattform ---
+// --- Wood Plattform
 recipes.remove(<Railcraft:post:4>);
 
-// --- Stone Platform ---
+// --- Stone Platform
 recipes.remove(<Railcraft:post:5>);
 
-// --- Metal Platform ---
+// --- Metal Platform
 recipes.remove(<Railcraft:post:6>);
 
 // --- Signal Lamp
 //recipes.remove(SignalLamp);
 
-// --- ControllerCircuit ---
+// --- ControllerCircuit
 //recipes.remove(ControllerCircuit);
 
-// --- ReceiverCircuit ---
+// --- ReceiverCircuit
 //recipes.remove(ReceiverCircuit);
 
-// --- SignalCircuit ---
+// --- SignalCircuit
 //recipes.remove(SignalCircuit);
 
-// --- Turbine Blade ---
+// --- Turbine Blade
 recipes.remove(<Railcraft:part.turbine.blade>);
 
-// --- Tunnel Bore ---
+// --- Tunnel Bore
 recipes.remove(<Railcraft:cart.bore>);
 
-// --- Steam Locomotive ---
+// --- Steam Locomotive
 recipes.remove(<Railcraft:cart.loco.steam.solid>.withTag({model: "railcraft:default"}));
 
-// --- Electric Locomotive ---
+// --- Electric Locomotive
 recipes.remove(<Railcraft:cart.loco.electric>.withTag({model: "railcraft:default"}));
 
-// --- Iron Borehead ---
+// --- Iron Borehead
 recipes.remove(<Railcraft:borehead.iron>);
 
-// --- Steel Borehead ---
+// --- Steel Borehead
 recipes.remove(<Railcraft:borehead.steel>);
 
-// --- Diamond Borehead ---
+// --- Diamond Borehead
 recipes.remove(<Railcraft:borehead.diamond>);
 
-// --- Strengthened Glass ---
+// --- Strengthened Glass
 recipes.remove(<Railcraft:glass>);
 
-// --- Gold-Plated Gear ---
+// --- Gold-Plated Gear
 recipes.remove(<Railcraft:part.gear>);
 
-// --- Iron Gear ---
+// --- Iron Gear
 recipes.remove(<Railcraft:part.gear:1>);
 
-// --- Steel Gear ---
+// --- Steel Gear
 recipes.remove(<Railcraft:part.gear:2>);
 
-// --- Tin Gear Brushing ---
+// --- Tin Gear Brushing
 recipes.remove(<Railcraft:part.gear:3>);
 
-// --- RC Crowbar ---
+// --- RC Crowbar
 recipes.remove(<Railcraft:tool.crowbar>);
 
-// --- Reinforced Crowbar ---
+// --- Reinforced Crowbar
 recipes.remove(<Railcraft:tool.crowbar.reinforced>);
 
-// --- Batbox Cart ---
+// --- Batbox Cart
 recipes.removeShaped(<Railcraft:cart.energy.batbox>);
 
-// --- CESU Cart ---
+// --- CESU Cart
 recipes.removeShaped(<Railcraft:cart.energy.cesu>);
 
-// --- MFE Cart ---
+// --- MFE Cart
 recipes.removeShaped(<Railcraft:cart.energy.mfe>);
 
-// --- Tank Cart ---
+// --- Tank Cart
 recipes.removeShaped(<Railcraft:cart.tank>);
 
 // --- Personal Anchor Cart ---
@@ -874,67 +873,67 @@ recipes.addShaped(StoneLantern, [
 // --- Iron Lantern
 recipes.addShaped(IronLantern, [
 [IronScrew, IronPlate, IronScrew],
-[Screwdriver, Torch, HHammer],
+[Screwdriver, Torch, HardHammer],
 [IronScrew, IronPlate, IronScrew]]);
 // - Alternate Recipe
 recipes.addShaped(IronLantern, [
 [IronScrew, IronPlate, IronScrew],
-[HHammer, Torch, Screwdriver],
+[HardHammer, Torch, Screwdriver],
 [IronScrew, IronPlate, IronScrew]]);
 
 // --- Gold Lantern
 recipes.addShaped(GoldLantern, [
 [GoldScrew, GoldPlate, GoldScrew],
-[Screwdriver, Torch, HHammer],
+[Screwdriver, Torch, HardHammer],
 [GoldScrew, GoldPlate, GoldScrew]]);
 // - Alternate Recipe
 recipes.addShaped(GoldLantern, [
 [GoldScrew, GoldPlate, GoldScrew],
-[HHammer, Torch, Screwdriver],
+[HardHammer, Torch, Screwdriver],
 [GoldScrew, GoldPlate, GoldScrew]]);
 
 // --- Copper Lantern
 recipes.addShaped(CopperLantern, [
 [BronzeScrew, CopperPlate, BronzeScrew],
-[Screwdriver, Torch, HHammer],
+[Screwdriver, Torch, HardHammer],
 [BronzeScrew, CopperPlate, BronzeScrew]]);
 // - Alternate Recipe
 recipes.addShaped(CopperLantern, [
 [BronzeScrew, CopperPlate, BronzeScrew],
-[HHammer, Torch, Screwdriver],
+[HardHammer, Torch, Screwdriver],
 [BronzeScrew, CopperPlate, BronzeScrew]]);
 
 // --- Tin Lantern
 recipes.addShaped(TinLantern, [
 [TinScrew, TinPlate, TinScrew],
-[Screwdriver, Torch, HHammer],
+[Screwdriver, Torch, HardHammer],
 [TinScrew, TinPlate, TinScrew]]);
 // - Alternate Recipe
 recipes.addShaped(TinLantern, [
 [TinScrew, TinPlate, TinScrew],
-[HHammer, Torch, Screwdriver],
+[HardHammer, Torch, Screwdriver],
 [TinScrew, TinPlate, TinScrew]]);
 
 // --- Lead Lantern
 recipes.addShaped(LeadLantern, [
 [LeadScrew, LeadPlate, LeadScrew],
-[Screwdriver, Torch, HHammer],
+[Screwdriver, Torch, HardHammer],
 [LeadScrew, LeadPlate, LeadScrew]]);
 // - Alternate Recipe
 recipes.addShaped(LeadLantern, [
 [LeadScrew, LeadPlate, LeadScrew],
-[HHammer, Torch, Screwdriver],
+[HardHammer, Torch, Screwdriver],
 [LeadScrew, LeadPlate, LeadScrew]]);
 
 // --- Steel Lantern
 recipes.addShaped(SteelLantern, [
 [SteelScrew, SteelPlate, SteelScrew],
-[Screwdriver, Torch, HHammer],
+[Screwdriver, Torch, HardHammer],
 [SteelScrew, SteelPlate, SteelScrew]]);
 // - Alternate Recipe
 recipes.addShaped(SteelLantern, [
 [SteelScrew, SteelPlate, SteelScrew],
-[HHammer, Torch, Screwdriver],
+[HardHammer, Torch, Screwdriver],
 [SteelScrew, SteelPlate, SteelScrew]]);
 
 
@@ -967,8 +966,23 @@ recipes.addShaped(ApothecaryBackpack, [
 Compressor.addRecipe(CoalCokeBlock, CoalCoke * 9);
 
 // --- Iron Tank Wall
-
+recipes.addShaped(IronTankWall * 4, [
+[IronPlate, IronPlate, IronPlate],
+[HardHammer, IronScrew, Screwdriver],
+[IronPlate, IronPlate, IronPlate]]);
+// - Alternate Recipe
+recipes.addShaped(IronTankWall * 4, [
+[IronPlate, IronPlate, IronPlate],
+[Screwdriver, IronScrew, HardHammer],
+[IronPlate, IronPlate, IronPlate]]);
 
 // --- Iron Tank Gauge
-
-asd
+recipes.addShaped(IronTankGauge * 4, [
+[IronPlate, GlassPane, IronPlate],
+[Screwdriver, IronScrew, Wrench],
+[IronPlate, GlassPane, IronPlate]]);
+// - Alternate Recipe
+recipes.addShaped(IronTankGauge * 4, [
+[IronPlate, GlassPane, IronPlate],
+[Wrench, IronScrew, Screwdriver],
+[IronPlate, GlassPane, IronPlate]]);
