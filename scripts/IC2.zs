@@ -91,6 +91,10 @@ val ITNT = <IC2:blockITNT>;
 val Nuke = <IC2:blockNuke>;
 val Crop = <IC2:blockCrop>;
 
+val Flint = <minecraft:flint>;
+val GunpowderBlock = <gregtech:gt.meta.storage.dust:8220>;
+val TNT = <minecraft:tnt>;
+
 
 val Miner = <IC2:blockMachine:7>;
 val Pump = <IC2:blockMachine:8>;
@@ -467,3 +471,7 @@ recipes.addShaped(ThermalGen, [
 // ||||||| Blocks |||||||
 
 
+recipes.addShaped(ITNT * 8, [
+[Flint, TNT, Flint],
+[TNT, GunpowderBlock, TNT],
+[Flint, TNT, Flint]]);

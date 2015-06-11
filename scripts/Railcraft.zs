@@ -15,6 +15,53 @@ import mods.ic2.Compressor;
 
 val IronTankWall = <Railcraft:machine.beta>;
 val IronTankGauge = <Railcraft:machine.beta:1>;
+val IronTankValve = <Railcraft:machine.beta:2>;
+val SteelTankWall = <Railcraft:machine.beta:13>;
+val SteelTankGauge = <Railcraft:machine.beta:14>;
+val SteelTankValve = <Railcraft:machine.beta:15>;
+val LPBoilerTank = <Railcraft:machine.beta:3>;
+val HPBoilerTank = <Railcraft:machine.beta:4>;
+
+val WoodTrack = <Railcraft:track:736>.withTag({track: "railcraft:track.slow"});
+val ReinforcedTrack = <Railcraft:track:24050>.withTag({track: "railcraft:track.reinforced"});
+val HSTrack = <Railcraft:track:816>.withTag({track: "railcraft:track.speed"});
+val ElectricTrack = <Railcraft:track:10192>.withTag({track: "railcraft:track.electric"});
+
+val WoodSwitchTrack = <Railcraft:track:19986>.withTag({track: "railcraft:track.slow.switch"});
+val WoodWyeTrack = <Railcraft:track>.withTag({track: "railcraft:track.slow.wye"});
+val WoodJunctionTrack = <Railcraft:track>.withTag({track: "railcraft:track.slow.junction"});
+val WoodBoosterTrack = <Railcraft:track>.withTag({track: "railcraft:track.slow.boost"});
+val SwitchTrack = <Railcraft:track:4767>.withTag({track: "railcraft:track.switch"});
+val WyeTrack = <Railcraft:track:2144>.withTag({track: "railcraft:track.wye"});
+val JunctionTrack = <Railcraft:track>.withTag({track: "railcraft:track.junction"});
+val SwitchReinforcedTrack = <Railcraft:track>.withTag({track: "railcraft:track.reinforced.switch"});
+val WyeReinforcedTrack = <Railcraft:track>.withTag({track: "railcraft:track.reinforced.wye"});
+val JunctionReinforcedTrack = <Railcraft:track:764>.withTag({track: "railcraft:track.reinforced.junction"});
+val ReinforcedBoosterTrack = <Railcraft:track>.withTag({track: "railcraft:track.reinforced.boost"});
+val SwitchHSTrack = <Railcraft:track:7916>.withTag({track: "railcraft:track.speed.switch"});
+val WyeHSTrack = <Railcraft:track>.withTag({track: "railcraft:track.speed.wye"});
+val HSBoosterTrack = <Railcraft:track>.withTag({track: "railcraft:track.speed.boost"});
+val ElectricSwitchTrack = <Railcraft:track:10488>.withTag({track: "railcraft:track.electric.switch"});
+val ElectricWyeTrack = <Railcraft:track>.withTag({track: "railcraft:track.electric.wye"});
+val ElectricJunctionTrack = <Railcraft:track>.withTag({track: "railcraft:track.electric.junction"});
+
+val ElevatorTrack = <Railcraft:track.elevator>;
+val LauncherTrack = <Railcraft:track>.withTag({track: "railcraft:track.launcher"});
+
+val WoodenRail = <Railcraft:part.rail:2>;
+val StandardRail = <Railcraft:part.rail>;
+val AdvancedRail = <Railcraft:part.rail:1>;
+val ReinforcedRail = <Railcraft:part.rail:4>;
+val HSRail = <Railcraft:part.rail:3>;
+val ElectricRail = <Railcraft:part.rail:5>;
+
+val WoodRailbed = <Railcraft:part.railbed>;
+val StoneRailbed = <Railcraft:part.railbed:1>;
+
+val SwitchLever = <Railcraft:signal:4>;
+val SwitchMotor = <Railcraft:signal:2>;
+
+val WaterTank = <Railcraft:machine.alpha:14>;
 
 val TrackmanBackpack = <Railcraft:backpack.trackman.t1>;
 val IcemanBackpack = <Railcraft:backpack.iceman.t1>;
@@ -71,6 +118,7 @@ val SandyBPost = <ForgeMicroblock:microblock:770>.withTag({mat:"tile.railcraft.b
 val SandstonePost = <ForgeMicroblock:microblock:770>.withTag({mat:"minecraft:sandstone"});
 val StonePost = <ForgeMicroblock:microblock:770>.withTag({mat:"minecraft:stone"});
 
+val RubberPlate = <ore:plateRubber>;
 val IronBlock = <ore:blockIron>;
 val SteelBlock = <ore:blockSteel>;
 val CopperBlock = <ore:blockCopper>;
@@ -78,7 +126,6 @@ val TinBlock = <ore:blockTin>;
 val LeadBlock = <ore:blockLead>;
 val GoldBlock = <ore:blockGold>;
 val DiamondBlock = <ore:blockDiamond>;
-
 val IronPlate = <ore:plateAnyIron>;
 val GoldPlate = <ore:plateGold>;
 val LapisPlate = <ore:plateLapis>;
@@ -96,6 +143,8 @@ val SSteelPlate = <ore:plateStainlessSteel>;
 val TiPlate = <ore:plateTitanium>;
 val IridiumPlate = <ore:plateIridium>;
 
+val BronzeRod = <ore:stickAnyBronze>;
+val AlRod = <ore:stickAluminium>;
 val IronRod = <ore:stickAnyIron>;
 val SteelRod = <ore:stickSteel>;
 val RedAlloyRod = <ore:stickRedAlloy>;
@@ -110,19 +159,40 @@ val BronzeScrew = <ore:screwAnyBronze>;
 val IronScrew = <ore:screwAnyIron>;
 val SteelScrew = <ore:screwSteel>;
 val TiScrew = <ore:screwTitanium>;
+val AlScrew = <ore:screwAluminium>;
 val SSteelScrew = <ore:screwStainlessSteel>;
 val TSteelScrew = <ore:screwTungstenSteel>;
 
+val BronzeBolt = <ore:boltAnyBronze>;
+val IronBolt = <ore:boltAnyIron>;
+val SteelBolt = <ore:boltSteel>;
+val TiBolt = <ore:boltTitanium>;
+val AlBolt = <ore:boltAluminium>;
+val SSteelBolt = <ore:boltStainlessSteel>;
+
 val IronGear = <ore:gearAnyIron>;
+val SmallBronzeGear = <ore:gearGtSmallAnyBronze>;
 val BronzeGear = <ore:gearAnyBronze>;
+val SmallSteelGear = <ore:gearGtSmallSteel>;
+val SteelGear = <ore:gearSteel>;
+val SmallAlGear = <ore:gearGtSmallAluminium>;
+val SmallSSteelGear = <ore:gearGtSmallStainlessSteel>;
 val SSteelGear = <ore:gearStainlessSteel>;
+val SmallTiGear = <ore:gearGtSmallTitanium>;
 val TiGear = <ore:gearTitanium>;
 val TSteelGear = <ore:gearTungstenSteel>;
 
+val ObsidianDust = <ore:dustObsidian>;
 val BronzeRing = <ore:ringAnyBronze>;
 val DiamondLens = <ore:lensDiamond>;
+val FineGoldWire = <ore:wireFineGold>;
+
+val LVMotor = <grindcore:item.LVMotor>;
+val MVMotor = <grindcore:item.MVMotor>;
+val HVMotor = <grindcore:item.HVMotor>;
 
 val GlassPane = <ore:paneGlass>;
+val Plank = <ore:plankWood>;
 val Track = <minecraft:rail>;
 val Leather =  <minecraft:leather>;
 val Brick = <minecraft:brick>;
@@ -142,9 +212,12 @@ val TNT = <minecraft:tnt>;
 val Piston = <minecraft:piston>;
 val IronBars = <minecraft:iron_bars>;
 val Potion = <minecraft:potion:*>;
+val BlazeRod = <minecraft:blaze_rod>;
+val Stick = <ore:stickWood>;
 
 val TannedLeather = <Backpack:tannedLeather>;
 val SnowSlab = <Railcraft:slab:3>;
+val CarpentersBlocks = <CarpentersBlocks:blockCarpentersBlock>;
 
 val Screwdriver = <ore:craftingToolScrewdriver>;
 val HardHammer = <ore:craftingToolHardHammer>;
@@ -247,148 +320,145 @@ recipes.remove(IcemanBackpack);
 recipes.remove(ApothecaryBackpack);
 
 
-// --- Block of Coal Coke ---
+// --- Block of Coal Coke
 recipes.remove(CoalCokeBlock);
 
-// --- Coal Coke ---
+// --- Coal Coke
 recipes.remove(CoalCoke);
 
-// --- Creosote Wood Block ---
+// --- Creosote Wood Block
 //recipes.remove(CreosoteWood);
 
-// --- Creosote Wood Slab ---
+// --- Creosote Wood Slab
 //recipes.remove(CreosoteWoodSlab);
 
-// --- Block of Concrete ---
+// --- Block of Concrete
 //recipes.remove(ConcreteBlock);
 
-// --- Concrete Slab ---
+// --- Concrete Slab
 //recipes.remove(ConcreteSlab);
 
-// --- Steel Anvil ---
+// --- Steel Anvil
 //recipes.remove(SteelAnvil);
 
-// --- Blast Furnace ---
+// --- Blast Furnace
 recipes.remove(<Railcraft:machine.alpha:12>);
 
-// --- Steam Oven ---
+// --- Steam Oven
 recipes.remove(<Railcraft:machine.alpha:3>);
 
-// --- Water Tank ---
-recipes.remove(<Railcraft:machine.alpha:14>);
+// --- Water Tank
+recipes.remove(WaterTank);
 
-// --- Rolling Machine ---
+// --- Rolling Machine
 recipes.remove(<Railcraft:machine.alpha:8>);
 
-// --- Rock Crusher ---
+// --- Rock Crusher
 recipes.remove(<Railcraft:machine.alpha:15>);
 
-// --- Trade Station ---
+// --- Trade Station
 recipes.remove(<Railcraft:machine.alpha:6>);
 
-// --- Anchor ---
+// --- Anchor
 recipes.remove(<Railcraft:machine.alpha>);
 
-// --- Personal Anchor ---
+// --- Personal Anchor
 recipes.remove(<Railcraft:machine.alpha:2>);
 
-// --- Steam Turbin Housing ---
+// --- Steam Turbine Housing
 recipes.remove(<Railcraft:machine.alpha:1>);
 
-// --- Smoker ---
+// --- Smoker
 recipes.remove(<Railcraft:machine.alpha:5>);
 
-// --- Manuel Steam Trap ---
+// --- Manuel Steam Trap
 recipes.remove(<Railcraft:machine.alpha:9>);
 
-// --- Automated Steam Trap ---
+// --- Automated Steam Trap
 recipes.remove(<Railcraft:machine.alpha:10>);
 
-// --- Iron Tank Wall ---
-recipes.remove(<Railcraft:machine.beta>);
+// --- Iron Tank Wall
+recipes.remove(IronTankWall);
 
-// --- Iron Tank Gauge ---
-//recipes.remove(IronTankGauge);
+// --- Iron Tank Gauge
+recipes.remove(IronTankGauge);
 
-// --- Iron Tank Valve ---
-recipes.removeShaped(<Railcraft:machine.beta:2>);
+// --- Iron Tank Valve
+recipes.remove(IronTankValve);
 
-// --- Solid Fueled Boiler Firebox ---
+// --- Solid Fueled Boiler Firebox
 recipes.remove(<Railcraft:machine.beta:5>);
 
-// --- Liquid Fueled Boiler Firebox ---
+// --- Liquid Fueled Boiler Firebox
 recipes.remove(<Railcraft:machine.beta:6>);
 
-// --- Low Pressure Boiler Tank ---
+// --- Low Pressure Boiler Tank
 recipes.remove(<Railcraft:machine.beta:3>);
 
-// --- High Pressure Boiler Tank ---
+// --- High Pressure Boiler Tank
 //recipes.remove(HPBoilerTank);
 
-// --- Hobbyist´s Steam Engine ---
+// --- Hobbyist´s Steam Engine
 recipes.remove(<Railcraft:machine.beta:7>);
 
-// --- Commercial Steam Engine ---
+// --- Commercial Steam Engine
 recipes.remove(<Railcraft:machine.beta:8>);
 
-// --- Industrial Steam Engine ---
+// --- Industrial Steam Engine
 recipes.remove(<Railcraft:machine.beta:9>);
 
-// --- Steel Tank Wall ---
+// --- Steel Tank Wall
 recipes.removeShaped(<Railcraft:machine.beta:13>);
 
-//-
-recipes.removeShaped(<Railcraft:machine.beta:13>);
-
-// --- Steel Tank Gauge ---
+// --- Steel Tank Gauge
 recipes.removeShaped(<Railcraft:machine.beta:14>);
 
-// --- Steel Tank Valve ---
+// --- Steel Tank Valve
 recipes.removeShaped(<Railcraft:machine.beta:15>);
 
-// --- Anchor Sentinel ---
+// --- Anchor Sentinel
 recipes.remove(<Railcraft:machine.beta:10>);
 
-// --- Metals Chest ---
+// --- Metals Chest
 recipes.remove(<Railcraft:machine.beta:12>);
 
-// --- Remove all Tracks Recipes ---
+// --- Remove all Tracks Recipes
 recipes.remove(<Railcraft:track:*>);
 
-// --- Elevator Track ---
+// --- Elevator Track
 recipes.remove(<Railcraft:track.elevator>);
 
-//--- Switch Lever ---
+// --- Switch Lever
 //recipes.remove(SwitchLever);
 
-// --- Switch Motor ---
+// --- Switch Motor
 //recipes.remove(SwitchMotor);
 
-// --- Signal Block ---
+// --- Signal Block
 recipes.remove(<Railcraft:signal:3>);
 
-// --- Distant Signal ---
+// --- Distant Signal
 recipes.remove(<Railcraft:signal:11>);
 
-// --- Dual Head Block Signal ---
+// --- Dual Head Block Signal
 recipes.remove(<Railcraft:signal:1>);
 
-// --- Dual Head Distant Signal ---
+// --- Dual Head Distant Signal
 recipes.remove(<Railcraft:signal:12>);
 
-// --- Signal Block Relay ---
+// --- Signal Block Relay
 recipes.remove(<Railcraft:signal:13>);
 
-// --- Signal Controll Box ---
+// --- Signal Controller Box
 recipes.remove(<Railcraft:signal:9>);
 
-// --- Analog Signal Controll Box ---
+// --- Analog Signal Controll Box
 recipes.remove(<Railcraft:signal:10>);
 
 // --- Signal Receiver Box
 recipes.remove(<Railcraft:signal:8>);
 
-// --- Signal Capacitor Box ---
+// --- Signal Capacitor Box
 recipes.remove(<Railcraft:signal:7>);
 
 // --- Signal Sequencer Box
@@ -397,70 +467,70 @@ recipes.remove(<Railcraft:signal:6>);
 // --- Signal Interloack Box
 recipes.remove(<Railcraft:signal>);
 
-// --- Stone Railbed ---
+// --- Stone Railbed
 //recipes.remove(StoneRailbed);
 
-// --- Wood Rail ---
+// --- Wood Rail
 //recipes.remove(WoodenRail);
 
-// --- Stone Tie ---
+// --- Stone Tie
 recipes.remove(<Railcraft:part.tie:1>);
 
-// --- Item Dtector ---
+// --- Item Detector
 recipes.remove(<Railcraft:detector>);
 
-// --- Any Detector ---
+// --- Any Detector
 recipes.remove(<Railcraft:detector:1>);
 
-// --- Empty Detector ---
+// --- Empty Detector
 recipes.remove(<Railcraft:detector:2>);
 
-// --- Mob Detector ---
+// --- Mob Detector
 recipes.remove(<Railcraft:detector:3>);
 
-// --- Powered Detector ---
+// --- Powered Detector
 recipes.remove(<Railcraft:detector:4>);
 
-// --- Player Detector ---
+// --- Player Detector
 recipes.remove(<Railcraft:detector:5>);
 
-// --- Explosive Detector ---
+// --- Explosive Detector
 recipes.remove(<Railcraft:detector:6>);
 
-// --- Animal Detector ---
+// --- Animal Detector
 recipes.remove(<Railcraft:detector:7>);
 
-// --- Tank Detector ---
+// --- Tank Detector
 recipes.remove(<Railcraft:detector:8>);
 
-// --- Advanced Detector ---
+// --- Advanced Detector
 recipes.remove(<Railcraft:detector:9>);
 
-// --- Energy Detector ---
+// --- Energy Detector
 recipes.remove(<Railcraft:detector:10>);
 
-// --- Age Detector ---
+// --- Age Detector
 recipes.remove(<Railcraft:detector:11>);
 
-// --- Train Detector ---
+// --- Train Detector
 recipes.remove(<Railcraft:detector:12>);
 
-// --- Sheep Detector ---
+// --- Sheep Detector
 recipes.remove(<Railcraft:detector:13>);
 
-// --- Villager Detector ---
+// --- Villager Detector
 recipes.remove(<Railcraft:detector:14>);
 
-// --- Locomotive Detector ---
+// --- Locomotive Detector
 recipes.remove(<Railcraft:detector:15>);
 
-// --- Routing Detector ---
+// --- Routing Detector
 recipes.remove(<Railcraft:detector:16>);
 
-// --- Item Loader ---
+// --- Item Loader
 recipes.remove(<Railcraft:machine.gamma>);
 
-// --- Item Unloader ---
+// --- Item Unloader
 recipes.remove(<Railcraft:machine.gamma:1>);
   
 // --- Advanced Item Loader
@@ -469,34 +539,34 @@ recipes.remove(<Railcraft:machine.gamma:2>);
 // --- Advanced Item Unloader
 recipes.remove(<Railcraft:machine.gamma:3>);
 
-// --- Fluid Loader ---
+// --- Fluid Loader
 recipes.remove(<Railcraft:machine.gamma:4>);
 
-// --- Fluid Unloader ---
+// --- Fluid Unloader
 recipes.remove(<Railcraft:machine.gamma:5>);
 
-// --- Energy Loader ---
+// --- Energy Loader
 recipes.remove(<Railcraft:machine.gamma:6>);
 
-// --- Energy Unloader ---
+// --- Energy Unloader
 recipes.remove(<Railcraft:machine.gamma:7>);
 
-// --- Cart Dispenser ---
+// --- Cart Dispenser
 recipes.remove(<Railcraft:machine.gamma:8>);
 
-// --- Train Dispenser ---
+// --- Train Dispenser
 recipes.remove(<Railcraft:machine.gamma:9>);
 
-// --- Electric Feeder Unit --- 
+// --- Electric Feeder Unit
 recipes.remove(<Railcraft:machine.epsilon>);
 
-// --- Flux Transformer --- 
+// --- Flux Transformer
 recipes.remove(<Railcraft:machine.epsilon:4>);
 
-// --- Force Track Emitter ---
+// --- Force Track Emitter
 recipes.remove(<Railcraft:machine.epsilon:3>);
 
-// --- Wood Post ---
+// --- Wood Post
 recipes.remove(<Railcraft:post>);
 
 // --- Stone Post
@@ -606,6 +676,65 @@ recipes.removeShaped(<Railcraft:tool.surveyor>);
 
 // --- Sandy Block ---
 recipes.remove(<Railcraft:brick.sandy:2>);
+
+
+// ||||||| Tracks |||||||
+
+
+// --- Wooden Track
+recipes.remove(WoodTrack);
+
+// --- Reinforced Track
+recipes.remove(ReinforcedTrack);
+
+// --- H.S. Track
+recipes.remove(HSTrack);
+
+// --- Electric Track
+recipes.remove(ElectricTrack);
+
+// --- Wooden Switch Track
+recipes.remove(WoodSwitchTrack);
+
+// --- Wooden Wye Track
+recipes.remove(WoodWyeTrack);
+
+// --- Wooden Junction Track
+recipes.remove(WoodJunctionTrack);
+
+// --- Switch Track
+recipes.remove(SwitchTrack);
+
+// --- Wye Track
+recipes.remove(WyeTrack);
+
+// --- Junction Track
+recipes.remove(JunctionTrack);
+
+// --- Reinforced Switch Track
+recipes.remove(SwitchReinforcedTrack);
+
+// --- Reinforced Wye Track
+recipes.remove(WyeReinforcedTrack);
+
+// --- Reinforced Junction Track
+recipes.remove(JunctionReinforcedTrack);
+
+// --- H.S. Switch Track
+recipes.remove(SwitchHSTrack);
+
+// --- H.S. Wye Track
+recipes.remove(WyeHSTrack);
+
+// --- Electric Switch Track
+recipes.remove(ElectricSwitchTrack);
+
+// --- Electric Wye Track
+recipes.remove(ElectricWyeTrack);
+
+// --- Electric Junction Track
+recipes.remove(ElectricJunctionTrack);
+
 
 
 // *======= Adding Back Recipes =======*
@@ -986,3 +1115,299 @@ recipes.addShaped(IronTankGauge * 4, [
 [IronPlate, GlassPane, IronPlate],
 [Wrench, IronScrew, Screwdriver],
 [IronPlate, GlassPane, IronPlate]]);
+
+// --- Iron Tank Valve
+recipes.addShaped(IronTankValve * 2, [
+[IronPlate, IronBars, IronPlate],
+[IronPlate, IronGear, IronPlate],
+[IronPlate, IronBars, IronPlate]]);
+
+// --- Steel Tank Wall
+recipes.addShaped(SteelTankWall * 4, [
+[SteelPlate, SteelPlate, SteelPlate],
+[HardHammer, SteelScrew, Screwdriver],
+[SteelPlate, SteelPlate, SteelPlate]]);
+// - Alternate Recipe
+recipes.addShaped(SteelTankWall * 4, [
+[SteelPlate, SteelPlate, SteelPlate],
+[Screwdriver, SteelScrew, HardHammer],
+[SteelPlate, SteelPlate, SteelPlate]]);
+
+// --- Steel Tank Gauge
+recipes.addShaped(SteelTankGauge * 4, [
+[SteelPlate, GlassPane, SteelPlate],
+[Screwdriver, SteelScrew, Wrench],
+[SteelPlate, GlassPane, SteelPlate]]);
+// - Alternate Recipe
+recipes.addShaped(SteelTankGauge * 4, [
+[SteelPlate, GlassPane, SteelPlate],
+[Wrench, SteelScrew, Screwdriver],
+[SteelPlate, GlassPane, SteelPlate]]);
+
+// --- Steel Tank Valve
+recipes.addShaped(SteelTankValve * 2, [
+[SteelPlate, IronBars, SteelPlate],
+[SteelPlate, SteelGear, SteelPlate],
+[SteelPlate, IronBars, SteelPlate]]);
+
+// --- Water Tank
+recipes.addShaped(WaterTank, [
+[Plank, IronBars, Plank],
+[IronRod, Wrench, IronRod],
+[Plank, RubberPlate, Plank]]);
+// --- Alternate Recipe
+recipes.addShaped(WaterTank * 2, [
+[CarpentersBlocks, IronBars, CarpentersBlocks],
+[SteelRod, Wrench, SteelRod],
+[CarpentersBlocks, RubberPlate, CarpentersBlocks]]);
+
+
+// ||||||| Tracks |||||||
+
+
+// --- Wooden Track
+recipes.addShaped(WoodTrack, [
+[IronScrew, Screwdriver, IronScrew],
+[WoodenRail, WoodRailbed, WoodenRail],
+[IronBolt, Wrench, IronBolt]]);
+
+// --- Reinforced Track
+recipes.addShaped(ReinforcedTrack, [
+[SteelScrew, Screwdriver, SteelScrew],
+[ReinforcedRail, StoneRailbed, ReinforcedRail],
+[SteelBolt, Wrench, SteelBolt]]);
+
+// --- H.S. Track
+recipes.addShaped(HSTrack, [
+[SSteelScrew, Screwdriver, SSteelScrew],
+[HSRail, StoneRailbed, HSRail],
+[SSteelBolt, Wrench, SSteelBolt]]);
+
+// --- Electric Track
+recipes.addShaped(ElectricTrack, [
+[AlScrew, Screwdriver, AlScrew],
+[ElectricRail, StoneRailbed, ElectricRail],
+[AlBolt, Wrench, AlBolt]]);
+
+// --- Wooden Switch Track
+recipes.addShaped(WoodSwitchTrack * 2, [
+[IronScrew, WoodTrack, IronScrew],
+[Wrench, SwitchLever, Screwdriver],
+[IronBolt, WoodTrack, IronBolt]]);
+// - Alternate Recipe
+recipes.addShaped(WoodSwitchTrack * 2, [
+[IronScrew, WoodTrack, IronScrew],
+[Screwdriver, SwitchLever, Wrench],
+[IronBolt, WoodTrack, IronBolt]]);
+
+// --- Wooden Wye Track
+recipes.addShaped(WoodWyeTrack * 2, [
+[IronScrew, WoodTrack, IronScrew],
+[Wrench, SwitchMotor, Screwdriver],
+[IronBolt, WoodTrack, IronBolt]]);
+// - Alternate Recipe
+recipes.addShaped(WoodWyeTrack * 2, [
+[IronScrew, WoodTrack, IronScrew],
+[Screwdriver, SwitchMotor, Wrench],
+[IronBolt, WoodTrack, IronBolt]]);
+
+// --- Wooden Junction Track
+recipes.addShaped(WoodJunctionTrack * 2, [
+[IronScrew, WoodTrack, IronScrew],
+[WoodTrack, Screwdriver, WoodTrack],
+[IronBolt, WoodTrack, IronBolt]]);
+
+// --- Wooden Booster Track
+recipes.addShaped(WoodBoosterTrack * 2, [
+[IronScrew, WoodTrack, IronScrew],
+[SmallBronzeGear, LVMotor, SmallBronzeGear],
+[IronBolt, WoodTrack, IronBolt]]);
+
+// --- Switch Track
+recipes.addShaped(SwitchTrack * 2, [
+[BronzeScrew, Track, BronzeScrew],
+[Wrench, SwitchLever, Screwdriver],
+[BronzeBolt, Track, BronzeBolt]]);
+// - Alternate Recipe
+recipes.addShaped(SwitchTrack * 2, [
+[BronzeScrew, Track, BronzeScrew],
+[Screwdriver, SwitchLever, Wrench],
+[BronzeBolt, Track, BronzeBolt]]);
+
+// --- Wye Track
+recipes.addShaped(WyeTrack * 2, [
+[BronzeScrew, Track, BronzeScrew],
+[Wrench, SwitchMotor, Screwdriver],
+[BronzeBolt, Track, BronzeBolt]]);
+// - Alternate Recipe
+recipes.addShaped(WyeTrack * 2, [
+[BronzeScrew, Track, BronzeScrew],
+[Screwdriver, SwitchMotor, Wrench],
+[BronzeBolt, Track, BronzeBolt]]);
+
+// --- Junction Track
+recipes.addShaped(JunctionTrack * 2, [
+[BronzeScrew, Track, BronzeScrew],
+[Track, Screwdriver, Track],
+[BronzeBolt, Track, BronzeBolt]]);
+
+// --- Reinforced Switch Track
+recipes.addShaped(SwitchReinforcedTrack * 2, [
+[SteelScrew, ReinforcedTrack, SteelScrew],
+[Wrench, SwitchLever, Screwdriver],
+[SteelBolt, ReinforcedTrack, SteelBolt]]);
+// - Alternate Recipe
+recipes.addShaped(SwitchReinforcedTrack * 2, [
+[SteelScrew, ReinforcedTrack, SteelScrew],
+[Screwdriver, SwitchLever, Wrench],
+[SteelBolt, ReinforcedTrack, SteelBolt]]);
+
+// --- Reinforced Wye Track
+recipes.addShaped(WyeReinforcedTrack * 2, [
+[SteelScrew, ReinforcedTrack, SteelScrew],
+[Wrench, SwitchMotor, Screwdriver],
+[SteelBolt, ReinforcedTrack, SteelBolt]]);
+// - Alternate Recipe
+recipes.addShaped(WyeReinforcedTrack * 2, [
+[SteelScrew, ReinforcedTrack, SteelScrew],
+[Screwdriver, SwitchMotor, Wrench],
+[SteelBolt, ReinforcedTrack, SteelBolt]]);
+
+// --- Reinforced Junction Track
+recipes.addShaped(JunctionReinforcedTrack * 2, [
+[SteelScrew, ReinforcedTrack, SteelScrew],
+[ReinforcedTrack, Screwdriver, ReinforcedTrack],
+[SteelBolt, ReinforcedTrack, SteelBolt]]);
+
+// --- Reinforced Booster Track
+recipes.addShaped(ReinforcedBoosterTrack * 2, [
+[SteelScrew, ReinforcedTrack, SteelScrew],
+[SmallAlGear, MVMotor, SmallAlGear],
+[SteelBolt, ReinforcedTrack, SteelBolt]]);
+
+// --- H.S. Switch Track
+recipes.addShaped(SwitchHSTrack * 2, [
+[SSteelScrew, HSTrack, SSteelScrew],
+[Wrench, SwitchLever, Screwdriver],
+[SSteelBolt, HSTrack, SSteelBolt]]);
+// - Alternate Recipe
+recipes.addShaped(SwitchHSTrack * 2, [
+[SSteelScrew, HSTrack, SSteelScrew],
+[Screwdriver, SwitchLever, Wrench],
+[SSteelBolt, HSTrack, SSteelBolt]]);
+
+// --- H.S. Wye Track
+recipes.addShaped(WyeHSTrack * 2, [
+[SSteelScrew, HSTrack, SSteelScrew],
+[Wrench, SwitchMotor, Screwdriver],
+[SSteelBolt, HSTrack, SSteelBolt]]);
+// - Alternate Recipe
+recipes.addShaped(WyeHSTrack * 2, [
+[SSteelScrew, HSTrack, SSteelScrew],
+[Screwdriver, SwitchMotor, Wrench],
+[SSteelBolt, HSTrack, SSteelBolt]]);
+
+// --- H.S. Booster Track
+recipes.addShaped(HSBoosterTrack * 2, [
+[SSteelScrew, HSTrack, SSteelScrew],
+[SmallTiGear, HVMotor, SmallTiGear],
+[SSteelBolt, HSTrack, SSteelBolt]]);
+
+// --- Electric Switch Track
+recipes.addShaped(ElectricSwitchTrack * 2, [
+[AlScrew, ElectricTrack, AlScrew],
+[Wrench, SwitchLever, Screwdriver],
+[AlBolt, ElectricTrack, AlBolt]]);
+// - Alternate Recipe
+recipes.addShaped(ElectricSwitchTrack * 2, [
+[AlScrew, ElectricTrack, AlScrew],
+[Screwdriver, SwitchLever, Wrench],
+[AlBolt, ElectricTrack, AlBolt]]);
+
+// --- Electric Wye Track
+recipes.addShaped(ElectricWyeTrack * 2, [
+[AlScrew, ElectricTrack, AlScrew],
+[Wrench, SwitchMotor, Screwdriver],
+[AlBolt, ElectricTrack, AlBolt]]);
+// - Alternate Recipe
+recipes.addShaped(ElectricWyeTrack * 2, [
+[AlScrew, ElectricTrack, AlScrew],
+[Screwdriver, SwitchMotor, Wrench],
+[AlBolt, ElectricTrack, AlBolt]]);
+
+// --- Electric Junction Track
+recipes.addShaped(ElectricJunctionTrack * 2, [
+[AlScrew, ElectricTrack, AlScrew],
+[ElectricTrack, Screwdriver, ElectricTrack],
+[AlBolt, ElectricTrack, AlBolt]]);
+
+
+// ||||||| Items |||||||
+
+
+
+// --- Wooden Rail
+recipes.addShaped(WoodenRail * 4, [
+[Stick, Saw, Stick],
+[Stick, null, Stick],
+[Stick, File, Stick]]);
+// - Alternate Recipe
+recipes.addShaped(WoodenRail * 4, [
+[Stick, File, Stick],
+[Stick, null, Stick],
+[Stick, Saw, Stick]]);
+
+// --- Standard Rail
+recipes.addShaped(StandardRail * 4, [
+[IronRod, File, IronRod],
+[IronRod, null, IronRod],
+[IronRod, HardHammer, IronRod]]);
+// - Alternate Recipe
+recipes.addShaped(StandardRail * 4, [
+[IronRod, HardHammer, IronRod],
+[IronRod, null, IronRod],
+[IronRod, File, IronRod]]);
+
+// --- Advanced Rail
+recipes.addShaped(AdvancedRail * 4, [
+[BronzeRod, File, BronzeRod],
+[BronzeRod, RedAlloyRod, BronzeRod],
+[BronzeRod, HardHammer, BronzeRod]]);
+// - Alternate Recipe
+recipes.addShaped(AdvancedRail * 4, [
+[BronzeRod, HardHammer, BronzeRod],
+[BronzeRod, RedAlloyRod, BronzeRod],
+[BronzeRod, File, BronzeRod]]);
+
+// --- Reinforced Rail
+recipes.addShaped(ReinforcedRail * 4, [
+[SteelRod, File, SteelRod],
+[SteelRod, ObsidianDust, SteelRod],
+[SteelRod, HardHammer, SteelRod]]);
+// - Alternate Recipe
+recipes.addShaped(ReinforcedRail * 4, [
+[SteelRod, HardHammer, SteelRod],
+[SteelRod, ObsidianDust, SteelRod],
+[SteelRod, File, SteelRod]]);
+
+// --- H.S. Rail
+recipes.addShaped(HSRail * 4, [
+[SSteelRod, File, SSteelRod],
+[SSteelRod, BlazeRod, SSteelRod],
+[SSteelRod, HardHammer, SSteelRod]]);
+// - Alternate Recipe
+recipes.addShaped(HSRail * 4, [
+[SSteelRod, HardHammer, SSteelRod],
+[SSteelRod, BlazeRod, SSteelRod],
+[SSteelRod, File, SSteelRod]]);
+
+// --- Electric Rail
+recipes.addShaped(ElectricRail * 4, [
+[AlRod, File, AlRod],
+[AlRod, FineGoldWire, AlRod],
+[AlRod, HardHammer, AlRod]]);
+// - Alternate Recipe
+recipes.addShaped(ElectricRail * 4, [
+[AlRod, HardHammer, AlRod],
+[AlRod, FineGoldWire, AlRod],
+[AlRod, File, AlRod]]);

@@ -322,6 +322,11 @@ val WaterBucket = <ore:bucketWater>;
 val WoodPulp = <ore:dustWood>;
 val ReinforcedGlass = <ore:paneGlass>;
 val SmallNStarDust = <ore:dustSmallNetherStar>;
+val BronzeBolt = <ore:boltBronze>;
+val BronzeScrew = <ore:screwBronze>;
+val SmallSteelGear = <ore:gearGtSmallSteel>;
+
+val LVMotor = <grindcore:item.LVMotor>;
 
 
 // ||||||| Tools |||||||
@@ -450,9 +455,6 @@ recipes.remove(ChiseledSandstone);
 
 // --- Smooth Sandstone
 recipes.remove(SmoothSandstone);
-
-// --- TNT
-recipes.remove(TNT);
 
 // --- Quartz Block
 recipes.remove(QuartzBlock);
@@ -638,21 +640,37 @@ recipes.addShaped(SPiston, [
 
 // --- Rail
 recipes.addShaped(Rail * 8, [
-[IronScrew, null , IronScrew],
+[BronzeScrew, Screwdriver , BronzeScrew],
 [StandardRail, WoodRailbed, StandardRail],
-[Screwdriver, null , HHammer]]);
+[BronzeBolt, Wrench , BronzeBolt]]);
 
 // --- Detector Rail
-recipes.addShaped(DetectorRail * 2, [
-[IronScrew, Detector, IronScrew],
-[StandardRail, WoodRailbed, StandardRail],
-[Screwdriver, RedAlloyWire, HHammer]]);
+recipes.addShaped(DetectorRail, [
+[BronzeScrew, Detector, BronzeScrew],
+[Screwdriver, Rail, Wrench],
+[BronzeBolt, RedAlloyWire, BronzeBolt]]);
+// - Alternate Recipe
+recipes.addShaped(DetectorRail, [
+[BronzeScrew, Detector, BronzeScrew],
+[Wrench, Rail, Screwdriver],
+[BronzeBolt, RedAlloyWire, BronzeBolt]]);
+
+// --- Booster Rail
+recipes.addShaped(BoosterRail, [
+[BronzeScrew, Rail, BronzeScrew],
+[SmallSteelGear, LVMotor, SmallSteelGear],
+[BronzeBolt, Rail, BronzeBolt]]);
 
 // --- Activator Rail
-recipes.addShaped(ActivatorRail * 2, [
-[IronScrew, RSTorch, IronScrew],
-[StandardRail, WoodRailbed, StandardRail],
-[Screwdriver, RedAlloyWire, HHammer]]);
+recipes.addShaped(ActivatorRail, [
+[BronzeScrew, RSTorch, BronzeScrew],
+[Screwdriver, Rail, Wrench],
+[BronzeBolt, RedAlloyWire, BronzeBolt]]);
+// - Alternate Recipe
+recipes.addShaped(ActivatorRail, [
+[BronzeScrew, RSTorch, BronzeScrew],
+[Wrench, Rail, Screwdriver],
+[BronzeBolt, RedAlloyWire, BronzeBolt]]);
 
 // --- Redstone Repeater
 recipes.addShaped(Repeater, [

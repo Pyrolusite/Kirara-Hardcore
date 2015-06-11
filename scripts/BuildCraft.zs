@@ -58,9 +58,12 @@ val PipeVoidFluid = <BuildCraft|Transport:item.buildcraftPipe.pipefluidsvoid>;
 val PipeClay = <BuildCraft|Transport:item.buildcraftPipe.pipeitemsclay>;
 val CobbleStructure = <BuildCraft|Transport:item.buildcraftPipe.pipestructurecobblestone>;
 
+val BCWrench = <BuildCraft|Core:wrenchItem>;
+
 val Laser = <BuildCraft|Silicon:laserBlock>;
 val BCTank = <BuildCraft|Factory:tankBlock>;
 val Quarry = <BuildCraft|Factory:machineBlock>;
+val Pump = <BuildCraft|Factory:pumpBlock>;
 
 val RubberPlate = <ore:plateRubber>;
 val IronPlate = <ore:plateIron>;
@@ -139,24 +142,36 @@ val FilterBuffer = <BuildCraft|Transport:filteredBufferBlock>;
 
 val LVTransformer = <IC2:blockElectric:3>;
 
+val InvarRod = <ore:stickInvar>;
 val SteelPlate = <ore:plateSteel>;
+val LapisFoil = <ore:foilLapis>;
 
+val ULVHull = <grindcore:tile.HullULV>;
+
+val LVPump = <grindcore:item.LVPump>;
 val LVMotor = <grindcore:item.LVMotor>;
 val LVPiston = <grindcore:item.LVPiston>;
 val LVHull = <grindcore:tile.HullLV>;
+val LVConveyor = <grindcore:item.LVConveyor>;
 
+val SteelDrillTip = <ore:toolHeadDrillSteel>;
 val AlDrillTip = <ore:toolHeadDrillAluminium>;
-
 val BasicCircuit = <ore:circuitBasic>;
 val GoodCircuit = <ore:circuitGood>;
 val AdvCircuit = <ore:circuitAdvanced>;
 
+val SmallIronGear = <ore:gearGtSmallIron>;
+
+val RSTorch = <minecraft:redstone_torch>;
 val ClayBlock = <minecraft:clay>;
 val Plank = <ore:plankWood>;
+
+val AlChest = <gregtech:gt.multitileentity:1>;
 
 val Wrench = <ore:craftingToolWrench>;
 val SoftHammer = <ore:craftingToolSoftHammer>;
 val Saw = <ore:craftingToolSaw>;
+val BendingCylinder = <ore:craftingToolBendingCylinder>;
 
 
 
@@ -173,7 +188,7 @@ recipes.remove(MiningWell);
 recipes.remove(Quarry);
 
 // --- Pump
-recipes.remove(<BuildCraft|Factory:pumpBlock>);
+recipes.remove(Pump);
 
 // --- Laser
 recipes.remove(Laser);
@@ -361,7 +376,7 @@ recipes.remove(LandMark);
 recipes.remove(PathMark);
 
 // --- Wrench
-recipes.remove(<BuildCraft|Core:wrenchItem>);
+recipes.remove(BCWrench);
 
 // --- Redstone Crystal
 recipes.remove(RSCrystal);
@@ -758,12 +773,52 @@ recipes.addShaped(PipeClay * 4, [
 
 // ||||||| Blocks |||||||
 
+
 // --- Quarry
 recipes.addShaped(Quarry, [
 [IronPlate, BasicCircuit, IronPlate],
 [LVMotor, LVHull, LVPiston],
 [SteelPlate, AlDrillTip, SteelPlate]]);
 
+// --- Filler
+recipes.addShaped(Filler, [
+[FactoryBlock, LandMark, FactoryBlock],
+[LVConveyor, LVHull, LVConveyor],
+[AlGear, AlChest, AlGear]]);
+
+// --- Mining Well
+recipes.addShaped(MiningWell, [
+[IronPlate, BasicCircuit, IronPlate],
+[LVMotor, ULVHull, LVMotor],
+[SmallIronGear, SteelDrillTip, SmallIronGear]]);
+
+// --- Pump
+recipes.addShaped(Pump, [
+[SteelPlate, BCTank, SteelPlate],
+[LVPump, MiningWell, LVPump],
+[SteelPlate, Wrench, SteelPlate]]);
+
+// --- Tank
+recipes.addShaped(BCTank, [
+[InvarRod, GlassPane, InvarRod],
+[GlassPane, Wrench, GlassPane],
+[InvarRod, GlassPane, InvarRod]]);
+
+
+
+// ||||||| Items |||||||
+
+
+// --- Land Mark
+recipes.addShapedMirrored(LandMark, [
+[null, LapisFoil, null],
+[null, RSTorch, null],
+[null, FactoryBlock, null]]);
+// - Alternate Recipe
+recipes.addShapedMirrored(LandMark * 2, [
+[LapisFoil, null, LapisFoil],
+[RSTorch, null, RSTorch],
+[FactoryBlock, null, FactoryBlock]]);
 
 
 // #======= Hiding & Renaming Stuff =======#

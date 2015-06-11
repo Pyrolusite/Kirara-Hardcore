@@ -21,6 +21,7 @@ val Mortar = <harvestcraft:mortarandpestleItem>;
 val MixingBowl = <harvestcraft:mixingbowlItem>;
 val Bakeware = <harvestcraft:bakewareItem>;
 val CuttingBoard = <harvestcraft:cuttingboardItem>;
+val Seeds = <ore:listAllseed>;
 
 val String = <minecraft:string>;
 val Cotton = <harvestcraft:cottonItem>;
@@ -36,6 +37,8 @@ val IronPlate = <ore:plateAnyIron>;
 val CopperRod = <ore:stickCopper>;
 val CopperIngot = <ore:ingotCopper>;
 val CopperPlate = <ore:plateCopper>;
+
+val Plantball = <IC2:itemFuelPlantBall>;
 
 val SBrick = <minecraft:stonebrick>;
 val SBricksBlock = <minecraft:stonebrick>;
@@ -74,7 +77,7 @@ recipes.remove(AllSinks);
 // *======= Adding Back Recipes =======*
 
 
-// - Woven Cotton
+// --- Woven Cotton
 recipes.addShaped(WovenCloth, [
 [String, Cotton, String],
 [Cotton, String, Cotton],
@@ -144,6 +147,12 @@ recipes.addShaped(CuttingBoard, [
 [File, CopperPlate, HHammer],
 [null, CopperRod, null],
 [WoodSlab, WoodSlab, WoodSlab]]);
+
+// --- Plantball
+recipes.addShaped(Plantball, [
+[Seeds, Seeds, Seeds],
+[Seeds, Seeds, Seeds],
+[Seeds, Seeds, Seeds]]);
 
 
 // #======= Hiding Stuff =======#
