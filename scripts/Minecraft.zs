@@ -560,7 +560,11 @@ recipes.remove(GoldIngot);
 recipes.remove(GoldNugget);
 
 // --- Sugar
-recipes.remove(Sugar);
+recipes.removeShaped(Sugar, [
+[SugarCane, null],
+[null, null]]);
+// -
+recipes.removeShapeless(Sugar, [SugarCane]);
 
 // --- Painting
 recipes.remove(Painting);
