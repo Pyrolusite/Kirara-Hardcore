@@ -75,12 +75,20 @@ val UVHull = <grindcore:tile.HullUV>;
 val Stick = <ore:stickWood>;
 val Transistor = <ore:oc:materialTransistor>;
 
+val IronIngot = <ore:ingotIron>;
+val SteelIngot = <ore:ingotSteel>;
+val NeodymiumIngot = <ore:ingotNeodymium>;
+val MagIronIngot = <gregtech:gt.meta.ingot:8645>;
+val MagSteelIngot = <gregtech:gt.meta.ingot:8646>;
+val MagNeodymiumIngot = <gregtech:gt.meta.ingot:8647>;
+
 val RubberRod = <ore:stickRubber>;
 val IronRod = <ore:stickAnyIron>;
-val MagIronRod = <ore:stickIronMagnetic>;
-val MagSteelRod = <ore:stickSteelMagnetic>;
-val MagNeodymiumRod = <ore:stickNeodymiumMagnetic>;
+val MagIronRod = <gregtech:gt.meta.stick:8645>;
 val SteelRod = <ore:stickSteel>;
+val MagSteelRod = <gregtech:gt.meta.stick:8646>;
+val NeodymiumRod = <ore:stickNeodymium>;
+val MagNeodymiumRod = <gregtech:gt.meta.stick:8647>;
 val AlRod = <ore:stickAluminium>;
 val SSteelRod = <ore:stickStainlessSteel>;
 val TiRod = <ore:stickTitanium>;
@@ -92,6 +100,8 @@ val ChromeRod = <ore:stickChrome>;
 val OsRod = <ore:stickOsmium>;
 
 val LongRubberRod = <ore:stickLongRubber>;
+val TSteelFoil = <ore:foilTungstenSteel>;
+val OsFoil = <ore:foilOsmium>;
 
 val FineCopperWire = <ore:wireFineCopper>;
 val FineGoldWire = <ore:wireFineGold>;
@@ -148,6 +158,7 @@ val RubberRing = <ore:ringRubber>;
 
 val Screwdriver = <ore:craftingToolScrewdriver>;
 val Wrench = <ore:craftingToolWrench>;
+val WireCutter = <ore:craftingToolWireCutter>;
 
 val TinRotor = <ore:rotorTinAlloy>;
 val BronzeRotor = <ore:rotorBronze>;
@@ -161,6 +172,7 @@ val CertusQuartz = <ore:gemCertusQuartz>;
 val EnderPearl = <ore:gemEnderPearl>;
 val EnderEye = <ore:gemEnderEye>;
 val NetherStar = <ore:gemNetherStar>;
+val RSDust = <ore:dustRedstone>;
 
 val DataOrb = <grindcore:item.DataOrb>;
 val EFlowCircuit = <grindcore:item.EnergyFlowCircuit>;
@@ -188,6 +200,43 @@ oreDict.wireFineTunstenSteel.add(<grindcore:item.FineTungstenSteelWire>);
 
 // *======= Adding Back Recipes =======*
 
+
+// --- Magnetic Iron Rod
+recipes.addShapeless(MagIronRod, [IronRod, RSDust, RSDust, RSDust, RSDust]);
+
+// --- Magnetic Steel Rod
+recipes.addShapeless(MagSteelRod, [SteelRod, RSDust, RSDust, RSDust, RSDust]);
+
+// --- Magnetic Neodymium Rod
+recipes.addShapeless(MagNeodymiumRod, [NeodymiumRod, RSDust, RSDust, RSDust, RSDust]);
+
+// --- Magnetic Iron Ingot
+recipes.addShapeless(MagIronIngot, [IronIngot, RSDust, RSDust, RSDust, RSDust]);
+
+// --- Magnetic Steel Ingot
+recipes.addShapeless(MagSteelIngot, [SteelIngot, RSDust, RSDust, RSDust, RSDust]);
+
+// --- Magnetic Neodymium Ingot
+recipes.addShapeless(MagNeodymiumIngot, [NeodymiumIngot, RSDust, RSDust, RSDust, RSDust]);
+
+// --- Fine TungstenSteel Wire
+recipes.addShapedMirrored(<grindcore:item.FineTungstenSteelWire>, [
+[TSteelFoil, WireCutter],
+[null, null]]);
+
+// --- Osmium Wire
+recipes.addShapedMirrored(<grindcore:item.OsmiumWire>, [
+[OsFoil, WireCutter],
+[OsFoil, null]]);
+// - Alternate Recipe
+recipes.addShapedMirrored(<grindcore:item.OsmiumWire>, [
+[OsFoil, WireCutter],
+[null, OsFoil]]);
+
+// --- Thick Osmium Wire
+recipes.addShapedMirrored(<grindcore:item.ThickOsmiumWire>, [
+[OsFoil, WireCutter],
+[OsFoil, OsFoil]]);
 
 // --- LV Motor
 recipes.addShaped(LVMotor, [

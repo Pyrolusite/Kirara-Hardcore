@@ -98,6 +98,9 @@ recipes.remove(CarpentersHatch);
 // --- Carpenter's Lever
 recipes.remove(CarpentersLever);
 
+// --- Carpenter's Button
+recipes.remove(CarpentersButton);
+
 // --- Carpenter's Flower Pot
 recipes.remove(CarpentersPot);
 

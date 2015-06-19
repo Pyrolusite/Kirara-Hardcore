@@ -27,8 +27,23 @@ val RainMaker = <Forestry:factory:7>;
 val Thermionic = <Forestry:factory2>;
 val RainTank = <Forestry:factory2:1>;
 val Worktable = <Forestry:factory2:2>;
+val Escritoire = <Forestry:core:1>;
+
 val ApiaristChest = <Forestry:apiculture:1>;
 val LepidoChest = <Forestry:lepidopterology>;
+val ArboristChest = <Forestry:arboriculture>;
+val BeeHouse = <Forestry:apiculture:2>;
+val Apiary = <Forestry:apiculture>;
+val Alveary = <Forestry:alveary>;
+val AlvearySwarmer = <Forestry:alveary:2>;
+val AlvearyFan = <Forestry:alveary:3>;
+val AlvearyHeater = <Forestry:alveary:4>;
+val AlvearyRegulator = <Forestry:alveary:5>;
+val AlvearyStabiliser = <Forestry:alveary:6>;
+val AlvearySieve = <Forestry:alveary:7>;
+
+val UntreatedFrame = <Forestry:frameUntreated>;
+val ImpregnatedFrame = <Forestry:frameImpregnated>;
 
 val ElectricalEng = <Forestry:engine>;
 val PeatEng = <Forestry:engine:1>;
@@ -120,6 +135,18 @@ val Pipette = <Forestry:pipette>;
 val Spectacles = <Forestry:naturalistHelmet>;
 val ApatineTube = <Forestry:thermionicTubes:10>;
 val EmptyCan = <Forestry:canEmpty>;
+val WovenSilk = <Forestry:craftingMaterial:3>;
+val ImpregnatedCasing = <Forestry:impregnatedCasing>;
+val ScentedPanel = <Forestry:craftingMaterial:6>;
+val ProvenFrame = <Forestry:frameProven>;
+
+val GoldTube = <Forestry:thermionicTubes:4>;
+val DiamondTube = <Forestry:thermionicTubes:5>;
+val BlazeTube = <Forestry:thermionicTubes:7>;
+
+val AnyComb = <ore:beeComb>;
+val AnyButterfly = <Forestry:butterflyGE:*>;
+val AnySapling = <ore:treeSapling>;
 
 val ApiaristBackpack = <Forestry:apiaristBag>;
 val LepidopteristBackpack = <Forestry:lepidopteristBag>;
@@ -135,6 +162,7 @@ val FCopperGear = <Forestry:gearCopper>;
 val FTinGear = <Forestry:gearTin>;
 
 val GtBronzeGear = <gregtech:gt.meta.gearGt:8610>;
+val AlChest = <gregtech:gt.multitileentity:1>.withTag({"gt.color": 8440048, "gt.painted": 0 as byte});
 
 val TinRotor = <ore:rotorTinAlloy>;
 val BronzeRotor = <ore:rotorBronze>;
@@ -142,6 +170,8 @@ val SmallBronzePipe = <gregtech:gt.meta.gearGtSmall:8610>;
 val LargeBrassPipe = <gregtech:gt.meta.gearGt:8620>;
 val LargeBronzePipe = <gregtech:gt.meta.gearGt:8610>;
 
+val CopperBolt = <ore:boltCopper>;
+val CopperScrew = <ore:screwCopper>;
 val IronRod = <ore:stickAnyIron>;
 val IronScrew = <ore:screwIron>;
 val IronBolt = <ore:boltIron>;
@@ -154,6 +184,8 @@ val BronzeScrew = <ore:screwAnyBronze>;
 val BronzeBolt = <ore:boltAnyBronze>;
 val GlassLens = <ore:lensGlass>;
 val GlassBolt = <ore:boltGlass>;
+val AnyQuartz = <ore:gemAnyQuartz>;
+val AlRotor = <ore:rotorAluminium>;
 
 val RubberPlate = <ore:plateRubber>;
 val IronPlate = <ore:plateAnyIron>;
@@ -162,6 +194,11 @@ val TinPlate = <ore:plateTin>;
 val DTinPlate = <ore:plateDenseTin>;
 val BronzePlate = <ore:plateAnyBronze>;
 val SteelPlate = <ore:plateSteel>;
+val AlPlate = <ore:plateAluminium>;
+val NQuartzPlate = <ore:plateNetherQuartz>;
+val SSteelPlate = <ore:plateStainlessSteel>;
+val DoubleAlPlate = <ore:plateDoubleAluminium>;
+val DoubleInvarPlate = <ore:plateDoubleInvar>;
 
 val CopperGear = <ore:gearCopper>;
 val TinGear = <ore:gearTinAlloy>;
@@ -171,10 +208,15 @@ val SmallTinGear = <ore:gearGtSmallTinAlloy>;
 val SmallBronzeGear = <ore:gearGtSmallBronze>;
 val RedAlloyPlate = <ore:plateRedAlloy>;
 val SmallSteelGear = <ore:gearGtSmallSteel>;
+val SSteelGear = <ore:gearStainlessSteel>;
+val SmallSSteelGear = <ore:gearGtSmallStainlessSteel>;
 val BronzeGear = <ore:gearAnyBronze>;
 
-val GoodCircuit = <Forestry:chipsets:3>.withTag({T: 3 as short});
+val GoodFCircuit = <Forestry:chipsets:3>.withTag({T: 3 as short});
 val Circuit = <Forestry:chipsets:1>.withTag({T: 1 as short});
+
+val BasicCircuit = <ore:circuitBasic>;
+val GoodCircuit = <ore:circuitGood>;
 val LVMotor = <grindcore:item.LVMotor>;
 val MVMotor = <grindcore:item.MVMotor>;
 val LVConveyor = <grindcore:item.LVConveyor>;
@@ -191,6 +233,7 @@ val ItemCannon = <minecraft:dispenser>;
 val Coil = <IC2:itemRecipePart>;
 val ClearPane = <minecraft:glass_pane>;
 val EmptyCell = <ore:cellEmpty>;
+val BCTank = <ore:craftingTank>;
 
 val StoneBricks = <minecraft:stonebrick>;
 val MossyStoneBricks = <minecraft:stonebrick:1>;
@@ -207,6 +250,8 @@ val PillarQuartzBlock = <minecraft:quartz_block:2>;
 val WoodSlab = <ore:slabWood>;
 val CobbleSlab = <minecraft:stone_slab:3>;
 
+val Log = <ore:logWood>;
+val Plank = <ore:plankWood>;
 val Chest = <minecraft:chest>;
 val Piston = <minecraft:piston>;
 val Hopper = <minecraft:hopper>;
@@ -219,8 +264,13 @@ val Bookshelf = <minecraft:bookshelf>;
 val GreenCarpet = <minecraft:carpet:13>;
 val IronBars = <minecraft:iron_bars>;
 
+val SteelTankWall = <Railcraft:machine.beta:13>;
+val Hatch = <CarpentersBlocks:blockCarpentersHatch>;
+val CarpentersBlock = <CarpentersBlocks:blockCarpentersBlock>;
+
 val Screwdriver = <ore:craftingToolScrewdriver>;
 val File = <ore:craftingToolFile>;
+val Saw = <ore:craftingToolSaw>;
 val Wrench = <ore:craftingToolWrench>;
 val HHammer = <ore:craftingToolHardHammer>;
 val WireCutter = <ore:craftingToolWireCutter>;
@@ -244,6 +294,18 @@ recipes.remove(RainTank);
 
 // --- Work Table
 recipes.remove(Worktable);
+
+// --- Escritoire
+mods.forestry.Carpenter.removeRecipe(Escritoire);
+
+// --- Apiarist Chest
+recipes.remove(ApiaristChest);
+
+// --- Lepidopterist Chest
+recipes.remove(LepidoChest);
+
+// --- Arborist Chest
+recipes.remove(ArboristChest);
 
 
 // ||||||| Machines |||||||
@@ -275,6 +337,37 @@ recipes.remove(Still);
 
 // --- Rain Maker
 recipes.remove(RainMaker);
+
+
+// ||||||| Bees |||||||
+
+
+// --- Bee House
+recipes.remove(BeeHouse);
+
+// --- Apiary
+recipes.remove(Apiary);
+
+// --- Alveary
+recipes.remove(Alveary);
+
+// --- Alveary Swarmer
+recipes.remove(AlvearySwarmer);
+
+// --- Alveary Fan
+recipes.remove(AlvearyFan);
+
+// --- Alveary Heater
+recipes.remove(AlvearyHeater);
+
+// --- Alveary Hygroregulator
+recipes.remove(AlvearyRegulator);
+
+// --- Alveary Stabiliser
+recipes.remove(AlvearyStabiliser);
+
+// --- Alveary Sieve
+recipes.remove(AlvearySieve);
 
 
 // ||||||| Engines |||||||
@@ -426,8 +519,38 @@ recipes.addShaped(Worktable, [
 [TinPlate, Bookshelf, TinPlate],
 [Chest, CraftTable, Chest]]);
 
+// --- Escritoire
+mods.forestry.Carpenter.addRecipe(400, <liquid:seedoil> * 250, 
+[CarpentersBlock, null, <gregtech:gt.meta.screw:260>,
+CarpentersBlock, CarpentersBlock, CarpentersBlock,
+CarpentersBlock, <gregtech:gt.meta.bolt:260>, CarpentersBlock], null, Escritoire);
+// - Alternate Recipe
+mods.forestry.Carpenter.addRecipe(400, <liquid:seedoil> * 250, 
+[CarpentersBlock, <gregtech:gt.meta.screw:260>, null,
+CarpentersBlock, CarpentersBlock, CarpentersBlock,
+CarpentersBlock, <gregtech:gt.meta.bolt:260>, CarpentersBlock], null, Escritoire);
+
+// --- Apiarist's Chest
+recipes.addShaped(ApiaristChest, [
+[CarpentersBlock, AnyComb, CarpentersBlock],
+[AnyComb, AlChest, AnyComb],
+[CarpentersBlock, AnyComb, CarpentersBlock]]);
+
+// --- Lepidopterist's Chest
+recipes.addShaped(LepidoChest, [
+[CarpentersBlock, AnyButterfly, CarpentersBlock],
+[AnyButterfly, AlChest, AnyButterfly],
+[CarpentersBlock, AnyButterfly, CarpentersBlock]]);
+
+// --- Arborist's Chest
+recipes.addShaped(ArboristChest, [
+[CarpentersBlock, AnySapling, CarpentersBlock],
+[AnySapling, AlChest, AnySapling],
+[CarpentersBlock, AnySapling, CarpentersBlock]]);
+
 
 // ||||||| Machines |||||||
+
 
 // --- Analyzer
 recipes.addShaped(Analyzer, [
@@ -493,6 +616,71 @@ recipes.addShaped(Thermionic, [
 [Coil, Worktable, Coil],
 [Coil, SturdyCasing, Coil],
 [DTinPlate, LVMotor, DTinPlate]]);
+
+
+// ||||||| Bees |||||||
+
+
+// --- Bee House
+recipes.addShaped(BeeHouse, [
+[WoodSlab, Hatch, WoodSlab],
+[CarpentersBlock, UntreatedFrame, CarpentersBlock],
+[Plank, CarpentersBlock, Plank]]);
+
+// --- Apiary
+recipes.addShaped(Apiary, [
+[WoodSlab, Hatch, WoodSlab],
+[ImpregnatedFrame, ImpregnatedFrame, ImpregnatedFrame],
+[Log, CarpentersBlock, Log]]);
+
+// --- Alveary
+mods.forestry.Carpenter.addRecipe(1200, <liquid:seedoil> * 750, 
+[ScentedPanel, ScentedPanel, ScentedPanel,
+ScentedPanel, <gregtech:gt.meta.plate:130>, ScentedPanel,
+ScentedPanel, ScentedPanel, ScentedPanel], ImpregnatedCasing, Alveary);
+
+// --- Alveary Swarmer
+mods.forestry.Carpenter.addRecipe(1600, <liquid:seedoil> * 1000, 
+[<gregtech:gt.meta.plate:8636>, DiamondTube, <gregtech:gt.meta.plate:8636>,
+DiamondTube, ProvenFrame, DiamondTube,
+<gregtech:gt.meta.plate:8636>, Apiary, <gregtech:gt.meta.plate:8636>], Alveary, AlvearySwarmer);
+
+// --- Alveary Fan
+mods.forestry.Carpenter.addRecipe(1600, <liquid:seedoil> * 1000, 
+[GoldTube, IronBars, GoldTube,
+IronBars, <gregtech:gt.meta.rotor:130>, IronBars,
+<gregtech:gt.meta.plateDouble:130>, <gregtech:gt.meta.gearGt:8636>, <gregtech:gt.meta.plateDouble:130>], Alveary, AlvearyFan);
+
+// --- Alveary Heater
+mods.forestry.Carpenter.addRecipe(1600, <liquid:seedoil> * 1000, 
+[<gregtech:gt.meta.plate:8636>, BlazeTube, <gregtech:gt.meta.plate:8636>,
+BlazeTube, Coil, BlazeTube,
+<gregtech:gt.meta.plateDouble:8661>, Coil, <gregtech:gt.meta.plateDouble:8661>], Alveary, AlvearyHeater);
+
+// --- Alveary Hygroregulator
+mods.forestry.Carpenter.addRecipe(1600, <liquid:seedoil> * 1000, 
+[GoldTube, SteelTankWall, GoldTube,
+SteelTankWall, <BuildCraft|Factory:tankBlock>, SteelTankWall,
+<gregtech:gt.meta.plate:8636>, SteelTankWall, <gregtech:gt.meta.plate:8636>], Alveary, AlvearyRegulator);
+
+// --- Alveary Stabiliser
+mods.forestry.Carpenter.addRecipe(1600, <liquid:seedoil> * 1000, 
+[<gregtech:gt.meta.plateGem:8346>, DiamondTube, <gregtech:gt.meta.plateGem:8346>,
+<grindcore:item.BasicCircuit>, BeeAnalyzer, <grindcore:item.GoodCircuit>,
+<gregtech:gt.meta.plate:130>, <gregtech:gt.meta.plateGem:8346>, <gregtech:gt.meta.plate:130>], Alveary, AlvearyStabiliser);
+// - Alternate Recipe
+mods.forestry.Carpenter.addRecipe(1600, <liquid:seedoil> * 1000, 
+[<gregtech:gt.meta.plateGem:8346>, DiamondTube, <gregtech:gt.meta.plateGem:8346>,
+<grindcore:item.GoodCircuit>, BeeAnalyzer, <grindcore:item.BasicCircuit>,
+<gregtech:gt.meta.plate:130>, <gregtech:gt.meta.plateGem:8346>, <gregtech:gt.meta.plate:130>], Alveary, AlvearyStabiliser);
+
+// --- Alveary Sieve
+mods.forestry.Carpenter.addRecipe(1600, <liquid:seedoil> * 1000, 
+[<gregtech:gt.meta.plate:130>, <gregtech:gt.meta.gearGtSmall:8636>, <gregtech:gt.meta.plate:130>,
+<gregtech:gt.meta.gearGtSmall:8636>, <gregtech:gt.meta.gearGt:130>, <gregtech:gt.meta.gearGtSmall:8636>,
+IronBars, WovenSilk, IronBars], Alveary, AlvearySieve);
+
+
 
 
 // ||||||| Engines |||||||
@@ -996,122 +1184,122 @@ recipes.addShaped(FValvePillarQuartzBlock, [
 recipes.addShaped(FControlStoneBricks, [
 [Circuit, RedAlloyWire, Circuit],
 [RedAlloyWire, FBStoneBricks, RedAlloyWire],
-[WireCutter, GoodCircuit, Wrench]]);
+[WireCutter, GoodFCircuit, Wrench]]);
 // - Alternate Recipe
 recipes.addShaped(FControlStoneBricks, [
 [Circuit, RedAlloyWire, Circuit],
 [RedAlloyWire, FBStoneBricks, RedAlloyWire],
-[Wrench, GoodCircuit, WireCutter]]);
+[Wrench, GoodFCircuit, WireCutter]]);
 
 // --- Farm Control
 recipes.addShaped(FControlMossyStoneBricks, [
 [Circuit, RedAlloyWire, Circuit],
 [RedAlloyWire, FBMossyStoneBricks, RedAlloyWire],
-[WireCutter, GoodCircuit, Wrench]]);
+[WireCutter, GoodFCircuit, Wrench]]);
 // - Alternate Recipe
 recipes.addShaped(FControlMossyStoneBricks, [
 [Circuit, RedAlloyWire, Circuit],
 [RedAlloyWire, FBMossyStoneBricks, RedAlloyWire],
-[Wrench, GoodCircuit, WireCutter]]);
+[Wrench, GoodFCircuit, WireCutter]]);
 
 // --- Farm Control
 recipes.addShaped(FControlCrackedStoneBricks, [
 [Circuit, RedAlloyWire, Circuit],
 [RedAlloyWire, FBCrackedStoneBricks, RedAlloyWire],
-[WireCutter, GoodCircuit, Wrench]]);
+[WireCutter, GoodFCircuit, Wrench]]);
 // - Alternate Recipe
 recipes.addShaped(FControlCrackedStoneBricks, [
 [Circuit, RedAlloyWire, Circuit],
 [RedAlloyWire, FBCrackedStoneBricks, RedAlloyWire],
-[Wrench, GoodCircuit, WireCutter]]);
+[Wrench, GoodFCircuit, WireCutter]]);
 
 // --- Farm Control
 recipes.addShaped(FControlBricks, [
 [Circuit, RedAlloyWire, Circuit],
 [RedAlloyWire, FBBricks, RedAlloyWire],
-[WireCutter, GoodCircuit, Wrench]]);
+[WireCutter, GoodFCircuit, Wrench]]);
 // - Alternate Recipe
 recipes.addShaped(FControlBricks, [
 [Circuit, RedAlloyWire, Circuit],
 [RedAlloyWire, FBBricks, RedAlloyWire],
-[Wrench, GoodCircuit, WireCutter]]);
+[Wrench, GoodFCircuit, WireCutter]]);
 
 // --- Farm Control
 recipes.addShaped(FControlSmoothSandstone, [
 [Circuit, RedAlloyWire, Circuit],
 [RedAlloyWire, FBSmoothSandstone, RedAlloyWire],
-[WireCutter, GoodCircuit, Wrench]]);
+[WireCutter, GoodFCircuit, Wrench]]);
 // - Alternate Recipe
 recipes.addShaped(FControlSmoothSandstone, [
 [Circuit, RedAlloyWire, Circuit],
 [RedAlloyWire, FBSmoothSandstone, RedAlloyWire],
-[Wrench, GoodCircuit, WireCutter]]);
+[Wrench, GoodFCircuit, WireCutter]]);
 
 // --- Farm Control
 recipes.addShaped(FControlChiseledSandstone, [
 [Circuit, RedAlloyWire, Circuit],
 [RedAlloyWire, FBChiseledSandstone, RedAlloyWire],
-[WireCutter, GoodCircuit, Wrench]]);
+[WireCutter, GoodFCircuit, Wrench]]);
 // - Alternate Recipe
 recipes.addShaped(FControlChiseledSandstone, [
 [Circuit, FBChiseledSandstone, Circuit],
 [RedAlloyWire, FBStoneBricks, RedAlloyWire],
-[Wrench, GoodCircuit, WireCutter]]);
+[Wrench, GoodFCircuit, WireCutter]]);
 
 // --- Farm Control
 recipes.addShaped(FControlNetherBricks, [
 [Circuit, RedAlloyWire, Circuit],
 [RedAlloyWire, FBNetherBricks, RedAlloyWire],
-[WireCutter, GoodCircuit, Wrench]]);
+[WireCutter, GoodFCircuit, Wrench]]);
 // - Alternate Recipe
 recipes.addShaped(FControlNetherBricks, [
 [Circuit, RedAlloyWire, Circuit],
 [RedAlloyWire, FBNetherBricks, RedAlloyWire],
-[Wrench, GoodCircuit, WireCutter]]);
+[Wrench, GoodFCircuit, WireCutter]]);
 
 // --- Farm Control
 recipes.addShaped(FControlCrackedStoneBricks, [
 [Circuit, RedAlloyWire, Circuit],
 [RedAlloyWire, FBCrackedStoneBricks, RedAlloyWire],
-[WireCutter, GoodCircuit, Wrench]]);
+[WireCutter, GoodFCircuit, Wrench]]);
 // - Alternate Recipe
 recipes.addShaped(FControlCrackedStoneBricks, [
 [Circuit, RedAlloyWire, Circuit],
 [RedAlloyWire, FBCrackedStoneBricks, RedAlloyWire],
-[Wrench, GoodCircuit, WireCutter]]);
+[Wrench, GoodFCircuit, WireCutter]]);
 
 // --- Farm Control
 recipes.addShaped(FControlQuartzBlock, [
 [Circuit, RedAlloyWire, Circuit],
 [RedAlloyWire, FBQuartzBlock, RedAlloyWire],
-[WireCutter, GoodCircuit, Wrench]]);
+[WireCutter, GoodFCircuit, Wrench]]);
 // - Alternate Recipe
 recipes.addShaped(FControlQuartzBlock, [
 [Circuit, RedAlloyWire, Circuit],
 [RedAlloyWire, FBQuartzBlock, RedAlloyWire],
-[Wrench, GoodCircuit, WireCutter]]);
+[Wrench, GoodFCircuit, WireCutter]]);
 
 // --- Farm Control
 recipes.addShaped(FControlChiseledQuartzBlock, [
 [Circuit, RedAlloyWire, Circuit],
 [RedAlloyWire, FBChiseledQuartzBlock, RedAlloyWire],
-[WireCutter, GoodCircuit, Wrench]]);
+[WireCutter, GoodFCircuit, Wrench]]);
 // - Alternate Recipe
 recipes.addShaped(FControlChiseledQuartzBlock, [
 [Circuit, RedAlloyWire, Circuit],
 [RedAlloyWire, FBChiseledQuartzBlock, RedAlloyWire],
-[Wrench, GoodCircuit, WireCutter]]);
+[Wrench, GoodFCircuit, WireCutter]]);
 
 // --- Farm Control
 recipes.addShaped(FControlPillarQuartzBlock, [
 [Circuit, RedAlloyWire, Circuit],
 [RedAlloyWire, FBPillarQuartzBlock, RedAlloyWire],
-[WireCutter, GoodCircuit, Wrench]]);
+[WireCutter, GoodFCircuit, Wrench]]);
 // - Alternate Recipe
 recipes.addShaped(FControlPillarQuartzBlock, [
 [Circuit, RedAlloyWire, Circuit],
 [RedAlloyWire, FBPillarQuartzBlock, RedAlloyWire],
-[Wrench, GoodCircuit, WireCutter]]);
+[Wrench, GoodFCircuit, WireCutter]]);
 
 
 // ||||||| Items |||||||
