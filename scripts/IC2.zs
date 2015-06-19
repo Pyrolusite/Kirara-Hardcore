@@ -127,9 +127,9 @@ val WTurningBlank = <IC2:itemTurningBlanksWood:209715>.withTag({state: {l4: 3, l
 val Circuit = <IC2:itemPartCircuit>;
 val AdvCircuit = <IC2:itemPartCircuitAdv>;
 
-/*val Battery =
-val AdvBattery = 
-val ECrystal = 
+val Battery = <IC2:itemBatREDischarged>;
+val AdvBattery = <IC2:itemAdvBat:26>;
+/*val ECrystal = 
 val LapCrystal = 
 val SingleBattery = 
 val ChargingBattery = 
@@ -174,11 +174,11 @@ val WindMeter = */
 
 // --- Armor
 
-/*val HHelm = 
-val HChest = 
-val HLeggings = 
-val HBoots = 
-val NHelm = 
+val ScubaHelm = <IC2:itemArmorHazmatHelmet>;
+val HazmatChest = <IC2:itemArmorHazmatChestplate>;
+val HazmatLeggings = <IC2:itemArmorHazmatLeggings>;
+val RubberBoots = <IC2:itemArmorRubBoots>;
+/*val NHelm = 
 val NChest = 
 val NLeggings = 
 val NBoots = 
@@ -202,20 +202,41 @@ val NightvisionGoggles = */
 val RubberLog = <minecraft:log:3>;
 val JunglePlanks = <minecraft:planks:3>;
 
+val RedAlloyDust = <ore:dustRedAlloy>;
+val RedAlloyDustBlock = <ore:blockDustRedAlloy>;
+
+val LeadFoil = <ore:foilLead>;
+val InvarFoil = <ore:foilInvar>;
+
+val RubberRod = <ore:stickRubber>;
+val LongSteelRod = <ore:stickLongSteel>;
+
+val RubberPlate = <ore:plateRubber>;
+val LeadPlate = <ore:plateLead>;
+val IronPlate = <ore:plateAnyIron>;
+val BronzePlate = <ore:plateAnyBronze>;
+val DoubleBronzePlate = <ore:plateDoubleAnyBronze>;
 val SteelPlate = <ore:plateSteel>;
+val DoubleSteelPlate = <ore:plateDoubleSteel>;
 val AlPlate = <ore:plateAluminium>;
 val SSteelPlate = <ore:plateStainlessSteel>;
 val TiPlate = <ore:plateTitanium>;
 val IridiumPlate = <ore:plateIridium>;
+val BatteryAlloyPlate = <ore:plateBatteryAlloy>;
+val DoubleBatteryAlloyPlate = <ore:plateDoubleBatteryAlloy>;
 
 val SSteelGear = <ore:gearStainlessSteel>;
 val TiGear = <ore:gearTitanium>;
 
 val BronzeBurningBox = <gregtech:gt.multitileentity:1102>;
 
-val BasicBattery = <ore:batteryBasic>;
 val FineCopperWire = <ore:wireFineCopper>;
+val FineGoldWire = <ore:wireFineGold>;
+val FinePlatinumWire = <ore:wireFinePlatinum>;
+
 val AlItemCasing = <ore:casingSmallAluminium>;
+val TinAlloyItemCasing = <ore:casingSmallTinAlloy>;
+val BronzeItemCasing = <ore:casingSmallBronze>;
 
 val LVMotor = <grindcore:item.LVMotor>;
 val LVHull = <grindcore:tile.HullLV>;
@@ -232,10 +253,19 @@ val ZPMHull = <grindcore:tile.HullZPM>;
 val TiRotor = <ore:rotorTitanium>;
 
 val IronShaft = <IC2:itemRecipePart:12>;
-
 val BasicCircuit = <ore:circuitBasic>;
-
 val TankWall = <Railcraft:machine.beta:13>;
+val CarpentersBlock = <CarpentersBlocks:blockCarpentersBlock>;
+val Respirator = <enviromine:airFilter>;
+
+val AnyWool = <minecraft:wool:*>;
+val OrangeDye = <ore:dyeOrange>;
+val GlassPane = <ore:paneGlass>;
+val Furnace = <minecraft:furnace>;
+
+val Screwdriver = <ore:craftingToolScrewdriver>;
+val WireCutter = <ore:craftingToolWireCutter>;
+val Wrench = <ore:craftingToolWrench>;
 
 
 // *======= Removing Recipes =======*
@@ -356,9 +386,9 @@ recipes.remove(WTurningBlank);
 recipes.remove(Circuit);
 recipes.remove(AdvCircuit);
 
-/*recipes.remove(Battery);
+recipes.remove(Battery);
 recipes.remove(AdvBattery);
-recipes.remove(ECrystal);
+/*recipes.remove(ECrystal);
 recipes.remove(LapCrystal);
 recipes.remove(SingleBattery);
 recipes.remove(ChargingBattery);
@@ -400,14 +430,14 @@ recipes.remove(Obscurator);
 recipes.remove(FTransmitter);
 recipes.remove(NanoSaber);
 recipes.remove(WindMeter);
-
+*/
 // --- Armor
 
-recipes.remove(HHelm);
-recipes.remove(HChest);
-recipes.remove(HLeggings);
-recipes.remove(HBoots);
-recipes.remove(NHelm);
+recipes.remove(ScubaHelm);
+recipes.remove(HazmatChest);
+recipes.remove(HazmatLeggings);
+recipes.remove(RubberBoots);
+/*recipes.remove(NHelm);
 recipes.remove(NChest);
 recipes.remove(NLeggings);
 recipes.remove(NBoots);
@@ -430,6 +460,68 @@ recipes.remove(NightvisionGoggles);*/
 // *======= Adding Back Recipes =======*
 
 
+// --- Iron Furnace
+recipes.addShaped(IronFurnace, [
+[IronPlate, IronPlate, IronPlate],
+[IronPlate, Wrench, IronPlate],
+[IronPlate, Furnace, IronPlate]]);
+
+// --- BatBox
+recipes.addShaped(BatBox, [
+[CarpentersBlock, FineCopperWire, CarpentersBlock],
+[Battery, LVHull, Battery],
+[DoubleSteelPlate, Battery, DoubleSteelPlate]]);
+
+// --- CESU
+recipes.addShaped(CESU, [
+[BronzePlate, FineGoldWire, BronzePlate],
+[AdvBattery, MVHull, AdvBattery],
+[DoubleBronzePlate, AdvBattery, DoubleBronzePlate]]);
+
+// --- LV Transformer
+recipes.addShaped(LVTransformer, [
+[CarpentersBlock, Coil, CarpentersBlock],
+[FineCopperWire, LVHull, FineGoldWire],
+[CarpentersBlock, Coil, CarpentersBlock]]);
+// - Alternate Recipe
+recipes.addShaped(LVTransformer, [
+[CarpentersBlock, Coil, CarpentersBlock],
+[FineGoldWire, LVHull, FineCopperWire],
+[CarpentersBlock, Coil, CarpentersBlock]]);
+
+// --- MV Transformer
+recipes.addShaped(MVTransformer, [
+[SteelPlate, Coil, SteelPlate],
+[FineGoldWire, MVHull, FinePlatinumWire],
+[SteelPlate, Coil, SteelPlate]]);
+// - Alternate Recipe
+recipes.addShaped(MVTransformer, [
+[SteelPlate, Coil, SteelPlate],
+[FinePlatinumWire, MVHull, FineGoldWire],
+[SteelPlate, Coil, SteelPlate]]);
+
+// --- RE-Battery
+recipes.addShaped(Battery, [
+[Screwdriver, FineCopperWire, WireCutter],
+[TinAlloyItemCasing, RedAlloyDust, TinAlloyItemCasing],
+[TinAlloyItemCasing, BatteryAlloyPlate, TinAlloyItemCasing]]);
+// - Alternate Recipe
+recipes.addShaped(Battery, [
+[WireCutter, FineCopperWire, Screwdriver],
+[TinAlloyItemCasing, RedAlloyDust, TinAlloyItemCasing],
+[TinAlloyItemCasing, BatteryAlloyPlate, TinAlloyItemCasing]]);
+
+// --- Advanced Battery
+recipes.addShaped(AdvBattery, [
+[Screwdriver, FineGoldWire, WireCutter],
+[BronzeItemCasing, RedAlloyDustBlock, BronzeItemCasing],
+[BronzeItemCasing, DoubleBatteryAlloyPlate, BronzeItemCasing]]);
+// - Alternate Recipe
+recipes.addShaped(AdvBattery, [
+[WireCutter, FineGoldWire, Screwdriver],
+[BronzeItemCasing, RedAlloyDustBlock, BronzeItemCasing],
+[BronzeItemCasing, DoubleBatteryAlloyPlate, BronzeItemCasing]]);
+
 // --- Compressor
 recipes.addShaped(Compressor, [
 [SteelPlate, BasicCircuit, SteelPlate],
@@ -439,7 +531,7 @@ recipes.addShaped(Compressor, [
 // --- Generator
 recipes.addShaped(Gen, [
 [SteelPlate, FineCopperWire, SteelPlate],
-[BasicBattery, LVHull, LVMotor],
+[Battery, LVHull, LVMotor],
 [SteelPlate, BronzeBurningBox, SteelPlate]]);
 
 // --- Kinetic Wind Generator
@@ -471,7 +563,51 @@ recipes.addShaped(ThermalGen, [
 // ||||||| Blocks |||||||
 
 
+// --- Industrial TNT
 recipes.addShaped(ITNT * 8, [
 [Flint, TNT, Flint],
 [TNT, GunpowderBlock, TNT],
 [Flint, TNT, Flint]]);
+
+
+// ||||||| Items |||||||
+
+
+// --- Coil
+recipes.addShaped(Coil, [
+[FineCopperWire, FineGoldWire, FineCopperWire],
+[FineGoldWire, LongSteelRod, FineGoldWire],
+[FineCopperWire, FineGoldWire, FineCopperWire]]);
+
+
+// ||||||| Weapons And Armors |||||||
+
+
+// --- Scuba Helmet
+recipes.addShaped(ScubaHelm, [
+[OrangeDye, RubberPlate, RubberRod],
+[RubberPlate, GlassPane, RubberPlate],
+[InvarFoil, Respirator, InvarFoil]]);
+
+// --- Hazmat Chestplate
+recipes.addShaped(HazmatChest, [
+[RubberPlate, OrangeDye, RubberPlate],
+[RubberPlate, LeadPlate, RubberPlate],
+[RubberPlate, LeadFoil, RubberPlate]]);
+
+// --- Hazmat Leggings
+recipes.addShaped(HazmatLeggings, [
+[RubberPlate, LeadPlate, RubberPlate],
+[RubberPlate, OrangeDye, RubberPlate],
+[RubberPlate, null, RubberPlate]]);
+// - Alternate Recipe
+recipes.addShaped(HazmatLeggings, [
+[RubberPlate, LeadPlate, RubberPlate],
+[RubberPlate, null, RubberPlate],
+[RubberPlate, OrangeDye, RubberPlate]]);
+
+// --- Rubber Boots
+recipes.addShaped(RubberBoots, [
+[LeadFoil, null, LeadFoil],
+[RubberPlate, null, RubberPlate],
+[RubberPlate, AnyWool, RubberPlate]]);

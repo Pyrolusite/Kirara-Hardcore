@@ -21,6 +21,7 @@ val SteelTankGauge = <Railcraft:machine.beta:14>;
 val SteelTankValve = <Railcraft:machine.beta:15>;
 val LPBoilerTank = <Railcraft:machine.beta:3>;
 val HPBoilerTank = <Railcraft:machine.beta:4>;
+val WaterTank = <Railcraft:machine.alpha:14>;
 
 val WoodTrack = <Railcraft:track:736>.withTag({track: "railcraft:track.slow"});
 val ReinforcedTrack = <Railcraft:track:24050>.withTag({track: "railcraft:track.reinforced"});
@@ -45,8 +46,24 @@ val ElectricSwitchTrack = <Railcraft:track:10488>.withTag({track: "railcraft:tra
 val ElectricWyeTrack = <Railcraft:track>.withTag({track: "railcraft:track.electric.wye"});
 val ElectricJunctionTrack = <Railcraft:track>.withTag({track: "railcraft:track.electric.junction"});
 
-val ElevatorTrack = <Railcraft:track.elevator>;
+val ControlTrack = <Railcraft:track>.withTag({track: "railcraft:track.control"});
+val LockingTrack = <Railcraft:track:20176>.withTag({track: "railcraft:track.locking"});
+val EmbarkingTrack = <Railcraft:track>.withTag({track: "railcraft:track.embarking"});
+val DisembarkingTrack = <Railcraft:track:23575>.withTag({track: "railcraft:track.disembarking"});
+val CouplerTrack = <Railcraft:track>.withTag({track: "railcraft:track.coupler"});
+val WhistlerTrack = <Railcraft:track>.withTag({track: "railcraft:track.whistle"});
+val LocomotiveTrack = <Railcraft:track:30516>.withTag({track: "railcraft:track.locomotive"});
+val LimiterTrack = <Railcraft:track:16093>.withTag({track: "railcraft:track.limiter"});
+val BufferStopTrack = <Railcraft:track:32363>.withTag({track: "railcraft:track.buffer.stop"});
+val OneWayTrack = <Railcraft:track:30946>.withTag({track: "railcraft:track.oneway"});
+val DDetectorTrack = <Railcraft:track>.withTag({track: "railcraft:track.detector.direction"});
+val GOneWayTrack = <Railcraft:track>.withTag({track: "railcraft:track.gated.oneway"});
+val GatedTrack = <Railcraft:track:19746>.withTag({track: "railcraft:track.gated"});
+val SuspendedTrack = <Railcraft:track>.withTag({track: "railcraft:track.suspended"});
+val DisposalTrack = <Railcraft:track:2264>.withTag({track: "railcraft:track.disposal"});
+val PrimingTrack = <Railcraft:track:8103>.withTag({track: "railcraft:track.priming"});
 val LauncherTrack = <Railcraft:track>.withTag({track: "railcraft:track.launcher"});
+val ElevatorTrack = <Railcraft:track.elevator>;
 
 val WoodenRail = <Railcraft:part.rail:2>;
 val StandardRail = <Railcraft:part.rail>;
@@ -60,8 +77,35 @@ val StoneRailbed = <Railcraft:part.railbed:1>;
 
 val SwitchLever = <Railcraft:signal:4>;
 val SwitchMotor = <Railcraft:signal:2>;
+val SignalLamp = <Railcraft:part.signal.lamp>;
+val RCrowbar = <Railcraft:tool.crowbar.reinforced>;
 
-val WaterTank = <Railcraft:machine.alpha:14>;
+val Detector = <Railcraft:detector:1>;
+val EmptyDetector = <Railcraft:detector:2>;
+val ItemDetector = <Railcraft:detector>;
+val MobDetector = <Railcraft:detector:3>;
+val PoweredDetector = <Railcraft:detector:4>;
+val PlayerDetector = <Railcraft:detector:5>;
+val ExplosiveDetector = <Railcraft:detector:6>;
+val AnimalDetector = <Railcraft:detector:7>;
+val TankDetector = <Railcraft:detector:8>;
+val AdvDetector = <Railcraft:detector:9>;
+val EnergyDetector = <Railcraft:detector:10>;
+val AgeDetector = <Railcraft:detector:11>;
+val TrainDetector = <Railcraft:detector:12>;
+val SheepDetector = <Railcraft:detector:13>;
+val VillagerDetector = <Railcraft:detector:14>;
+val LocomotiveDetector = <Railcraft:detector:15>;
+val RoutingDetector = <Railcraft:detector:16>;
+
+val ItemLoader = <Railcraft:machine.gamma>;
+val ItemUnloader = <Railcraft:machine.gamma:1>;
+val AdvItemLoader = <Railcraft:machine.gamma:2>;
+val AdvItemUnloader = <Railcraft:machine.gamma:3>;
+val FluidLoader = <Railcraft:machine.gamma:4>;
+val FluidUnloader = <Railcraft:machine.gamma:5>;
+val EnergyLoader = <Railcraft:machine.gamma:6>;
+val EnergyUnloader = <Railcraft:machine.gamma:7>;
 
 val TrackmanBackpack = <Railcraft:backpack.trackman.t1>;
 val IcemanBackpack = <Railcraft:backpack.iceman.t1>;
@@ -70,13 +114,13 @@ val ApothecaryBackpack = <Railcraft:backpack.apothecary.t1>;
 val CoalCokeBlock = <Railcraft:cube>;
 val CoalCoke = <Railcraft:fuel.coke>;
 
-val IronStairs = <Railcraft:stair:5>;
-val SteelStairs = <Railcraft:stair:42>;
-val CopperStairs = <Railcraft:stair:39>;
-val TinStairs = <Railcraft:stair:40>;
-val LeadStairs = <Railcraft:stair:41>;
-val GoldStairs = <Railcraft:stair:6>;
-val DiamondStairs = <Railcraft:stair:7>;
+val IronStairs = <Railcraft:stair:6>;
+val SteelStairs = <Railcraft:stair:43>;
+val CopperStairs = <Railcraft:stair:40>;
+val TinStairs = <Railcraft:stair:41>;
+val LeadStairs = <Railcraft:stair:42>;
+val GoldStairs = <Railcraft:stair:7>;
+val DiamondStairs = <Railcraft:stair:8>;
 
 val AbyssalLantern = <Railcraft:lantern.stone>;
 val BleachedLantern = <Railcraft:lantern.stone:1>;
@@ -106,6 +150,7 @@ val QuarriedBSlab = <Railcraft:slab:25>;
 val SandyBSlab = <Railcraft:slab:22>;
 val SandstoneSlab = <minecraft:stone_slab:1>;
 val StoneSlab = <minecraft:stone_slab>;
+val InfernalBricks = <Railcraft:brick.infernal>;
 
 val AbyssalBPost = <ForgeMicroblock:microblock:770>.withTag({mat:"tile.railcraft.brick.abyssal_2"});
 val BleachedBPost = <ForgeMicroblock:microblock:770>.withTag({mat:"tile.railcraft.brick.bleachedbone_2"});
@@ -139,9 +184,13 @@ val BronzePlate = <ore:plateBronze>;
 val SteelPlate = <ore:plateSteel>;
 val ObsidianPlate = <ore:plateObsidian>;
 val DObsidianPlate = <ore:plateDenseObsidian>;
+val AlPlate = <ore:plateAluminium>;
 val SSteelPlate = <ore:plateStainlessSteel>;
 val TiPlate = <ore:plateTitanium>;
 val IridiumPlate = <ore:plateIridium>;
+val EnderPearlPlate = <ore:plateGemEnderPearl>;
+val DoubleIronPlate = <ore:plateDoubleAnyIron>;
+val DoubleSteelPlate = <ore:plateDoubleSteel>;
 
 val BronzeRod = <ore:stickAnyBronze>;
 val AlRod = <ore:stickAluminium>;
@@ -175,6 +224,7 @@ val SmallBronzeGear = <ore:gearGtSmallAnyBronze>;
 val BronzeGear = <ore:gearAnyBronze>;
 val SmallSteelGear = <ore:gearGtSmallSteel>;
 val SteelGear = <ore:gearSteel>;
+val AlGear = <ore:gearAluminium>;
 val SmallAlGear = <ore:gearGtSmallAluminium>;
 val SmallSSteelGear = <ore:gearGtSmallStainlessSteel>;
 val SSteelGear = <ore:gearStainlessSteel>;
@@ -191,17 +241,40 @@ val LVMotor = <grindcore:item.LVMotor>;
 val MVMotor = <grindcore:item.MVMotor>;
 val HVMotor = <grindcore:item.HVMotor>;
 
+val LVPiston = <grindcore:item.LVPiston>;
+val MVPiston = <grindcore:item.MVPiston>;
+
+val LVPump = <grindcore:item.LVPump>;
+val LVHull = <grindcore:tile.HullLV>;
+val LVConveyor = <grindcore:item.LVConveyor>;
+
+val Transistor = <OpenComputers:item:23>;
+val NANDChip = <ore:circuitPrimitive>;
+val BasicCircuit = <ore:circuitBasic>;
+val GoodCircuit = <ore:circuitGood>;
+val AdvCircuit = <ore:circuitAdvanced>;
+
+val MossyStone = <ore:stoneMossy>;
+val TripWire = <minecraft:tripwire_hook>;
+val StoneBricks = <minecraft:stonebrick>;
+val Cobblestone = <ore:cobblestone>;
+val Log = <ore:logWood>;
+val WoodSlab = <ore:slabWood>;
 val GlassPane = <ore:paneGlass>;
 val Plank = <ore:plankWood>;
 val Track = <minecraft:rail>;
 val Leather =  <minecraft:leather>;
 val Brick = <minecraft:brick>;
 val Torch = <minecraft:torch>;
-val Stone = <minecraft:stone>;
+val Stone = <ore:stone>;
 val Lever = <minecraft:lever>;
 val String = <minecraft:string>;
+val PressurePlate = <minecraft:heavy_weighted_pressure_plate>;
+val FenceGate = <minecraft:fence_gate>;
 val Cauldron = <minecraft:cauldron>;
 val BrickBlock = <minecraft:brick_block>;
+val NoteBlock = <minecraft:noteblock>;
+val RSRepeater = <minecraft:repeater>;
 val Dispenser = <minecraft:dispenser>;
 val Shears = <minecraft:shears>;
 val Chest = <minecraft:chest>;
@@ -214,10 +287,18 @@ val IronBars = <minecraft:iron_bars>;
 val Potion = <minecraft:potion:*>;
 val BlazeRod = <minecraft:blaze_rod>;
 val Stick = <ore:stickWood>;
+val Clock = <minecraft:clock>;
+val NBricksBlock = <minecraft:nether_brick>;
+val QuartzBlock = <minecraft:quartz_block:*>;
+val AnyWool = <minecraft:wool:*>;
 
+val FactoryBlock = <chisel:factoryblock:6>;
 val TannedLeather = <Backpack:tannedLeather>;
 val SnowSlab = <Railcraft:slab:3>;
 val CarpentersBlocks = <CarpentersBlocks:blockCarpentersBlock>;
+val RedAlloyWire = <RedLogic:redlogic.wire>;
+val AdvBattery = <ore:batteryAdvanced>;
+val BCTank = <ore:craftingTank>;
 
 val Screwdriver = <ore:craftingToolScrewdriver>;
 val HardHammer = <ore:craftingToolHardHammer>;
@@ -396,7 +477,7 @@ recipes.remove(<Railcraft:machine.beta:6>);
 recipes.remove(<Railcraft:machine.beta:3>);
 
 // --- High Pressure Boiler Tank
-//recipes.remove(HPBoilerTank);
+recipes.remove(HPBoilerTank);
 
 // --- Hobbyist´s Steam Engine
 recipes.remove(<Railcraft:machine.beta:7>);
@@ -647,34 +728,34 @@ recipes.removeShaped(<Railcraft:cart.energy.mfe>);
 // --- Tank Cart
 recipes.removeShaped(<Railcraft:cart.tank>);
 
-// --- Personal Anchor Cart ---
+// --- Personal Anchor Cart
 recipes.removeShaped(<Railcraft:cart.anchor.personal>);
 
-// --- World Anchor Cart ---
+// --- World Anchor Cart
 recipes.removeShaped(<Railcraft:cart.anchor>);
 
-// --- Work Cart ---
+// --- Work Cart
 recipes.removeShaped(<Railcraft:cart.work>);
 
-// --- Electric Meter ---
+// --- Electric Meter
 recipes.removeShaped(<Railcraft:tool.electric.meter>);
 
-// --- Trackmans Goggle ---
+// --- Trackman's Goggle
 recipes.removeShaped(<Railcraft:armor.goggles>);
 
-// --- Magnifying Glass ---
+// --- Magnifying Glass
 recipes.removeShaped(<Railcraft:tool.magnifying.glass>);
 
-// --- Signal Tuner ---
+// --- Signal Tuner
 recipes.removeShaped(<Railcraft:tool.signal.tuner>);
 
-// --- Signal Block Surveyor ---
+// --- Signal Block Surveyor
 recipes.removeShaped(<Railcraft:tool.surveyor>);
 
-// --- Coke Oven ---
+// --- Coke Oven
 //recipes.remove(<Railcraft:machine.alpha:7>);
 
-// --- Sandy Block ---
+// --- Sandy Block
 recipes.remove(<Railcraft:brick.sandy:2>);
 
 
@@ -735,6 +816,135 @@ recipes.remove(ElectricWyeTrack);
 // --- Electric Junction Track
 recipes.remove(ElectricJunctionTrack);
 
+// --- Control Track
+recipes.remove(ControlTrack);
+
+// --- Disembarking Track
+recipes.remove(DisembarkingTrack);
+
+// --- Embarking Track
+recipes.remove(EmbarkingTrack);
+
+// --- Coupler Track
+recipes.remove(CouplerTrack);
+
+// --- Whistler Track
+recipes.remove(WhistlerTrack);
+
+// --- Locomotive Track
+recipes.remove(LocomotiveTrack);
+
+// --- Limiter Track
+recipes.remove(LimiterTrack);
+
+// --- Buffer Stop Track
+recipes.remove(BufferStopTrack);
+
+// --- One-Way Track
+recipes.remove(OneWayTrack);
+
+// --- Directional Detector Track
+recipes.remove(DDetectorTrack);
+
+// --- Gated One-Way Track
+recipes.remove(GOneWayTrack);
+
+// --- Gated Track
+recipes.remove(GatedTrack);
+
+// --- Suspended Track
+recipes.remove(SuspendedTrack);
+
+// --- Disposal Track
+recipes.remove(DisposalTrack);
+
+// --- Priming Track
+recipes.remove(PrimingTrack);
+
+// --- Launcher Track
+recipes.remove(LauncherTrack);
+
+// --- Elevator Track
+recipes.remove(ElevatorTrack);
+
+
+// ||||||| Detectors |||||||
+
+
+// --- Any Detector
+recipes.remove(Detector);
+
+// --- Empty Detector
+recipes.remove(EmptyDetector);
+
+// --- Item Detector
+recipes.remove(ItemDetector);
+
+// --- Mob Detector
+recipes.remove(MobDetector);
+
+// --- Powered Detector
+recipes.remove(PoweredDetector);
+
+// --- Player Detector
+recipes.remove(PlayerDetector);
+
+// --- Explosive Detector
+recipes.remove(ExplosiveDetector);
+
+// --- Animal Detector
+recipes.remove(AnimalDetector);
+
+// --- Tank Detector
+recipes.remove(TankDetector);
+
+// --- Advanced Detector
+recipes.remove(AdvDetector);
+
+// --- Energy Detector
+recipes.remove(EnergyDetector);
+
+// --- Age Detector
+recipes.remove(AgeDetector);
+
+// --- Train Detector
+recipes.remove(TrainDetector);
+
+// --- Sheep Detector
+recipes.remove(SheepDetector);
+
+// --- Villager Detector
+recipes.remove(VillagerDetector);
+
+// --- Locomotive Detector
+recipes.remove(LocomotiveDetector);
+
+// --- Routing Detector
+recipes.remove(RoutingDetector);
+
+// --- Item Loader
+recipes.remove(ItemLoader);
+
+// --- Item Unloader
+recipes.remove(ItemUnloader);
+
+// --- Advanced Item Loader
+recipes.remove(AdvItemLoader);
+
+// --- Advanced Item Unloader
+recipes.remove(AdvItemUnloader);
+
+// --- Fluid Loader
+recipes.remove(FluidLoader);
+
+// --- Fluid Unloader
+recipes.remove(FluidUnloader);
+
+// --- Energy Loader
+recipes.remove(EnergyLoader);
+
+// --- Energy Unloader
+recipes.remove(EnergyUnloader);
 
 
 // *======= Adding Back Recipes =======*
@@ -1342,8 +1552,405 @@ recipes.addShaped(ElectricJunctionTrack * 2, [
 [AlBolt, ElectricTrack, AlBolt]]);
 
 
-// ||||||| Items |||||||
+// --- Control Track
+recipes.addShaped(ControlTrack * 2, [
+[Screwdriver, Track, SteelScrew],
+[AdvancedRail, RedAlloyPlate, AdvancedRail],
+[SteelBolt, Track, HardHammer]]);
+// - Alternate Recipe
+recipes.addShaped(ControlTrack * 2, [
+[HardHammer, Track, SteelScrew],
+[AdvancedRail, RedAlloyPlate, AdvancedRail],
+[SteelBolt, Track, Screwdriver]]);
 
+// --- Locking Track
+recipes.addShaped(LockingTrack * 2, [
+[AdvancedRail, Track, AdvancedRail],
+[Screwdriver, RedAlloyPlate, SteelScrew],
+[AdvancedRail, Track, AdvancedRail]]);
+// - Alternate Recipe
+recipes.addShaped(LockingTrack * 2, [
+[AdvancedRail, Track, AdvancedRail],
+[SteelScrew, RedAlloyPlate, Screwdriver],
+[AdvancedRail, Track, AdvancedRail]]);
+
+// --- Disembarking Track
+recipes.addShaped(DisembarkingTrack * 2, [
+[AdvancedRail, Track, AdvancedRail],
+[RedAlloyPlate, HardHammer, RedAlloyPlate],
+[AdvancedRail, Track, AdvancedRail]]);
+// - Alternate Recipe
+recipes.addShaped(DisembarkingTrack * 2, [
+[AdvancedRail, Track, AdvancedRail],
+[RedAlloyPlate, HardHammer, RedAlloyPlate],
+[AdvancedRail, Track, AdvancedRail]]);
+
+// --- Embarking Track
+recipes.addShaped(EmbarkingTrack * 2, [
+[AdvancedRail, Track, AdvancedRail],
+[Screwdriver, EnderPearlPlate, SSteelScrew],
+[AdvancedRail, Track, AdvancedRail]]);
+// - Alternate Recipe
+recipes.addShaped(EmbarkingTrack * 2, [
+[AdvancedRail, Track, AdvancedRail],
+[SSteelScrew, EnderPearlPlate, Screwdriver],
+[AdvancedRail, Track, AdvancedRail]]);
+
+// --- Coupler Track
+recipes.addShaped(CouplerTrack, [
+[AdvancedRail, Track, AdvancedRail],
+[Screwdriver, RCrowbar, BronzeScrew],
+[AdvancedRail, Track, AdvancedRail]]);
+// - Alternate Recipe
+recipes.addShaped(CouplerTrack, [
+[AdvancedRail, Track, AdvancedRail],
+[BronzeScrew, RCrowbar, Screwdriver],
+[AdvancedRail, Track, AdvancedRail]]);
+
+// --- Whistler Track
+recipes.addShaped(WhistlerTrack * 2, [
+[FactoryBlock, Track, FactoryBlock],
+[RedAlloyPlate, HardHammer, RedAlloyPlate],
+[FactoryBlock, Track, FactoryBlock]]);
+
+// --- Locomotive Track
+recipes.addShaped(LocomotiveTrack * 2, [
+[StandardRail, Track, StandardRail],
+[SignalLamp, Screwdriver, SignalLamp],
+[StandardRail, Track, StandardRail]]);
+
+// --- Limiter Track
+recipes.addShaped(LimiterTrack * 2, [
+[StandardRail, Track, StandardRail],
+[RSRepeater, RedAlloyPlate, RSRepeater],
+[StandardRail, Track, StandardRail]]);
+
+// --- Buffer Stop Track
+recipes.addShaped(BufferStopTrack * 2, [
+[StandardRail, Track, StandardRail],
+[BronzeBolt, IronBlock, BronzeScrew],
+[StandardRail, Track, StandardRail]]);
+
+// --- One-Way Track
+recipes.addShaped(OneWayTrack * 2, [
+[StandardRail, Track, StandardRail],
+[SmallSteelGear, Wrench, SmallSteelGear],
+[StandardRail, Track, StandardRail]]);
+
+// --- Directional Detector Track
+recipes.addShaped(DDetectorTrack * 2, [
+[StandardRail, Track, StandardRail],
+[RedAlloyWire, PressurePlate, RedAlloyWire],
+[StandardRail, Track, StandardRail]]);
+
+// --- Gated One-Way Track
+recipes.addShaped(GOneWayTrack * 2, [
+[StandardRail, Track, StandardRail],
+[SmallSteelGear, FenceGate, SmallSteelGear],
+[StandardRail, Track, StandardRail]]);
+
+// --- Gated Track
+recipes.addShaped(GatedTrack * 2, [
+[Screwdriver, Track, SteelScrew],
+[StandardRail, Track, StandardRail],
+[SteelBolt, Track, HardHammer]]);
+// - Alternate Recipe
+recipes.addShaped(GatedTrack * 2, [
+[HardHammer, Track, SteelScrew],
+[StandardRail, Track, StandardRail],
+[SteelBolt, Track, Screwdriver]]);
+
+// --- Suspended Track
+recipes.addShaped(SuspendedTrack * 2, [
+[StandardRail, Wrench, StandardRail],
+[StandardRail, Track, StandardRail],
+[StandardRail, Saw, StandardRail]]);
+// - Alternate Recipe
+recipes.addShaped(SuspendedTrack * 2, [
+[StandardRail, Saw, StandardRail],
+[StandardRail, Track, StandardRail],
+[StandardRail, Wrench, StandardRail]]);
+
+// --- Disposal Track
+recipes.addShaped(DisposalTrack * 2, [
+[StandardRail, Track, StandardRail],
+[LVPiston, Wrench, LVPiston],
+[StandardRail, Track, StandardRail]]);
+
+// --- Priming Track
+recipes.addShaped(PrimingTrack * 2, [
+[Screwdriver, ReinforcedTrack, TiScrew],
+[AdvancedRail, PressurePlate, AdvancedRail],
+[TiBolt, ReinforcedTrack, HardHammer]]);
+// - Alternate Recipe
+recipes.addShaped(PrimingTrack * 2, [
+[HardHammer, ReinforcedTrack, TiScrew],
+[AdvancedRail, PressurePlate, AdvancedRail],
+[TiBolt, ReinforcedTrack, Screwdriver]]);
+
+// --- Launcher Track
+recipes.addShaped(LauncherTrack * 2, [
+[Screwdriver, ReinforcedTrack, TiScrew],
+[SteelBlock, MVPiston, SteelBlock],
+[TiBolt, ReinforcedTrack, HardHammer]]);
+// - Alternate Recipe
+recipes.addShaped(LauncherTrack * 2, [
+[HardHammer, ReinforcedTrack, TiScrew],
+[SteelBlock, MVPiston, SteelBlock],
+[TiBolt, ReinforcedTrack, Screwdriver]]);
+
+// --- Elevator Track
+recipes.addShaped(ElevatorTrack * 2, [
+[AdvancedRail, Track, AdvancedRail],
+[AlGear, Wrench, AlGear],
+[AdvancedRail, Track, AdvancedRail]]);
+
+
+// ||||||| Detectors |||||||
+
+
+// --- Any Detector
+recipes.addShaped(Detector, [
+[Stone, TripWire, Stone],
+[RedAlloyWire, LVHull, RedAlloyWire],
+[Stone, PressurePlate, Stone]]);
+
+// --- Empty Detector
+recipes.addShaped(EmptyDetector, [
+[StoneBricks, Wrench, StoneBricks],
+[BronzePlate, Detector, BronzePlate],
+[StoneBricks, Transistor, StoneBricks]]);
+// - Alternate Recipe
+recipes.addShaped(EmptyDetector, [
+[StoneBricks, Transistor, StoneBricks],
+[BronzePlate, Detector, BronzePlate],
+[StoneBricks, Wrench, StoneBricks]]);
+
+// --- Item Detector
+recipes.addShaped(ItemDetector, [
+[Plank, Wrench, Plank],
+[BronzePlate, Detector, BronzePlate],
+[Plank, Transistor, Plank]]);
+// - Alternate Recipe
+recipes.addShaped(ItemDetector, [
+[Plank, Transistor, Plank],
+[BronzePlate, Detector, BronzePlate],
+[Plank, Wrench, Plank]]);
+
+// --- Mob Detector
+recipes.addShaped(MobDetector, [
+[MossyStone, Wrench, MossyStone],
+[AlPlate, Detector, AlPlate],
+[MossyStone, BasicCircuit, MossyStone]]);
+// - Alternate Recipe
+recipes.addShaped(MobDetector, [
+[MossyStone, BasicCircuit, MossyStone],
+[AlPlate, Detector, AlPlate],
+[MossyStone, Wrench, MossyStone]]);
+
+// --- Powered Detector
+recipes.addShaped(PoweredDetector, [
+[Cobblestone, Wrench, Cobblestone],
+[SteelPlate, Detector, SteelPlate],
+[Cobblestone, NANDChip, Cobblestone]]);
+// - Alternate Recipe
+recipes.addShaped(PoweredDetector, [
+[Cobblestone, NANDChip, Cobblestone],
+[SteelPlate, Detector, SteelPlate],
+[Cobblestone, Wrench, Cobblestone]]);
+
+// --- Player Detector
+recipes.addShaped(PlayerDetector, [
+[StoneSlab, Wrench, StoneSlab],
+[AlPlate, Detector, AlPlate],
+[StoneSlab, BasicCircuit, StoneSlab]]);
+// - Alternate Recipe
+recipes.addShaped(PlayerDetector, [
+[StoneSlab, BasicCircuit, StoneSlab],
+[AlPlate, Detector, AlPlate],
+[StoneSlab, Wrench, StoneSlab]]);
+
+// --- Explosive Detector
+recipes.addShaped(ExplosiveDetector, [
+[WoodSlab, Wrench, WoodSlab],
+[SSteelPlate, Detector, SSteelPlate],
+[WoodSlab, GoodCircuit, WoodSlab]]);
+// - Alternate Recipe
+recipes.addShaped(ExplosiveDetector, [
+[WoodSlab, GoodCircuit, WoodSlab],
+[SSteelPlate, Detector, SSteelPlate],
+[WoodSlab, Wrench, WoodSlab]]);
+
+// --- Animal Detector
+recipes.addShaped(AnimalDetector, [
+[Log, Wrench, Log],
+[AlPlate, Detector, AlPlate],
+[Log, BasicCircuit, Log]]);
+// - Alternate Recipe
+recipes.addShaped(AnimalDetector, [
+[Log, BasicCircuit, Log],
+[AlPlate, Detector, AlPlate],
+[Log, Wrench, Log]]);
+
+// --- Tank Detector
+recipes.addShaped(TankDetector, [
+[BrickBlock, Wrench, BrickBlock],
+[SteelPlate, Detector, SteelPlate],
+[BrickBlock, NANDChip, BrickBlock]]);
+// - Alternate Recipe
+recipes.addShaped(TankDetector, [
+[BrickBlock, NANDChip, BrickBlock],
+[SteelPlate, Detector, SteelPlate],
+[BrickBlock, Wrench, BrickBlock]]);
+
+// --- Advanced Detector
+recipes.addShaped(AdvDetector, [
+[DoubleSteelPlate, Wrench, DoubleSteelPlate],
+[TiPlate, Detector, TiPlate],
+[DoubleSteelPlate, AdvCircuit, DoubleSteelPlate]]);
+// - Alternate Recipe
+recipes.addShaped(AdvDetector, [
+[DoubleSteelPlate, AdvCircuit, DoubleSteelPlate],
+[TiPlate, Detector, TiPlate],
+[DoubleSteelPlate, Wrench, DoubleSteelPlate]]);
+
+// --- Energy Detector
+recipes.addShaped(EnergyDetector, [
+[DoubleIronPlate, Wrench, DoubleIronPlate],
+[SSteelPlate, Detector, SSteelPlate],
+[DoubleIronPlate, GoodCircuit, DoubleIronPlate]]);
+// - Alternate Recipe
+recipes.addShaped(EnergyDetector, [
+[DoubleIronPlate, GoodCircuit, DoubleIronPlate],
+[SSteelPlate, Detector, SSteelPlate],
+[DoubleIronPlate, Wrench, DoubleIronPlate]]);
+
+// --- Age Detector
+recipes.addShaped(AgeDetector, [
+[Log, GoodCircuit, Log],
+[SSteelPlate, Detector, SSteelPlate],
+[Log, Clock, Log]]);
+// - Alternate Recipe
+recipes.addShaped(AgeDetector, [
+[Log, Clock, Log],
+[SSteelPlate, Detector, SSteelPlate],
+[Log, GoodCircuit, Log]]);
+
+// --- Train Detector
+recipes.addShaped(TrainDetector, [
+[NBricksBlock, Wrench, NBricksBlock],
+[AlPlate, Detector, AlPlate],
+[NBricksBlock, BasicCircuit, NBricksBlock]]);
+// - Alternate Recipe
+recipes.addShaped(TrainDetector, [
+[NBricksBlock, BasicCircuit, NBricksBlock],
+[AlPlate, Detector, AlPlate],
+[NBricksBlock, Wrench, NBricksBlock]]);
+
+// --- Sheep Detector
+recipes.addShaped(SheepDetector, [
+[AnyWool, Wrench, AnyWool],
+[SteelPlate, Detector, SteelPlate],
+[AnyWool, NANDChip, AnyWool]]);
+// - Alternate Recipe
+recipes.addShaped(SheepDetector, [
+[AnyWool, NANDChip, AnyWool],
+[SteelPlate, Detector, SteelPlate],
+[AnyWool, Wrench, AnyWool]]);
+
+// --- Villager Detector
+recipes.addShaped(VillagerDetector, [
+[TannedLeather, Wrench, TannedLeather],
+[AlPlate, Detector, AlPlate],
+[TannedLeather, BasicCircuit, TannedLeather]]);
+// - Alternate Recipe
+recipes.addShaped(VillagerDetector, [
+[TannedLeather, BasicCircuit, TannedLeather],
+[AlPlate, Detector, AlPlate],
+[TannedLeather, Wrench, TannedLeather]]);
+
+// --- Locomotive Detector
+recipes.addShaped(LocomotiveDetector, [
+[InfernalBricks, Wrench, InfernalBricks],
+[AlPlate, Detector, AlPlate],
+[InfernalBricks, BasicCircuit, InfernalBricks]]);
+// - Alternate Recipe
+recipes.addShaped(LocomotiveDetector, [
+[InfernalBricks, BasicCircuit, InfernalBricks],
+[AlPlate, Detector, AlPlate],
+[InfernalBricks, Wrench, InfernalBricks]]);
+
+// --- Routing Detector
+recipes.addShaped(RoutingDetector, [
+[QuartzBlock, Wrench, QuartzBlock],
+[SSteelPlate, Detector, SSteelPlate],
+[QuartzBlock, GoodCircuit, QuartzBlock]]);
+// - Alternate Recipe
+recipes.addShaped(RoutingDetector, [
+[QuartzBlock, GoodCircuit, QuartzBlock],
+[SSteelPlate, Detector, SSteelPlate],
+[QuartzBlock, Wrench, QuartzBlock]]);
+
+// --- Item Loader
+recipes.addShaped(ItemLoader, [
+[Cobblestone, Hopper, Cobblestone],
+[IronBars, ItemDetector, IronBars],
+[Cobblestone, LVConveyor, Cobblestone]]);
+
+// --- Item Unloader
+recipes.addShaped(ItemUnloader, [
+[Cobblestone, LVConveyor, Cobblestone],
+[IronBars, ItemDetector, IronBars],
+[Cobblestone, Hopper, Cobblestone]]);
+
+// --- Advanced Item Loader
+recipes.addShaped(AdvItemLoader, [
+[AlPlate, BasicCircuit, AlPlate],
+[RedAlloyWire, ItemLoader, RedAlloyWire],
+[AlPlate, GoodCircuit, AlPlate]]);
+// - Alternate Recipe
+recipes.addShaped(AdvItemLoader, [
+[AlPlate, GoodCircuit, AlPlate],
+[RedAlloyWire, ItemLoader, RedAlloyWire],
+[AlPlate, BasicCircuit, AlPlate]]);
+
+// --- Advanced Item Unloader
+recipes.addShaped(AdvItemUnloader, [
+[AlPlate, BasicCircuit, AlPlate],
+[RedAlloyWire, ItemUnloader, RedAlloyWire],
+[AlPlate, GoodCircuit, AlPlate]]);
+// - Alternate Recipe
+recipes.addShaped(AdvItemUnloader, [
+[AlPlate, GoodCircuit, AlPlate],
+[RedAlloyWire, ItemUnloader, RedAlloyWire],
+[AlPlate, BasicCircuit, AlPlate]]);
+
+// --- Fluid Loader
+recipes.addShaped(FluidLoader, [
+[Cobblestone, BCTank, Cobblestone],
+[IronBars, ItemDetector, IronBars],
+[Cobblestone, LVPump, Cobblestone]]);
+
+// --- Fluid Unloader
+recipes.addShaped(FluidUnloader, [
+[Cobblestone, LVPump, Cobblestone],
+[IronBars, ItemDetector, IronBars],
+[Cobblestone, BCTank, Cobblestone]]);
+
+// --- Energy Loader
+recipes.addShaped(EnergyLoader, [
+[Cobblestone, Hopper, Cobblestone],
+[AdvBattery, EnergyDetector, AdvBattery],
+[Cobblestone, FineGoldWire, Cobblestone]]);
+
+// --- Energy Unloader
+recipes.addShaped(EnergyUnloader, [
+[Cobblestone, FineGoldWire, Cobblestone],
+[AdvBattery, EnergyDetector, AdvBattery],
+[Cobblestone, Hopper, Cobblestone]]);
+
+
+// ||||||| Rails |||||||
 
 
 // --- Wooden Rail

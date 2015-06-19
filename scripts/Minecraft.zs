@@ -281,6 +281,8 @@ val StoneCover = <ForgeMicroblock:microblock:1>.withTag({mat:"tile.stone"});
 
 // ||||||| Other Items |||||||
 
+val SmallSugarPile = <ore:dustSmallSugar>;
+val TinySugarPile = <ore:dustTinySugar>;
 val IronPlate = <ore:plateAnyIron>;
 val IronRod = <ore:stickAnyIron>;
 val DiamondRod = <ore:stickDiamond>;
@@ -342,6 +344,7 @@ val Wrench = <ore:craftingToolWrench>;
 val WireCutter = <ore:craftingToolWireCutter>;
 
 val FieryBlood = <TwilightForest:item.fieryBlood>;
+val Carminite = <TwilightForest:item.carminite>;
 
 
 
@@ -457,10 +460,10 @@ recipes.remove(ChiseledSandstone);
 recipes.remove(SmoothSandstone);
 
 // --- Quartz Block
-recipes.remove(QuartzBlock);
+//recipes.remove(QuartzBlock);
 
 // --- Chiseled Quartz
-recipes.remove(ChiseledQuartz);
+//recipes.remove(ChiseledQuartz);
 
 // --- Minecart With Chest
 recipes.removeShaped(ChestCart);
@@ -563,8 +566,6 @@ recipes.remove(GoldNugget);
 recipes.removeShaped(Sugar, [
 [SugarCane, null],
 [null, null]]);
-// -
-recipes.removeShapeless(Sugar, [SugarCane]);
 
 // --- Painting
 recipes.remove(Painting);
@@ -762,21 +763,6 @@ recipes.addShaped(Fence * 4, [
 [SteelScrew, Screwdriver, SteelScrew],
 [Stick, Plank, Stick],
 [Stick, Plank, Stick]]);
-// -
-recipes.addShaped(Fence * 2, [
-[null, null, null],
-[Stick, CarpentersBlock, Stick],
-[Stick, CarpentersBlock, Stick]]);
-// -
-recipes.addShaped(Fence * 4, [
-[IronScrew, Screwdriver, IronScrew],
-[Stick, CarpentersBlock, Stick],
-[Stick, CarpentersBlock, Stick]]);
-// -
-recipes.addShaped(Fence * 6, [
-[SteelScrew, Screwdriver, SteelScrew],
-[Stick, CarpentersBlock, Stick],
-[Stick, CarpentersBlock, Stick]]);
 
 // --- Fence Gate
 recipes.addShaped(FenceGate, [
@@ -798,21 +784,6 @@ recipes.addShaped(FenceGate * 4, [
 [SteelScrew, Screwdriver, SteelScrew],
 [Plank, Stick, Plank],
 [Plank, Stick, Plank]]);
-// -
-recipes.addShaped(FenceGate * 2, [
-[null, null, null],
-[CarpentersBlock, Stick, CarpentersBlock],
-[CarpentersBlock, Stick, CarpentersBlock]]);
-// -
-recipes.addShaped(FenceGate * 4, [
-[IronScrew, Screwdriver, IronScrew],
-[CarpentersBlock, Stick, CarpentersBlock],
-[CarpentersBlock, Stick, CarpentersBlock]]);
-// -
-recipes.addShaped(FenceGate * 6, [
-[SteelScrew, Screwdriver, SteelScrew],
-[CarpentersBlock, Stick, CarpentersBlock],
-[CarpentersBlock, Stick, CarpentersBlock]]);
 
 // --- Iron Bars
 recipes.addShaped(IronBars * 6, [
@@ -1339,6 +1310,16 @@ recipes.addShaped(TrappedChest, [
 [null, Tripwire, null],
 [IronScrew, Chest, IronScrew],
 [null, Screwdriver, null]]);
+
+// --- Sugar
+recipes.addShapedMirrored(Sugar, [
+[SmallSugarPile, SmallSugarPile],
+[SmallSugarPile, SmallSugarPile]]);
+// - Alternate Recipe
+recipes.addShaped(Sugar, [
+[TinySugarPile, TinySugarPile, TinySugarPile],
+[TinySugarPile, TinySugarPile, TinySugarPile],
+[TinySugarPile, TinySugarPile, TinySugarPile]]);
 
 
 // #======= Other Stuff =======#
