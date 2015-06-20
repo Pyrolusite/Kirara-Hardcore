@@ -1,5 +1,5 @@
 // ******* Created by Arch-Nihil for *******
-// ******* the Grind-Complex modpack *******
+// ******* the Kirara server series  *******
 
 
 
@@ -7,13 +7,14 @@
 
 // *======= Variables =======*
 
-// ---Generators
+// --- Generators
 
 val KUWindGen = <IC2:blockKineticGenerator>;
 val KUSteamGen = <IC2:blockKineticGenerator:1>;
 val EUKUGen = <IC2:blockKineticGenerator:2>;
 val ManualKUGen = <IC2:blockKineticGenerator:3>;
 val KUWaterGen = <IC2:blockKineticGenerator:4>;
+val KUGen = <IC2:blockKineticGenerator:9>;
 
 val SolidHUGen = <IC2:blockHeatGenerator>;
 val FluidHUGen = <IC2:blockHeatGenerator:1>;
@@ -35,7 +36,7 @@ val ReactorChamber = <IC2:blockReactorChamber>;
 val HUReactorFluidPort = <IC2:blockReactorFluidPort>;
 val HUReactorHatch = <IC2:blockReactorAccessHatch>;
 val HUReactorRSPort = <IC2:blockReactorRedstonePort>;
-val HUReactorVessal = <IC2:blockreactorvessel>;
+val HUReactorVessel = <IC2:blockreactorvessel>;
 
 // --- EUNetwork
 
@@ -61,7 +62,7 @@ val Extractor = <IC2:blockMachine:4>;
 val Compressor = <IC2:blockMachine:5>;
 val FSCanning = <IC2:blockMachine:6>;
 val Recycler = <IC2:blockMachine:11>;
-val InductionFurnice = <IC2:blockMachine:13>;
+val InductionFurnace = <IC2:blockMachine:13>;
 val MassFab = <IC2:blockMachine:14>;
 val ThermalCentrifuge = <IC2:blockMachine2:3>;
 val MetalFormer = <IC2:blockMachine2:4>;
@@ -114,7 +115,7 @@ val Coil = <IC2:itemRecipePart>;
 val ElectricMotor = <IC2:itemRecipePart:1>;
 val PowerUnit = <IC2:itemRecipePart:2>;
 val SPowerUnit = <IC2:itemRecipePart:3>;
-val HUConductor = <IC2:itemRecipePart:5>;
+val HeatConductor = <IC2:itemRecipePart:5>;
 val CopperBoiler = <IC2:itemRecipePart:6>;
 val WRotorBlade = <IC2:itemRecipePart:7>;
 val IRotorBlade = <IC2:itemRecipePart:8>;
@@ -125,12 +126,16 @@ val ShaftS = <IC2:itemRecipePart:12>;
 val ITurningBlank = <IC2:itemTurningBlanks:349525>.withTag({state: {l4: 5, l2: 5, l3: 5, l0: 5, l1: 5}});
 val WTurningBlank = <IC2:itemTurningBlanksWood:209715>.withTag({state: {l4: 3, l2: 3, l3: 3, l0: 3, l1: 3}});
 val Circuit = <IC2:itemPartCircuit>;
-val AdvCircuit = <IC2:itemPartCircuitAdv>;
+val AdvancedCircuit = <IC2:itemPartCircuitAdv>;
+val CarbonPlate = <ore:plateAlloyCarbon>;
+val EnergiumDust = <IC2:itemDust2:2>;
+val CarbonMesh = <IC2:itemPartCarbonMesh>;
+val CarbonFibre = <IC2:itemPartCarbonFibre>;
 
 val Battery = <IC2:itemBatREDischarged>;
 val AdvBattery = <IC2:itemAdvBat:26>;
-/*val ECrystal = 
-val LapCrystal = 
+val ECrystal = <IC2:itemBatCrystal:26>;
+/*val LapCrystal = 
 val SingleBattery = 
 val ChargingBattery = 
 val ChargingAdvBattery = 
@@ -178,11 +183,11 @@ val ScubaHelm = <IC2:itemArmorHazmatHelmet>;
 val HazmatChest = <IC2:itemArmorHazmatChestplate>;
 val HazmatLeggings = <IC2:itemArmorHazmatLeggings>;
 val RubberBoots = <IC2:itemArmorRubBoots>;
-/*val NHelm = 
-val NChest = 
-val NLeggings = 
-val NBoots = 
-val QHelm = 
+val NHelm = <IC2:itemArmorNanoHelmet:27>;
+val NChest = <IC2:itemArmorNanoChestplate:27>;
+val NLeggings = <IC2:itemArmorNanoLegs:27>;
+val NBoots = <IC2:itemArmorNanoBoots:27>;
+/*val QHelm = 
 val QChest = 
 val QLeggings = 
 val QBoots = 
@@ -194,8 +199,8 @@ val AdvBatpack =
 val MFEBatpack = 
 val CFBackpack = 
 val SolarHelmet = 
-val StaticBoots = 
-val NightvisionGoggles = */
+val StaticBoots = */
+val NightvisionGoggles = <IC2:itemNightvisionGoggles>;
 
 // --- Misc
 
@@ -210,8 +215,11 @@ val InvarFoil = <ore:foilInvar>;
 
 val RubberRod = <ore:stickRubber>;
 val LongSteelRod = <ore:stickLongSteel>;
+val MagSteelRod = <ore:stickSteelMagnetic>;
 
 val RubberPlate = <ore:plateRubber>;
+val CopperPlate = <ore:plateCopper>;
+val DCopperPlate = <ore:plateDenseCopper>;
 val LeadPlate = <ore:plateLead>;
 val IronPlate = <ore:plateAnyIron>;
 val BronzePlate = <ore:plateAnyBronze>;
@@ -232,9 +240,15 @@ val BronzeBurningBox = <gregtech:gt.multitileentity:1102>;
 
 val FineCopperWire = <ore:wireFineCopper>;
 val FineGoldWire = <ore:wireFineGold>;
+val FineSilverWire = <ore:wireFineSilver>;
 val FinePlatinumWire = <ore:wireFinePlatinum>;
+val TiFoil = <ore:foilTitanium>;
+val SSilverFoil = <ore:foilSterlingSilver>;
+val DiamondDust = <ore:dustDiamond>;
 
+val CopperItemCasing = <ore:casingSmallCopper>;
 val AlItemCasing = <ore:casingSmallAluminium>;
+val SteelItemCasing = <ore:casingSmallSteel>;
 val TinAlloyItemCasing = <ore:casingSmallTinAlloy>;
 val BronzeItemCasing = <ore:casingSmallBronze>;
 
@@ -253,11 +267,17 @@ val ZPMHull = <grindcore:tile.HullZPM>;
 val TiRotor = <ore:rotorTitanium>;
 
 val IronShaft = <IC2:itemRecipePart:12>;
+val NANDChip = <ore:circuitPrimitive>;
 val BasicCircuit = <ore:circuitBasic>;
+val GoodCircuit = <ore:circuitGood>;
+val AdvCircuit = <ore:circuitAdvanced>;
 val TankWall = <Railcraft:machine.beta:13>;
 val CarpentersBlock = <CarpentersBlocks:blockCarpentersBlock>;
 val Respirator = <enviromine:airFilter>;
 
+val WoodPressurePlate = <minecraft:wooden_pressure_plate>;
+val PressurePlate = <minecraft:stone_pressure_plate>;
+val HeavyPressurePlate = <minecraft:heavy_weighted_pressure_plate>;
 val AnyWool = <minecraft:wool:*>;
 val OrangeDye = <ore:dyeOrange>;
 val GlassPane = <ore:paneGlass>;
@@ -266,74 +286,171 @@ val Furnace = <minecraft:furnace>;
 val Screwdriver = <ore:craftingToolScrewdriver>;
 val WireCutter = <ore:craftingToolWireCutter>;
 val Wrench = <ore:craftingToolWrench>;
+val HardHammer = <ore:craftingToolHardHammer>;
 
 
 // *======= Removing Recipes =======*
 
 
-
+// --- Kinetic Wind Generator
 recipes.remove(KUWindGen);
+
+// --- Kinetic Steam Generator
 recipes.remove(KUSteamGen);
+
+// --- Electric Kinetic Generator
 recipes.remove(EUKUGen);
+
+// --- Manual Kinetic Generator
 recipes.remove(ManualKUGen);
+
+// --- Water Kinetic Generator
 recipes.remove(KUWaterGen);
 
+// --- Solid Heat Generator
 recipes.remove(SolidHUGen);
+
+// --- Fluid Heat Generator
 recipes.remove(FluidHUGen);
+
+// --- Radioisotope Heat Generator
 recipes.remove(IsotopeHUGen);
+
+// --- Electric Heat Generator
 recipes.remove(EUHUGen);
 
+// --- Generator
 recipes.remove(Gen);
+
+// --- Geothermal Generator
 recipes.remove(ThermalGen);
+
+// --- Water Mill
 recipes.remove(WaterGen);
+
+// --- Solar Panel
 recipes.remove(SolarGen);
+
+// --- Wind Mill
 recipes.remove(WindGen);
+
+// --- Radioisotope Thermoelectric Generator
 recipes.remove(IsotopeGen);
+
+// --- Semifluid Generator
 recipes.remove(SemiFluidGen);
+
+// --- Stirling Generator
 recipes.remove(HUEUGen);
+
+// --- Kinetic Generator
 recipes.remove(KUEUGen);
 
+// --- Nuclear Reactor
 recipes.remove(Reactor);
+
+// --- Reactor Chamber
 recipes.remove(ReactorChamber);
+
+// --- Reactor Fluid Port
 recipes.remove(HUReactorFluidPort);
+
+// --- Reactor Access Hatch
 recipes.remove(HUReactorHatch);
+
+// --- Reactor Redstone Port
 recipes.remove(HUReactorRSPort);
-recipes.remove(HUReactorVessal);
 
-// --- EUNetwork
+// --- Reactor Pressure Vessel
+recipes.remove(HUReactorVessel);
 
+// --- LV-Transformer
 recipes.remove(LVTransformer);
+
+// --- MV-Transformer
 recipes.remove(MVTransformer);
+
+// --- HV-Transformer
 recipes.remove(HVTransformer);
+
+// --- EV-Transformer
 recipes.remove(EVTransformer);
 
+// --- BatBox
 recipes.remove(BatBox);
+
+// --- CESU
 recipes.remove(CESU);
+
+// --- MFE
 recipes.remove(MFE);
+
+// --- MFSU
 recipes.remove(MFSU);
 
+// --- BatBox Charge Pad
 recipes.remove(PadBatBox);
+
+// --- CESU Charge Pad
 recipes.remove(PadCESU);
+
+// --- MFE Charge Pad
 recipes.remove(PadMFE);
+
+// --- MFSU Charge Pad
 recipes.remove(PadMFSU);
 
+// --- Iron Furnace
 recipes.remove(IronFurnace);
+
+// --- Electric Furnace
 recipes.remove(EUFurnace);
+
+// --- Macerator
 recipes.remove(Macerator);
+
+// --- Extractor
 recipes.remove(Extractor);
+
+// --- Compressor
 recipes.remove(Compressor);
+
+// --- Fluid-Solid Canning Machine
 recipes.remove(FSCanning);
+
+// --- Recycler
 recipes.remove(Recycler);
-recipes.remove(InductionFurnice);
+
+// --- Induction Furnace
+recipes.remove(InductionFurnace);
+
+// --- Mass Fabricator
 recipes.remove(MassFab);
+
+// --- Thermal Centrifuge
 recipes.remove(ThermalCentrifuge);
+
+// --- Metal Former
 recipes.remove(MetalFormer);
+
+// --- Ore Washing Plant
 recipes.remove(OreWashingPlant);
+
+// --- Pattern Storage
 recipes.remove(PatternStorage);
+
+// --- Scanner
 recipes.remove(Scanner);
+
+// --- Replicator
 recipes.remove(Replicator);
+
+// --- Solid Canning Machine
 recipes.remove(SCanning);
+
+// --- Bottling Plant
 recipes.remove(BottlingPlant);
+
 recipes.remove(LiquidHUExchanger);
 recipes.remove(Fermenter);
 recipes.remove(FluidRegulator);
@@ -373,7 +490,7 @@ recipes.remove(Coil);
 recipes.remove(ElectricMotor);
 recipes.remove(PowerUnit);
 recipes.remove(SPowerUnit);
-recipes.remove(HUConductor);
+recipes.remove(HeatConductor);
 recipes.remove(CopperBoiler);
 recipes.remove(WRotorBlade);
 recipes.remove(IRotorBlade);
@@ -384,12 +501,13 @@ recipes.remove(ShaftS);
 recipes.remove(ITurningBlank);
 recipes.remove(WTurningBlank);
 recipes.remove(Circuit);
-recipes.remove(AdvCircuit);
+recipes.remove(AdvancedCircuit);
+recipes.remove(EnergiumDust);
+recipes.remove(CarbonMesh);
 
 recipes.remove(Battery);
 recipes.remove(AdvBattery);
-/*recipes.remove(ECrystal);
-recipes.remove(LapCrystal);
+/*recipes.remove(LapCrystal);
 recipes.remove(SingleBattery);
 recipes.remove(ChargingBattery);
 recipes.remove(ChargingAdvBattery);
@@ -437,11 +555,11 @@ recipes.remove(ScubaHelm);
 recipes.remove(HazmatChest);
 recipes.remove(HazmatLeggings);
 recipes.remove(RubberBoots);
-/*recipes.remove(NHelm);
+recipes.remove(NHelm);
 recipes.remove(NChest);
 recipes.remove(NLeggings);
 recipes.remove(NBoots);
-recipes.remove(QHelm);
+/*recipes.remove(QHelm);
 recipes.remove(QChest);
 recipes.remove(QLeggings);
 recipes.remove(QBoots);
@@ -453,11 +571,14 @@ recipes.remove(AdvBatpack);
 recipes.remove(MFEBatpack);
 recipes.remove(CFBackpack);
 recipes.remove(SolarHelmet);
-recipes.remove(StaticBoots);
-recipes.remove(NightvisionGoggles);*/
+recipes.remove(StaticBoots);*/
+recipes.remove(NightvisionGoggles);
 
 
 // *======= Adding Back Recipes =======*
+
+
+// ||||||| Machines |||||||
 
 
 // --- Iron Furnace
@@ -472,13 +593,37 @@ recipes.addShaped(BatBox, [
 [Battery, LVHull, Battery],
 [DoubleSteelPlate, Battery, DoubleSteelPlate]]);
 
+// --- BatBox Charge Pad
+recipes.addShaped(PadBatBox, [
+[RubberPlate, WoodPressurePlate, RubberPlate],
+[FineCopperWire, BatBox, FineCopperWire],
+[RubberPlate, NANDChip, RubberPlate]]);
+
 // --- CESU
 recipes.addShaped(CESU, [
 [BronzePlate, FineGoldWire, BronzePlate],
 [AdvBattery, MVHull, AdvBattery],
 [DoubleBronzePlate, AdvBattery, DoubleBronzePlate]]);
 
-// --- LV Transformer
+// --- CESU Charge Pad
+recipes.addShaped(PadCESU, [
+[RubberPlate, PressurePlate, RubberPlate],
+[FineGoldWire, CESU, FineGoldWire],
+[RubberPlate, BasicCircuit, RubberPlate]]);
+
+// --- MFE Charge Pad
+recipes.addShaped(PadMFE, [
+[RubberPlate, HeavyPressurePlate, RubberPlate],
+[FineSilverWire, MFE, FineSilverWire],
+[RubberPlate, GoodCircuit, RubberPlate]]);
+
+// --- MFSU Charge Pad
+recipes.addShaped(PadMFSU, [
+[RubberPlate, HeavyPressurePlate, RubberPlate],
+[FinePlatinumWire, MFSU, FinePlatinumWire],
+[RubberPlate, AdvCircuit, RubberPlate]]);
+
+// --- LV-Transformer
 recipes.addShaped(LVTransformer, [
 [CarpentersBlock, Coil, CarpentersBlock],
 [FineCopperWire, LVHull, FineGoldWire],
@@ -489,7 +634,7 @@ recipes.addShaped(LVTransformer, [
 [FineGoldWire, LVHull, FineCopperWire],
 [CarpentersBlock, Coil, CarpentersBlock]]);
 
-// --- MV Transformer
+// --- MV-Transformer
 recipes.addShaped(MVTransformer, [
 [SteelPlate, Coil, SteelPlate],
 [FineGoldWire, MVHull, FinePlatinumWire],
@@ -579,6 +724,72 @@ recipes.addShaped(Coil, [
 [FineGoldWire, LongSteelRod, FineGoldWire],
 [FineCopperWire, FineGoldWire, FineCopperWire]]);
 
+// --- Energium Dust
+recipes.addShaped(EnergiumDust * 8, [
+[DiamondDust, RedAlloyDust, DiamondDust],
+[RedAlloyDust, DiamondDust, RedAlloyDust],
+[DiamondDust, RedAlloyDust, DiamondDust]]);
+
+// --- Raw Carbon Mesh
+recipes.addShapedMirrored(CarbonMesh, [
+[CarbonFibre, CarbonFibre],
+[CarbonFibre, CarbonFibre]]);
+
+// --- Copper Boiler
+recipes.addShaped(CopperBoiler, [
+[CopperItemCasing, Coil, CopperItemCasing],
+[Coil, Wrench, Coil],
+[CopperItemCasing, Coil, CopperItemCasing]]);
+
+// --- Heat Conductor
+recipes.addShaped(HeatConductor, [
+[RubberPlate, CopperPlate, RubberPlate],
+[SSilverFoil, DCopperPlate, SSilverFoil],
+[RubberPlate, CopperPlate, RubberPlate]]);
+
+// --- Electric Motor
+recipes.addShaped(ElectricMotor, [
+[SteelItemCasing, SteelItemCasing, Wrench],
+[Coil, Coil, MagSteelRod],
+[SteelItemCasing, SteelItemCasing, Screwdriver]]);
+// - Alternate Recipe
+recipes.addShaped(ElectricMotor, [
+[SteelItemCasing, SteelItemCasing, Screwdriver],
+[Coil, Coil, MagSteelRod],
+[SteelItemCasing, SteelItemCasing, Wrench]]);
+
+// --- Power Unit
+recipes.addShaped(PowerUnit, [
+[Battery, SteelItemCasing, FineGoldWire],
+[BasicCircuit, Battery, ElectricMotor],
+[Battery, SteelItemCasing, FineCopperWire]]);
+// - Alternate Recipe
+recipes.addShaped(PowerUnit, [
+[Battery, SteelItemCasing, FineCopperWire],
+[BasicCircuit, Battery, ElectricMotor],
+[Battery, SteelItemCasing, FineGoldWire]]);
+
+// --- Small Power Unit
+recipes.addShaped(SPowerUnit, [
+[SteelItemCasing, FineGoldWire, Wrench],
+[BasicCircuit, Battery, ElectricMotor],
+[SteelItemCasing, FineCopperWire, Screwdriver]]);
+// - Alternate Recipe
+recipes.addShaped(SPowerUnit, [
+[SteelItemCasing, FineCopperWire, Wrench],
+[BasicCircuit, Battery, ElectricMotor],
+[SteelItemCasing, FineGoldWire, Screwdriver]]);
+// -
+recipes.addShaped(SPowerUnit, [
+[SteelItemCasing, FineGoldWire, Screwdriver],
+[BasicCircuit, Battery, ElectricMotor],
+[SteelItemCasing, FineCopperWire, Wrench]]);
+// -
+recipes.addShaped(SPowerUnit, [
+[SteelItemCasing, FineCopperWire, Screwdriver],
+[BasicCircuit, Battery, ElectricMotor],
+[SteelItemCasing, FineGoldWire, Wrench]]);
+
 
 // ||||||| Weapons And Armors |||||||
 
@@ -611,3 +822,27 @@ recipes.addShaped(RubberBoots, [
 [LeadFoil, null, LeadFoil],
 [RubberPlate, null, RubberPlate],
 [RubberPlate, AnyWool, RubberPlate]]);
+
+// --- NanoSuit Helmet
+recipes.addShaped(NHelm, [
+[TiFoil, ECrystal, TiFoil],
+[CarbonPlate, NightvisionGoggles, CarbonPlate],
+[null, HardHammer, null]]);
+
+// --- NanoSuit Chestplate
+recipes.addShaped(NChest, [
+[CarbonPlate, HardHammer, CarbonPlate],
+[TiFoil, ECrystal, TiFoil],
+[CarbonPlate, TiFoil, CarbonPlate]]);
+
+// --- NanoSuit Leggings
+recipes.addShaped(NLeggings, [
+[CarbonPlate, ECrystal, CarbonPlate],
+[TiFoil, HardHammer, TiFoil],
+[CarbonPlate, null, CarbonPlate]]);
+
+// --- NanoSuit Boots
+recipes.addShapedMirrored(NBoots, [
+[TiFoil, null, TiFoil],
+[CarbonPlate, null, CarbonPlate],
+[CarbonPlate, ECrystal, CarbonPlate]]);
