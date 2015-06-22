@@ -235,7 +235,7 @@ val BlackTogglePlate = <RedLogic:redlogic.button:319>;
 
 val RedAlloyDust = <ore:dustRedAlloy>;
 val RedAlloyRod = <ore:stickRedAlloy>;
-val IronPlate = <ore:plateIron>;
+val IronPlate = <ore:plateAnyIron>;
 
 val Wrench = <ore:craftingToolWrench>;
 val WireCutter = <ore:craftingToolWireCutter>;

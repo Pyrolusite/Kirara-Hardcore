@@ -117,7 +117,10 @@ val FineOsWire = <ore:wireFineOsmium>;
 val OsWire = <ore:wireMediumOsmium>;
 val ThickOsWire = <ore:wireThickOsmium>;
 
+val RedAlloyIngot = <ore:ingotRedAlloy>;
+
 val RubberPlate = <ore:plateRubber>;
+val RedAlloyPlate = <ore:plateRedAlloy>;
 val IronPlate = <ore:plateAnyIron>;
 val SteelPlate = <ore:plateSteel>;
 val AlPlate = <ore:plateAluminium>;
@@ -128,6 +131,10 @@ val ChromePlate = <ore:plateChrome>;
 val IridiumPlate = <ore:plateIridium>;
 val OsmiumPlate = <ore:plateOsmium>;
 val NeutronPlate = <ore:plateNeutronium>;
+val NeodymiumPlate = <ore:plateNeodymium>;
+val MagIronPlate = <gregtech:gt.meta.plate:8645>;
+val MagSteelPlate = <gregtech:gt.meta.plate:8646>;
+val MagNeodymiumPlate = <gregtech:gt.meta.plate:8647>;
 
 val SmallBronzeGear = <ore:gearGtSmallBronze>;
 val SmallSteelGear = <ore:gearGtSmallSteel>;
@@ -159,6 +166,7 @@ val RubberRing = <ore:ringRubber>;
 val Screwdriver = <ore:craftingToolScrewdriver>;
 val Wrench = <ore:craftingToolWrench>;
 val WireCutter = <ore:craftingToolWireCutter>;
+val Mortar = <ore:craftingToolMortar>;
 
 val TinRotor = <ore:rotorTinAlloy>;
 val BronzeRotor = <ore:rotorBronze>;
@@ -201,6 +209,11 @@ oreDict.wireFineTunstenSteel.add(<grindcore:item.FineTungstenSteelWire>);
 // *======= Adding Back Recipes =======*
 
 
+// --- Red Alloy Dust
+recipes.addShapeless(<gregtech:gt.meta.dust:8660>, [RedAlloyIngot, Mortar]);
+// - Alternate Recipe
+recipes.addShapeless(<gregtech:gt.meta.dust:8660>, [RedAlloyPlate, Mortar]);
+
 // --- Magnetic Iron Rod
 recipes.addShapeless(MagIronRod, [IronRod, RSDust, RSDust, RSDust, RSDust]);
 
@@ -218,6 +231,15 @@ recipes.addShapeless(MagSteelIngot, [SteelIngot, RSDust, RSDust, RSDust, RSDust]
 
 // --- Magnetic Neodymium Ingot
 recipes.addShapeless(MagNeodymiumIngot, [NeodymiumIngot, RSDust, RSDust, RSDust, RSDust]);
+
+// --- Magnetic Iron Plate
+recipes.addShapeless(MagIronPlate, [IronPlate, RSDust, RSDust, RSDust, RSDust]);
+
+// --- Magnetic Steel Plate
+recipes.addShapeless(MagSteelPlate, [SteelPlate, RSDust, RSDust, RSDust, RSDust]);
+
+// --- Magnetic Neodymium Plate
+recipes.addShapeless(MagNeodymiumPlate, [NeodymiumPlate, RSDust, RSDust, RSDust, RSDust]);
 
 // --- Fine TungstenSteel Wire
 recipes.addShapedMirrored(<grindcore:item.FineTungstenSteelWire>, [

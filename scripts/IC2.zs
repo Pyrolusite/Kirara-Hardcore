@@ -1,11 +1,15 @@
 // ******* Created by Arch-Nihil for *******
 // ******* the Kirara server series  *******
+// * Special thanks to Gemji for the help. *
 
 
 
 // *======= Importing Stuff =======*
 
+
+
 // *======= Variables =======*
+
 
 // --- Generators
 
@@ -121,8 +125,6 @@ val WRotorBlade = <IC2:itemRecipePart:7>;
 val IRotorBlade = <IC2:itemRecipePart:8>;
 val CRotorBlade = <IC2:itemRecipePart:9>;
 val SRotorBlade = <IC2:itemRecipePart:10>;
-val ShaftI = <IC2:itemRecipePart:11>;
-val ShaftS = <IC2:itemRecipePart:12>;
 val ITurningBlank = <IC2:itemTurningBlanks:349525>.withTag({state: {l4: 5, l2: 5, l3: 5, l0: 5, l1: 5}});
 val WTurningBlank = <IC2:itemTurningBlanksWood:209715>.withTag({state: {l4: 3, l2: 3, l3: 3, l0: 3, l1: 3}});
 val Circuit = <IC2:itemPartCircuit>;
@@ -156,14 +158,15 @@ val EUSplittWire =
 
 val CoalBall = 
 val CCoalBall = 
-val CoalChunk =
+val CoalChunk =*/
 
 // --- Tools
 
+val Treetap = <IC2:itemTreetap>;
 val MiningDrill = <IC2:itemToolDrill:*>;
 val DiamondDrill = <IC2:itemToolDDrill:*>;
 val IridiumDrill = <IC2:itemToolIridiumDrill:*>;
-val Cutter = 
+/*val Cutter = 
 val Wrench = 
 val Chainsaw = 
 val EWrench = 
@@ -202,7 +205,7 @@ val SolarHelmet =
 val StaticBoots = */
 val NightvisionGoggles = <IC2:itemNightvisionGoggles>;
 
-// --- Misc
+// ||||||| Others |||||||
 
 val RubberLog = <minecraft:log:3>;
 val JunglePlanks = <minecraft:planks:3>;
@@ -219,20 +222,32 @@ val MagSteelRod = <ore:stickSteelMagnetic>;
 
 val RubberPlate = <ore:plateRubber>;
 val CopperPlate = <ore:plateCopper>;
-val DCopperPlate = <ore:plateDenseCopper>;
 val LeadPlate = <ore:plateLead>;
+val RedAlloyPlate = <ore:plateRedAlloy>;
+val InvarPlate = <ore:plateInvar>;
 val IronPlate = <ore:plateAnyIron>;
 val BronzePlate = <ore:plateAnyBronze>;
-val DoubleBronzePlate = <ore:plateDoubleAnyBronze>;
 val SteelPlate = <ore:plateSteel>;
-val DoubleSteelPlate = <ore:plateDoubleSteel>;
 val AlPlate = <ore:plateAluminium>;
 val SSteelPlate = <ore:plateStainlessSteel>;
 val TiPlate = <ore:plateTitanium>;
 val IridiumPlate = <ore:plateIridium>;
 val BatteryAlloyPlate = <ore:plateBatteryAlloy>;
+val MagNeodymiumPlate = <ore:plateNeodymiumMagnetic>;
+val SiliconPlate = <ore:plateSilicon>;
+
+val DoubleCopperPlate = <ore:plateDoubleCopper>;
+val DoubleInvarPlate = <ore:plateDoubleInvar>;
+val DoubleBronzePlate = <ore:plateDoubleAnyBronze>;
+val DoubleSteelPlate = <ore:plateDoubleSteel>;
+val DoubleSSteelPlate = <ore:plateDoubleStainlessSteel>;
 val DoubleBatteryAlloyPlate = <ore:plateDoubleBatteryAlloy>;
 
+val DenseCopperPlate = <ore:plateDenseCopper>;
+val DenseLeadPlate = <ore:plateDenseLead>;
+
+val SmallWoodGear = <ore:gearGtSmallWood>;
+val AlGear = <ore:gearAluminium>;
 val SSteelGear = <ore:gearStainlessSteel>;
 val TiGear = <ore:gearTitanium>;
 
@@ -242,9 +257,15 @@ val FineCopperWire = <ore:wireFineCopper>;
 val FineGoldWire = <ore:wireFineGold>;
 val FineSilverWire = <ore:wireFineSilver>;
 val FinePlatinumWire = <ore:wireFinePlatinum>;
+
 val TiFoil = <ore:foilTitanium>;
 val SSilverFoil = <ore:foilSterlingSilver>;
 val DiamondDust = <ore:dustDiamond>;
+
+val WoodBolt = <ore:boltWood>;
+val WoodScrew = <ore:screwWood>;
+val SteelBolt = <ore:boltSteel>;
+val SteelScrew = <ore:screwSteel>;
 
 val CopperItemCasing = <ore:casingSmallCopper>;
 val AlItemCasing = <ore:casingSmallAluminium>;
@@ -252,10 +273,14 @@ val SteelItemCasing = <ore:casingSmallSteel>;
 val TinAlloyItemCasing = <ore:casingSmallTinAlloy>;
 val BronzeItemCasing = <ore:casingSmallBronze>;
 
+val ULVHull = <grindcore:tile.HullULV>;
+
 val LVMotor = <grindcore:item.LVMotor>;
 val LVHull = <grindcore:tile.HullLV>;
+val LVPump = <grindcore:item.LVPump>;
 val LVPiston = <grindcore:item.LVPiston>;
 
+val MVMotor = <grindcore:item.MVMotor>;
 val MVHull = <grindcore:tile.HullMV>;
 val MVPump = <grindcore:item.MVPump>;
 
@@ -266,14 +291,20 @@ val ZPMHull = <grindcore:tile.HullZPM>;
 
 val TiRotor = <ore:rotorTitanium>;
 
-val IronShaft = <IC2:itemRecipePart:12>;
+val IronShaft = <IC2:itemRecipePart:11>;
+val SteelShaft = <IC2:itemRecipePart:12>;
 val NANDChip = <ore:circuitPrimitive>;
 val BasicCircuit = <ore:circuitBasic>;
 val GoodCircuit = <ore:circuitGood>;
 val AdvCircuit = <ore:circuitAdvanced>;
 val TankWall = <Railcraft:machine.beta:13>;
+val CarpentersLever = <CarpentersBlocks:blockCarpentersLever>;
 val CarpentersBlock = <CarpentersBlocks:blockCarpentersBlock>;
+val Slope = <CarpentersBlocks:blockCarpentersSlope>;
 val Respirator = <enviromine:airFilter>;
+val BCTank = <ore:craftingTank>;
+val IronFence = <IC2:blockFenceIron>;
+val EmptyCell = <ore:cellEmpty>;
 
 val WoodPressurePlate = <minecraft:wooden_pressure_plate>;
 val PressurePlate = <minecraft:stone_pressure_plate>;
@@ -282,6 +313,7 @@ val AnyWool = <minecraft:wool:*>;
 val OrangeDye = <ore:dyeOrange>;
 val GlassPane = <ore:paneGlass>;
 val Furnace = <minecraft:furnace>;
+val Plank = <ore:plankWood>;
 
 val Screwdriver = <ore:craftingToolScrewdriver>;
 val WireCutter = <ore:craftingToolWireCutter>;
@@ -418,6 +450,12 @@ recipes.remove(Compressor);
 // --- Fluid-Solid Canning Machine
 recipes.remove(FSCanning);
 
+// --- Magnetizer
+recipes.remove(Magnetizer);
+
+// --- Electrolyzer
+recipes.remove(Electrolyzer);
+
 // --- Recycler
 recipes.remove(Recycler);
 
@@ -451,12 +489,24 @@ recipes.remove(SCanning);
 // --- Bottling Plant
 recipes.remove(BottlingPlant);
 
+// --- Liquid Heat Exchanger
 recipes.remove(LiquidHUExchanger);
+
+// --- Fermenter
 recipes.remove(Fermenter);
+
+// --- Fluid Regulator
 recipes.remove(FluidRegulator);
+
+// --- Condenser
 recipes.remove(Condenser);
+
+// --- Steam Generator
 recipes.remove(SteamGen);
+
+// --- Blast Furnace
 recipes.remove(BlastFurnace);
+
 recipes.remove(BlockCutMachine);
 recipes.remove(SolarDistaller);
 recipes.remove(FluidDistributor);
@@ -477,8 +527,6 @@ recipes.remove(Pump);
 recipes.remove(AdvMiner);
 
 
-recipes.remove(Magnetizer);
-recipes.remove(Electrolyzer);
 recipes.remove(Terraformer);
 recipes.remove(Teleporter);
 recipes.remove(TeslaCoil);
@@ -496,8 +544,6 @@ recipes.remove(WRotorBlade);
 recipes.remove(IRotorBlade);
 recipes.remove(CRotorBlade);
 recipes.remove(SRotorBlade);
-recipes.remove(ShaftI);
-recipes.remove(ShaftS);
 recipes.remove(ITurningBlank);
 recipes.remove(WTurningBlank);
 recipes.remove(Circuit);
@@ -530,7 +576,12 @@ recipes.remove(CoalBall);
 recipes.remove(CCoalBall);
 recipes.remove(CoalChunk);
 
-// --- Tools
+
+// ||||||| Tools |||||||
+
+
+// --- Treetap
+recipes.remove(Treetap);
 
 recipes.remove(MiningDrill);
 recipes.remove(DiamondDrill);
@@ -645,6 +696,179 @@ recipes.addShaped(MVTransformer, [
 [FinePlatinumWire, MVHull, FineGoldWire],
 [SteelPlate, Coil, SteelPlate]]);
 
+// --- Electric Furnace
+recipes.addShaped(EUFurnace, [
+[SteelPlate, NANDChip, SteelPlate],
+[Coil, IronFurnace, Coil],
+[DoubleSteelPlate, LVMotor, DoubleSteelPlate]]);
+
+// --- Compressor
+recipes.addShaped(Compressor, [
+[SteelPlate, BasicCircuit, SteelPlate],
+[LVPiston, LVHull, LVPiston],
+[DoubleSteelPlate, LVMotor, DoubleSteelPlate]]);
+
+// --- Extractor
+recipes.addShaped(Extractor, [
+[SteelPlate, LVPiston, SteelPlate],
+[NANDChip, LVHull, Treetap],
+[SteelPlate, LVMotor, SteelPlate]]);
+// - Alternate Recipe
+recipes.addShaped(Extractor, [
+[SteelPlate, LVPiston, SteelPlate],
+[Treetap, LVHull, NANDChip],
+[SteelPlate, LVMotor, SteelPlate]]);
+
+// --- Fluid-Solid Canning Machine
+recipes.addShaped(FSCanning, [
+[SteelPlate, BCTank, SteelPlate],
+[NANDChip, ULVHull, LVPump],
+[SteelPlate, LVMotor, SteelPlate]]);
+// - Alternate Recipe
+recipes.addShaped(FSCanning, [
+[SteelPlate, BCTank, SteelPlate],
+[LVPump, ULVHull, NANDChip],
+[SteelPlate, LVMotor, SteelPlate]]);
+
+// --- Magnetizer
+recipes.addShaped(Magnetizer, [
+[RedAlloyPlate, IronFence, RedAlloyPlate],
+[MagNeodymiumPlate, LVHull, MagNeodymiumPlate],
+[RedAlloyPlate, IronFence, RedAlloyPlate]]);
+
+// --- Electrolyzer
+recipes.addShaped(Electrolyzer, [
+[AlPlate, FineGoldWire, AlPlate],
+[BasicCircuit, MVHull, BasicCircuit],
+[AlPlate, MVMotor, AlPlate]]);
+
+// --- Recycler
+recipes.addShaped(Recycler, [
+[SteelPlate, NANDChip, SteelPlate],
+[LVPiston, LVHull, LVPiston],
+[SteelPlate, LVMotor, SteelPlate]]);
+
+// --- Fermenter
+recipes.addShaped(Fermenter, [
+[SteelPlate, BCTank, SteelPlate],
+[BCTank, ULVHull, BCTank],
+[SteelPlate, HeatConductor, SteelPlate]]);
+
+
+// ||||||| Generators |||||||
+
+
+// --- Generator
+recipes.addShaped(Gen, [
+[SteelPlate, FineCopperWire, SteelPlate],
+[Battery, LVHull, LVMotor],
+[SteelPlate, BronzeBurningBox, SteelPlate]]);
+
+// --- Kinetic Steam Generator
+recipes.addShaped(KUSteamGen, [
+[SSteelPlate, CopperBoiler, SSteelPlate],
+[BCTank, HVHull, SteelShaft],
+[DoubleSSteelPlate, CopperBoiler, DoubleSSteelPlate]]);
+
+// --- Electric Kinetic Generator
+recipes.addShaped(EUKUGen, [
+[SSteelPlate, Battery, SSteelPlate],
+[MVMotor, MVHull, SteelShaft],
+[SSteelPlate, Battery, SSteelPlate]]);
+
+// --- Manual Kinetic Generator
+recipes.addShaped(ManualKUGen, [
+[AlPlate, AlGear, AlPlate],
+[CarpentersLever, MVHull, IronShaft],
+[AlPlate, AlGear, AlPlate]]);
+
+// --- Kinetic Wind Generator
+recipes.addShaped(KUWindGen, [
+[SteelPlate, SSteelGear, SteelShaft],
+[TiPlate, HVHull, TiGear],
+[SteelPlate, SSteelGear, SteelShaft]]);
+
+// --- Solid Heat Generator
+recipes.addShaped(SolidHUGen, [
+[DoubleCopperPlate, HeatConductor, DoubleCopperPlate],
+[SteelItemCasing, LVHull, SteelItemCasing],
+[InvarPlate, IronFurnace, InvarPlate]]);
+
+// --- Fluid Heat Generator
+recipes.addShaped(FluidHUGen, [
+[DoubleCopperPlate, HeatConductor, DoubleCopperPlate],
+[BCTank, LVHull, BCTank],
+[InvarPlate, LVPump, InvarPlate]]);
+
+// --- Electric Heat Generator
+recipes.addShaped(EUHUGen, [
+[DoubleCopperPlate, HeatConductor, DoubleCopperPlate],
+[SteelPlate, LVHull, SteelPlate],
+[InvarPlate, LVMotor, InvarPlate]]);
+
+// --- Radioisotope Thermoelectric Generator
+recipes.addShaped(IsotopeGen, [
+[DenseLeadPlate, ReactorChamber, DenseLeadPlate],
+[DenseLeadPlate, HVHull, DenseLeadPlate],
+[DenseLeadPlate, Gen, DenseLeadPlate]]);
+
+// --- Semi-Fluid Generator
+recipes.addShaped(SemiFluidGen, [
+[AlPlate, EmptyCell, AlPlate],
+[LVPump, MVHull, LVPump],
+[AlPlate, Gen, AlPlate]]);
+
+// --- Geothermal Generator
+recipes.addShaped(ThermalGen, [
+[InvarPlate, Coil, InvarPlate],
+[MVPump, MVHull, MVPump],
+[DoubleInvarPlate, Gen, DoubleInvarPlate]]);
+
+// --- Water Mill
+recipes.addShaped(WaterGen, [
+[IronPlate, WRotorBlade, IronPlate],
+[WRotorBlade, Gen, WRotorBlade],
+[IronPlate, WRotorBlade, IronPlate]]);
+
+// --- Solar Panel
+recipes.addShaped(SolarGen, [
+[GlassPane, GlassPane, GlassPane],
+[SiliconPlate, CarbonPlate, SiliconPlate],
+[GoodCircuit, Gen, GoodCircuit]]);
+
+// --- Wind Mill
+recipes.addShaped(WindGen, [
+[CarbonPlate, SteelScrew, CarbonPlate],
+[SteelBolt, Gen, SteelScrew],
+[CarbonPlate, SteelBolt, CarbonPlate]]);
+
+// --- Stirling Generator
+recipes.addShaped(HUEUGen, [
+[AlPlate, HeatConductor, AlPlate],
+[InvarPlate, Gen, InvarPlate],
+[AlPlate, HeatConductor, AlPlate]]);
+
+// --- Kinetic Generator
+recipes.addShaped(KUEUGen, [
+[SSteelPlate, FinePlatinumWire, SSteelPlate],
+[SteelShaft, Gen, HVMotor],
+[DoubleSSteelPlate, FinePlatinumWire, DoubleSSteelPlate]]);
+
+
+
+// ||||||| Blocks |||||||
+
+
+// --- Industrial TNT
+recipes.addShaped(ITNT * 8, [
+[Flint, TNT, Flint],
+[TNT, GunpowderBlock, TNT],
+[Flint, TNT, Flint]]);
+
+
+// ||||||| Items |||||||
+
+
 // --- RE-Battery
 recipes.addShaped(Battery, [
 [Screwdriver, FineCopperWire, WireCutter],
@@ -666,57 +890,6 @@ recipes.addShaped(AdvBattery, [
 [WireCutter, FineGoldWire, Screwdriver],
 [BronzeItemCasing, RedAlloyDustBlock, BronzeItemCasing],
 [BronzeItemCasing, DoubleBatteryAlloyPlate, BronzeItemCasing]]);
-
-// --- Compressor
-recipes.addShaped(Compressor, [
-[SteelPlate, BasicCircuit, SteelPlate],
-[LVPiston, LVHull, LVPiston],
-[SteelPlate, LVMotor, SteelPlate]]);
-
-// --- Generator
-recipes.addShaped(Gen, [
-[SteelPlate, FineCopperWire, SteelPlate],
-[Battery, LVHull, LVMotor],
-[SteelPlate, BronzeBurningBox, SteelPlate]]);
-
-// --- Kinetic Wind Generator
-recipes.addShaped(KUWindGen, [
-[SteelPlate, SSteelGear, IronShaft],
-[TiPlate, HVHull, TiRotor],
-[SteelPlate, SSteelGear, IronShaft]]);
-
-// --- Radioisotope Thermoelectric Generator
-recipes.addShaped(IsotopeGen, [
-[IridiumPlate, ReactorChamber, IridiumPlate],
-[ReactorChamber, ZPMHull, ReactorChamber],
-[IridiumPlate, Gen, IridiumPlate]]);
-
-// --- Semi-Fluid Generator
-recipes.addShaped(SemiFluidGen, [
-[AlPlate, AlItemCasing, AlPlate],
-[TankWall, MVHull, TankWall],
-[AlPlate, Gen, AlPlate]]);
-
-// --- Geothermal Generator
-recipes.addShaped(ThermalGen, [
-[SSteelPlate, Coil, SSteelPlate],
-[MVPump, MVHull, MVPump],
-[SSteelPlate, Gen, SSteelPlate]]);
-
-
-
-// ||||||| Blocks |||||||
-
-
-// --- Industrial TNT
-recipes.addShaped(ITNT * 8, [
-[Flint, TNT, Flint],
-[TNT, GunpowderBlock, TNT],
-[Flint, TNT, Flint]]);
-
-
-// ||||||| Items |||||||
-
 
 // --- Coil
 recipes.addShaped(Coil, [
@@ -744,7 +917,7 @@ recipes.addShaped(CopperBoiler, [
 // --- Heat Conductor
 recipes.addShaped(HeatConductor, [
 [RubberPlate, CopperPlate, RubberPlate],
-[SSilverFoil, DCopperPlate, SSilverFoil],
+[SSilverFoil, DenseCopperPlate, SSilverFoil],
 [RubberPlate, CopperPlate, RubberPlate]]);
 
 // --- Electric Motor
@@ -789,6 +962,21 @@ recipes.addShaped(SPowerUnit, [
 [SteelItemCasing, FineCopperWire, Screwdriver],
 [BasicCircuit, Battery, ElectricMotor],
 [SteelItemCasing, FineGoldWire, Wrench]]);
+
+
+// ||||||| Tools |||||||
+
+
+// --- Treetap
+recipes.addShaped(Treetap, [
+[WoodBolt, SmallWoodGear, WoodScrew],
+[Slope, CarpentersBlock, Plank],
+[Plank, Screwdriver, Wrench]]);
+// - Alternate Recipe
+recipes.addShaped(Treetap, [
+[WoodBolt, SmallWoodGear, WoodScrew],
+[Slope, CarpentersBlock, Plank],
+[Plank, Wrench, Screwdriver]]);
 
 
 // ||||||| Weapons And Armors |||||||

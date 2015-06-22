@@ -68,6 +68,7 @@ val Laser = <BuildCraft|Silicon:laserBlock>;
 val BCTank = <BuildCraft|Factory:tankBlock>;
 val Quarry = <BuildCraft|Builders:machineBlock>;
 val Pump = <BuildCraft|Factory:pumpBlock>;
+val Refinery = <BuildCraft|Factory:refineryBlock>;
 
 val RubberPlate = <ore:plateRubber>;
 val IronPlate = <ore:plateIron>;
@@ -90,6 +91,7 @@ val Quartzite = <ore:gemQuartzite>;
 val Sandstone = <minecraft:sandstone>;
 val FactoryBlock = <chisel:factoryblock:6>;
 
+val GtWoodGear = <ore:gearWood>;
 val BronzeGear = <ore:gearAnyBronze>;
 val SteelGear = <ore:gearSteel>;
 val AlGear = <ore:gearAluminium>;
@@ -163,6 +165,9 @@ val LVPiston = <grindcore:item.LVPiston>;
 val LVHull = <grindcore:tile.HullLV>;
 val LVConveyor = <grindcore:item.LVConveyor>;
 
+val MVPump = <grindcore:item.MVPump>;
+val MVMotor = <grindcore:item.MVMotor>;
+
 val SteelDrillTip = <ore:toolHeadDrillSteel>;
 val AlDrillTip = <ore:toolHeadDrillAluminium>;
 val BasicCircuit = <ore:circuitBasic>;
@@ -206,7 +211,7 @@ recipes.remove(Laser);
 recipes.remove(<BuildCraft|Silicon:laserTableBlock>);
 
 // --- Refinery
-recipes.remove(<BuildCraft|Factory:refineryBlock>);
+recipes.remove(Refinery);
 
 // --- Chute
 recipes.remove(<BuildCraft|Factory:blockHopper>);
@@ -418,10 +423,7 @@ recipes.addShaped(RedstoneEngine, [
 
 
 // --- Wooden Gear
-recipes.addShaped(WoodGear, [
-[Stick, Plank, Stick],
-[Plank, Saw, Plank],
-[Stick, Plank, Stick]]);
+recipes.addShapeless(WoodGear, [GtWoodGear]);
 
 
 // ||||||| Pipes |||||||
@@ -824,6 +826,12 @@ recipes.addShaped(Pump, [
 [SteelPlate, BCTank, SteelPlate],
 [LVPump, MiningWell, LVPump],
 [SteelPlate, Wrench, SteelPlate]]);
+
+// --- Refinery
+recipes.addShaped(Refinery, [
+[BCTank, BCTank, BCTank],
+[LVPiston, MVPump, LVPiston],
+[SSteelGear, MVMotor, SSteelGear]]);
 
 // --- Tank
 recipes.addShaped(BCTank, [
