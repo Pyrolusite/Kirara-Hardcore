@@ -37,10 +37,10 @@ val KUEUGen = <IC2:blockGenerator:9>;
 
 val Reactor = <IC2:blockGenerator:5>;
 val ReactorChamber = <IC2:blockReactorChamber>;
-val HUReactorFluidPort = <IC2:blockReactorFluidPort>;
-val HUReactorHatch = <IC2:blockReactorAccessHatch>;
-val HUReactorRSPort = <IC2:blockReactorRedstonePort>;
-val HUReactorVessel = <IC2:blockreactorvessel>;
+val ReactorFluidPort = <IC2:blockReactorFluidPort>;
+val ReactorHatch = <IC2:blockReactorAccessHatch>;
+val ReactorRSPort = <IC2:blockReactorRedstonePort>;
+val ReactorVessel = <IC2:blockreactorvessel>;
 
 // --- EUNetwork
 
@@ -137,8 +137,8 @@ val CarbonFibre = <IC2:itemPartCarbonFibre>;
 val Battery = <IC2:itemBatREDischarged>;
 val AdvBattery = <IC2:itemAdvBat:26>;
 val ECrystal = <IC2:itemBatCrystal:26>;
-/*val LapCrystal = 
-val SingleBattery = 
+val LapCrystal = <IC2:itemBatLamaCrystal:26>;
+/*val SingleBattery = 
 val ChargingBattery = 
 val ChargingAdvBattery = 
 val ChargingECrystal = 
@@ -256,11 +256,13 @@ val BronzeBurningBox = <gregtech:gt.multitileentity:1102>;
 val FineCopperWire = <ore:wireFineCopper>;
 val FineGoldWire = <ore:wireFineGold>;
 val FineSilverWire = <ore:wireFineSilver>;
+val FineElectrumWire = <ore:wireFineElectrum>;
 val FinePlatinumWire = <ore:wireFinePlatinum>;
 
 val TiFoil = <ore:foilTitanium>;
 val SSilverFoil = <ore:foilSterlingSilver>;
 val DiamondDust = <ore:dustDiamond>;
+val DiamondBuzzBlade = <ore:toolHeadBuzzSawDiamond>;
 
 val WoodBolt = <ore:boltWood>;
 val WoodScrew = <ore:screwWood>;
@@ -268,6 +270,7 @@ val SteelBolt = <ore:boltSteel>;
 val SteelScrew = <ore:screwSteel>;
 
 val CopperItemCasing = <ore:casingSmallCopper>;
+val LeadItemCasing = <ore:casingSmallLead>;
 val AlItemCasing = <ore:casingSmallAluminium>;
 val SteelItemCasing = <ore:casingSmallSteel>;
 val TinAlloyItemCasing = <ore:casingSmallTinAlloy>;
@@ -283,14 +286,18 @@ val LVPiston = <grindcore:item.LVPiston>;
 val MVMotor = <grindcore:item.MVMotor>;
 val MVHull = <grindcore:tile.HullMV>;
 val MVPump = <grindcore:item.MVPump>;
+val MVPiston = <grindcore:item.MVPiston>;
 
 val HVMotor = <grindcore:item.HVMotor>;
+val HVPump = <grindcore:item.HVPump>;
 val HVHull = <grindcore:tile.HullHV>;
 
+val EVHull = <grindcore:tile.HullEV>;
 val ZPMHull = <grindcore:tile.HullZPM>;
-
 val TiRotor = <ore:rotorTitanium>;
 
+val Concrete = <Railcraft:cube:1>;
+val RedAlloyWire = <RedLogic:redlogic.wire>;
 val IronShaft = <IC2:itemRecipePart:11>;
 val SteelShaft = <IC2:itemRecipePart:12>;
 val NANDChip = <ore:circuitPrimitive>;
@@ -300,6 +307,7 @@ val AdvCircuit = <ore:circuitAdvanced>;
 val TankWall = <Railcraft:machine.beta:13>;
 val CarpentersLever = <CarpentersBlocks:blockCarpentersLever>;
 val CarpentersBlock = <CarpentersBlocks:blockCarpentersBlock>;
+val CarpentersHatch = <CarpentersBlocks:blockCarpentersHatch>;
 val Slope = <CarpentersBlocks:blockCarpentersSlope>;
 val Respirator = <enviromine:airFilter>;
 val BCTank = <ore:craftingTank>;
@@ -385,16 +393,16 @@ recipes.remove(Reactor);
 recipes.remove(ReactorChamber);
 
 // --- Reactor Fluid Port
-recipes.remove(HUReactorFluidPort);
+recipes.remove(ReactorFluidPort);
 
 // --- Reactor Access Hatch
-recipes.remove(HUReactorHatch);
+recipes.remove(ReactorHatch);
 
 // --- Reactor Redstone Port
-recipes.remove(HUReactorRSPort);
+recipes.remove(ReactorRSPort);
 
 // --- Reactor Pressure Vessel
-recipes.remove(HUReactorVessel);
+recipes.remove(ReactorVessel);
 
 // --- LV-Transformer
 recipes.remove(LVTransformer);
@@ -507,18 +515,30 @@ recipes.remove(SteamGen);
 // --- Blast Furnace
 recipes.remove(BlastFurnace);
 
+// --- Block Cutting Machine
 recipes.remove(BlockCutMachine);
+
 recipes.remove(SolarDistaller);
+
+// --- Fluid Distributor
 recipes.remove(FluidDistributor);
+
 recipes.remove(ElectricSortingMachine);
+
+// --- Item Buffer
 recipes.remove(ItemBuffer);
 recipes.remove(CropHarvester);
 recipes.remove(TurningTable);
 recipes.remove(PSafe);
 recipes.remove(TradeOMat);
 recipes.remove(EnergyOMat);
+
+// --- Industrial TNT
 recipes.remove(ITNT);
+
+// --- Nuke
 recipes.remove(Nuke);
+
 recipes.remove(Crop);
 
 
@@ -642,7 +662,7 @@ recipes.addShaped(IronFurnace, [
 recipes.addShaped(BatBox, [
 [CarpentersBlock, FineCopperWire, CarpentersBlock],
 [Battery, LVHull, Battery],
-[DoubleSteelPlate, Battery, DoubleSteelPlate]]);
+[CarpentersBlock, Battery, CarpentersBlock]]);
 
 // --- BatBox Charge Pad
 recipes.addShaped(PadBatBox, [
@@ -662,11 +682,23 @@ recipes.addShaped(PadCESU, [
 [FineGoldWire, CESU, FineGoldWire],
 [RubberPlate, BasicCircuit, RubberPlate]]);
 
+// --- MFE
+recipes.addShaped(MFE, [
+[SteelPlate, FineSilverWire, SteelPlate],
+[ECrystal, HVHull, ECrystal],
+[DoubleSteelPlate, ECrystal, DoubleSteelPlate]]);
+
 // --- MFE Charge Pad
 recipes.addShaped(PadMFE, [
 [RubberPlate, HeavyPressurePlate, RubberPlate],
 [FineSilverWire, MFE, FineSilverWire],
 [RubberPlate, GoodCircuit, RubberPlate]]);
+
+// --- MFSU
+recipes.addShaped(MFSU, [
+[SSteelPlate, FinePlatinumWire, SSteelPlate],
+[LapCrystal, EVHull, LapCrystal],
+[DoubleSSteelPlate, LapCrystal, DoubleSSteelPlate]]);
 
 // --- MFSU Charge Pad
 recipes.addShaped(PadMFSU, [
@@ -676,25 +708,87 @@ recipes.addShaped(PadMFSU, [
 
 // --- LV-Transformer
 recipes.addShaped(LVTransformer, [
-[CarpentersBlock, Coil, CarpentersBlock],
+[CarpentersBlock, NANDChip, CarpentersBlock],
 [FineCopperWire, LVHull, FineGoldWire],
 [CarpentersBlock, Coil, CarpentersBlock]]);
 // - Alternate Recipe
 recipes.addShaped(LVTransformer, [
-[CarpentersBlock, Coil, CarpentersBlock],
+[CarpentersBlock, NANDChip, CarpentersBlock],
 [FineGoldWire, LVHull, FineCopperWire],
 [CarpentersBlock, Coil, CarpentersBlock]]);
+// -
+recipes.addShaped(LVTransformer, [
+[CarpentersBlock, Coil, CarpentersBlock],
+[FineCopperWire, LVHull, FineGoldWire],
+[CarpentersBlock, NANDChip, CarpentersBlock]]);
+// -
+recipes.addShaped(LVTransformer, [
+[CarpentersBlock, Coil, CarpentersBlock],
+[FineGoldWire, LVHull, FineCopperWire],
+[CarpentersBlock, NANDChip, CarpentersBlock]]);
 
 // --- MV-Transformer
 recipes.addShaped(MVTransformer, [
-[SteelPlate, Coil, SteelPlate],
-[FineGoldWire, MVHull, FinePlatinumWire],
-[SteelPlate, Coil, SteelPlate]]);
-// - Alternate Recipe
+[SteelPlate, Battery, SteelPlate],
+[FineGoldWire, MVHull, FineSilverWire],
+[SteelPlate, BasicCircuit, SteelPlate]]);
+// - Alternate Recipes
 recipes.addShaped(MVTransformer, [
-[SteelPlate, Coil, SteelPlate],
-[FinePlatinumWire, MVHull, FineGoldWire],
-[SteelPlate, Coil, SteelPlate]]);
+[SteelPlate, Battery, SteelPlate],
+[FineSilverWire, MVHull, FineGoldWire],
+[SteelPlate, BasicCircuit, SteelPlate]]);
+// -
+recipes.addShaped(MVTransformer, [
+[SteelPlate, BasicCircuit, SteelPlate],
+[FineGoldWire, MVHull, FineSilverWire],
+[SteelPlate, Battery, SteelPlate]]);
+// -
+recipes.addShaped(MVTransformer, [
+[SteelPlate, BasicCircuit, SteelPlate],
+[FineSilverWire, MVHull, FineGoldWire],
+[SteelPlate, Battery, SteelPlate]]);
+
+// --- HV-Transformer
+recipes.addShaped(HVTransformer, [
+[AlPlate, AdvBattery, AlPlate],
+[FineSilverWire, HVHull, FineElectrumWire],
+[AlPlate, GoodCircuit, AlPlate]]);
+// - Alternate Recipes
+recipes.addShaped(HVTransformer, [
+[AlPlate, AdvBattery, AlPlate],
+[FineElectrumWire, HVHull, FineSilverWire],
+[AlPlate, GoodCircuit, AlPlate]]);
+// -
+recipes.addShaped(HVTransformer, [
+[AlPlate, GoodCircuit, AlPlate],
+[FineSilverWire, HVHull, FineElectrumWire],
+[AlPlate, AdvBattery, AlPlate]]);
+// -
+recipes.addShaped(HVTransformer, [
+[AlPlate, GoodCircuit, AlPlate],
+[FineElectrumWire, HVHull, FineSilverWire],
+[AlPlate, AdvBattery, AlPlate]]);
+
+// --- EV-Transformer
+recipes.addShaped(EVTransformer, [
+[SSteelPlate, ECrystal, SSteelPlate],
+[FineElectrumWire, EVHull, FinePlatinumWire],
+[SSteelPlate, AdvCircuit, SSteelPlate]]);
+// - Alternate Recipes
+recipes.addShaped(EVTransformer, [
+[SSteelPlate, ECrystal, SSteelPlate],
+[FinePlatinumWire, EVHull, FineElectrumWire],
+[SSteelPlate, AdvCircuit, SSteelPlate]]);
+// -
+recipes.addShaped(EVTransformer, [
+[SSteelPlate, AdvCircuit, SSteelPlate],
+[FineElectrumWire, EVHull, FinePlatinumWire],
+[SSteelPlate, ECrystal, SSteelPlate]]);
+// -
+recipes.addShaped(EVTransformer, [
+[SSteelPlate, AdvCircuit, SSteelPlate],
+[FinePlatinumWire, EVHull, FineElectrumWire],
+[SSteelPlate, ECrystal, SSteelPlate]]);
 
 // --- Electric Furnace
 recipes.addShaped(EUFurnace, [
@@ -718,6 +812,17 @@ recipes.addShaped(Extractor, [
 [SteelPlate, LVPiston, SteelPlate],
 [Treetap, LVHull, NANDChip],
 [SteelPlate, LVMotor, SteelPlate]]);
+
+// --- Macerator
+recipes.addShaped(Macerator, [
+[SSteelPlate, GoodCircuit, SSteelPlate],
+[DiamondBuzzBlade, HVHull, MVPiston],
+[SSteelPlate, MVMotor, SSteelPlate]]);
+// - Alternate Recipe
+recipes.addShaped(Macerator, [
+[SSteelPlate, GoodCircuit, SSteelPlate],
+[MVPiston, HVHull, DiamondBuzzBlade],
+[SSteelPlate, MVMotor, SSteelPlate]]);
 
 // --- Fluid-Solid Canning Machine
 recipes.addShaped(FSCanning, [
@@ -806,6 +911,12 @@ recipes.addShaped(EUHUGen, [
 [SteelPlate, LVHull, SteelPlate],
 [InvarPlate, LVMotor, InvarPlate]]);
 
+// --- Radioisotope Heat Generator
+recipes.addShaped(IsotopeHUGen, [
+[DoubleCopperPlate, HeatConductor, DoubleCopperPlate],
+[DenseLeadPlate, HVHull, DenseLeadPlate],
+[DoubleInvarPlate, DenseLeadPlate, DoubleInvarPlate]]);
+
 // --- Radioisotope Thermoelectric Generator
 recipes.addShaped(IsotopeGen, [
 [DenseLeadPlate, ReactorChamber, DenseLeadPlate],
@@ -853,6 +964,52 @@ recipes.addShaped(KUEUGen, [
 [SSteelPlate, FinePlatinumWire, SSteelPlate],
 [SteelShaft, Gen, HVMotor],
 [DoubleSSteelPlate, FinePlatinumWire, DoubleSSteelPlate]]);
+
+// --- Nuclear Reactor
+recipes.addShaped(Reactor, [
+[ReactorChamber, HVMotor, ReactorChamber],
+[LeadItemCasing, AdvCircuit, LeadItemCasing],
+[ReactorChamber, Gen, ReactorChamber]]);
+
+// --- Reactor Chamber
+recipes.addShaped(ReactorChamber, [
+[DenseLeadPlate, LeadItemCasing, DenseLeadPlate],
+[LeadItemCasing, HVHull, LeadItemCasing],
+[DenseLeadPlate, LeadItemCasing, DenseLeadPlate]]);
+
+// --- Reactor Fluid Port
+recipes.addShaped(ReactorFluidPort, [
+[ReactorVessel, BCTank, ReactorVessel],
+[HVPump, Wrench, HVPump],
+[ReactorVessel, BCTank, ReactorVessel]]);
+// - Alternate Recipe
+recipes.addShaped(ReactorFluidPort, [
+[ReactorVessel, HVPump, ReactorVessel],
+[BCTank, Wrench, BCTank],
+[ReactorVessel, HVPump, ReactorVessel]]);
+
+// --- Reactor Access Hatch
+recipes.addShaped(ReactorHatch, [
+[ReactorVessel, CarpentersHatch, ReactorVessel],
+[DenseLeadPlate, Wrench, DenseLeadPlate],
+[ReactorVessel, DenseLeadPlate, ReactorVessel]]);
+
+// --- Reactor Redstone Port
+recipes.addShaped(ReactorRSPort, [
+[ReactorVessel, DenseLeadPlate, ReactorVessel],
+[RedAlloyWire, Wrench, RedAlloyWire],
+[ReactorVessel, DenseLeadPlate, ReactorVessel]]);
+// - Alternate Recipe
+recipes.addShaped(ReactorRSPort, [
+[ReactorVessel, RedAlloyWire, ReactorVessel],
+[DenseLeadPlate, Wrench, DenseLeadPlate],
+[ReactorVessel, RedAlloyWire, ReactorVessel]]);
+
+// --- Reactor Pressure Vessel
+recipes.addShaped(ReactorVessel * 4, [
+[Concrete, DenseLeadPlate, Concrete],
+[DenseLeadPlate, Wrench, DenseLeadPlate],
+[Concrete, DenseLeadPlate, Concrete]]);
 
 
 

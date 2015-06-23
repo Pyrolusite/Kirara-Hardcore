@@ -102,6 +102,7 @@ val OsRod = <ore:stickOsmium>;
 val LongRubberRod = <ore:stickLongRubber>;
 val TSteelFoil = <ore:foilTungstenSteel>;
 val OsFoil = <ore:foilOsmium>;
+val DiamondBuzzBlade = <gregtech:gt.meta.toolHeadBuzzSaw:8300>;
 
 val FineCopperWire = <ore:wireFineCopper>;
 val FineGoldWire = <ore:wireFineGold>;
@@ -119,6 +120,7 @@ val ThickOsWire = <ore:wireThickOsmium>;
 
 val RedAlloyIngot = <ore:ingotRedAlloy>;
 
+val DiamondPlate = <ore:plateGemDiamond>;
 val RubberPlate = <ore:plateRubber>;
 val RedAlloyPlate = <ore:plateRedAlloy>;
 val IronPlate = <ore:plateAnyIron>;
@@ -163,6 +165,8 @@ val RedAlloyWire = <RedLogic:redlogic.wire>;
 val NANDGate = <RedLogic:redlogic.gates:6>;
 val RubberRing = <ore:ringRubber>;
 
+val HardHammer = <ore:craftingToolHardHammer>;
+val File = <ore:craftingToolFile>;
 val Screwdriver = <ore:craftingToolScrewdriver>;
 val Wrench = <ore:craftingToolWrench>;
 val WireCutter = <ore:craftingToolWireCutter>;
@@ -240,6 +244,12 @@ recipes.addShapeless(MagSteelPlate, [SteelPlate, RSDust, RSDust, RSDust, RSDust]
 
 // --- Magnetic Neodymium Plate
 recipes.addShapeless(MagNeodymiumPlate, [NeodymiumPlate, RSDust, RSDust, RSDust, RSDust]);
+
+// --- Diamond Buzzsaw Blade
+recipes.addShaped(DiamondBuzzBlade, [
+[Wrench, DiamondPlate, HardHammer],
+[DiamondPlate, null, DiamondPlate],
+[File, DiamondPlate, WireCutter]]);
 
 // --- Fine TungstenSteel Wire
 recipes.addShapedMirrored(<grindcore:item.FineTungstenSteelWire>, [
