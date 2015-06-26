@@ -1,4 +1,5 @@
-// - Created by Arch for Kirara server.
+// ******* Created by Arch-Nihil for *******
+// ******* the Kirara server series  *******
 
 
 

@@ -1,5 +1,5 @@
 // ******* Created by Arch-Nihil for *******
-// ******* the Grind-Complex modpack *******
+// ******* the Kirara server series  *******
 
 
 

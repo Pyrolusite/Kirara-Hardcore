@@ -1,5 +1,5 @@
 // ******* Created by Arch-Nihil for *******
-// ******* the Grind-Complex modpack *******
+// ******* the Kirara server series  *******
 
 
 
@@ -12,6 +12,21 @@ import mods.nei.NEI;
 
 // *======= Variables =======*
 
+
+oreDict.circuitUltimate.add(<grindcore:item.DataOrb>);
+oreDict.circuitMaster.add(<grindcore:item.EnergyFlowCircuit>);
+oreDict.circuitElite.add(<grindcore:item.DataControlCircuit>);
+oreDict.circuitData.add(<grindcore:item.DataCircuit>);
+oreDict.circuitAdvanced.add(<grindcore:item.AdvancedCircuit>);
+oreDict.circuitGood.add(<grindcore:item.GoodCircuit>);
+oreDict.circuitBasic.add(<grindcore:item.BasicCircuit>);
+oreDict.circuitPrimitive.add(<grindcore:item.NANDChip>);
+
+oreDict.wireMediumOsmium.add(<grindcore:item.OsmiumWire>);
+oreDict.wireThickOsmium.add(<grindcore:item.ThickOsmiumWire>);
+oreDict.wireFineStainlessSteel.add(<grindcore:item.FineStainlessSteelWire>);
+oreDict.wireFineTitanium.add(<grindcore:item.FineTitaniumWire>);
+oreDict.wireFineTunstenSteel.add(<grindcore:item.FineTungstenSteelWire>);
 
 val LVPiston = <grindcore:item.LVPiston>;
 val MVPiston = <grindcore:item.MVPiston>;
@@ -75,6 +90,7 @@ val UVHull = <grindcore:tile.HullUV>;
 val Stick = <ore:stickWood>;
 val Transistor = <ore:oc:materialTransistor>;
 
+val RubberIngot = <gregtech:gt.meta.ingot:8217>;
 val IronIngot = <ore:ingotIron>;
 val SteelIngot = <ore:ingotSteel>;
 val NeodymiumIngot = <ore:ingotNeodymium>;
@@ -107,6 +123,7 @@ val DiamondBuzzBlade = <gregtech:gt.meta.toolHeadBuzzSaw:8300>;
 val FineCopperWire = <ore:wireFineCopper>;
 val FineGoldWire = <ore:wireFineGold>;
 val FineSilverWire = <ore:wireFineSilver>;
+val FineElectrumWire = <ore:wireFineElectrum>;
 val FinePlatinumWire = <ore:wireFinePlatinum>;
 val FineBronzeWire = <ore:wireFineBronze>;
 val FineSteelWire = <ore:wireFineSteel>;
@@ -160,6 +177,7 @@ val ChromeItemCasing = <ore:casingSmallChrome>;
 val IridiumItemCasing = <ore:casingSmallIridium>;
 val OsmiumItemCasing = <ore:casingSmallOsmium>;
 
+val StickyResin = <IC2:itemHarz>;
 val RedAlloyDust = <ore:dustRedAlloy>;
 val RedAlloyWire = <RedLogic:redlogic.wire>;
 val NANDGate = <RedLogic:redlogic.gates:6>;
@@ -177,6 +195,7 @@ val BronzeRotor = <ore:rotorBronze>;
 val SteelRotor = <ore:rotorSteel>;
 val SSteelRotor = <ore:rotorStainlessSteel>;
 val TiRotor = <ore:rotorTitanium>;
+val Obsidian = <minecraft:obsidian>;
 
 val NetherQuartz = <ore:gemNetherQuartz>;
 val Quartzite = <ore:gemQuartzite>;
@@ -195,28 +214,20 @@ val GoodCircuit = <grindcore:item.GoodCircuit>;
 val BasicCircuit = <grindcore:item.BasicCircuit>;
 val NANDChip = <grindcore:item.NANDChip>;
 
-oreDict.circuitUltimate.add(<grindcore:item.DataOrb>);
-oreDict.circuitMaster.add(<grindcore:item.EnergyFlowCircuit>);
-oreDict.circuitElite.add(<grindcore:item.DataControlCircuit>);
-oreDict.circuitData.add(<grindcore:item.DataCircuit>);
-oreDict.circuitAdvanced.add(<grindcore:item.AdvancedCircuit>);
-oreDict.circuitGood.add(<grindcore:item.GoodCircuit>);
-oreDict.circuitBasic.add(<grindcore:item.BasicCircuit>);
-oreDict.circuitPrimitive.add(<grindcore:item.NANDChip>);
-
-oreDict.wireMediumOsmium.add(<grindcore:item.OsmiumWire>);
-oreDict.wireThickOsmium.add(<grindcore:item.ThickOsmiumWire>);
-oreDict.wireFineStainlessSteel.add(<grindcore:item.FineStainlessSteelWire>);
-oreDict.wireFineTitanium.add(<grindcore:item.FineTitaniumWire>);
-oreDict.wireFineTunstenSteel.add(<grindcore:item.FineTungstenSteelWire>);
 
 // *======= Adding Back Recipes =======*
 
+
+// --- Rubber
+furnace.addRecipe(RubberIngot, StickyResin, 1);
 
 // --- Red Alloy Dust
 recipes.addShapeless(<gregtech:gt.meta.dust:8660>, [RedAlloyIngot, Mortar]);
 // - Alternate Recipe
 recipes.addShapeless(<gregtech:gt.meta.dust:8660>, [RedAlloyPlate, Mortar]);
+
+// --- Obsidian Dust
+recipes.addShapeless(<gregtech:gt.meta.dust:8214>, [Obsidian, Mortar]);
 
 // --- Magnetic Iron Rod
 recipes.addShapeless(MagIronRod, [IronRod, RSDust, RSDust, RSDust, RSDust]);
@@ -272,33 +283,33 @@ recipes.addShapedMirrored(<grindcore:item.ThickOsmiumWire>, [
 
 // --- LV Motor
 recipes.addShaped(LVMotor, [
-[RubberRod, FineSteelWire, IronRod],
-[FineSteelWire, MagIronRod, FineSteelWire],
-[IronRod, FineSteelWire, RubberRod]]);
+[RubberRod, FineCopperWire, IronRod],
+[FineCopperWire, MagIronRod, FineCopperWire],
+[IronRod, FineCopperWire, RubberRod]]);
 
 // --- MV Motor
 recipes.addShaped(MVMotor, [
-[RubberRod, FineAlWire, AlRod],
-[FineAlWire, MagSteelRod, FineAlWire],
-[AlRod, FineAlWire, RubberRod]]);
+[RubberRod, FineGoldWire, AlRod],
+[FineGoldWire, MagSteelRod, FineGoldWire],
+[AlRod, FineGoldWire, RubberRod]]);
 
 // --- HV Motor
 recipes.addShaped(HVMotor, [
-[RubberRod, FineSSteelWire, SSteelRod],
-[FineSSteelWire, MagSteelRod, FineSSteelWire],
-[SSteelRod, FineSSteelWire, RubberRod]]);
+[RubberRod, FineSilverWire, SSteelRod],
+[FineSilverWire, MagSteelRod, FineSilverWire],
+[SSteelRod, FineSilverWire, RubberRod]]);
 
 // --- EV Motor
 recipes.addShaped(EVMotor, [
-[LongRubberRod, FineTiWire, TiRod],
-[FineTiWire, MagNeodymiumRod, FineTiWire],
-[TiRod, FineTiWire, LongRubberRod]]);
+[LongRubberRod, FineElectrumWire, TiRod],
+[FineElectrumWire, MagNeodymiumRod, FineElectrumWire],
+[TiRod, FineElectrumWire, LongRubberRod]]);
 
 // --- IV Motor
 recipes.addShaped(IVMotor, [
-[LongRubberRod, FineTSteelWire, TSteelRod],
-[FineTSteelWire, MagNeodymiumRod, FineTSteelWire],
-[TSteelRod, FineTSteelWire, LongRubberRod]]);
+[LongRubberRod, FinePlatinumWire, TSteelRod],
+[FinePlatinumWire, MagNeodymiumRod, FinePlatinumWire],
+[TSteelRod, FinePlatinumWire, LongRubberRod]]);
 
 
 // --- LV Piston

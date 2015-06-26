@@ -83,7 +83,7 @@ val Condenser = <IC2:blockMachine2:15>;
 val SteamGen = <IC2:blockMachine3>;
 val BlastFurnace = <IC2:blockMachine3:1>;
 val BlockCutMachine = <IC2:blockMachine3:2>;
-val SolarDistaller = <IC2:blockMachine3:3>;
+val SolarDistiller = <IC2:blockMachine3:3>;
 val FluidDistributor = <IC2:blockMachine3:4>;
 val ElectricSortingMachine = <IC2:blockMachine3:5>;
 val ItemBuffer = <IC2:blockMachine3:6>;
@@ -100,11 +100,9 @@ val Flint = <minecraft:flint>;
 val GunpowderBlock = <gregtech:gt.meta.storage.dust:8220>;
 val TNT = <minecraft:tnt>;
 
-
 val Miner = <IC2:blockMachine:7>;
 val Pump = <IC2:blockMachine:8>;
 val AdvMiner =  <IC2:blockMachine2:11>;
-
 
 val Magnetizer = <IC2:blockMachine:9>;
 val Electrolyzer = <IC2:blockMachine:10>;
@@ -133,6 +131,14 @@ val CarbonPlate = <ore:plateAlloyCarbon>;
 val EnergiumDust = <IC2:itemDust2:2>;
 val CarbonMesh = <IC2:itemPartCarbonMesh>;
 val CarbonFibre = <IC2:itemPartCarbonFibre>;
+val MiningPipe = <IC2:blockMiningPipe>;
+val CrystalMemory = <IC2:itemcrystalmemory>;
+
+// --- Reactor Components
+
+val HeatVent = <IC2:reactorVent>;
+
+// --- Batteries
 
 val Battery = <IC2:itemBatREDischarged>;
 val AdvBattery = <IC2:itemAdvBat:26>;
@@ -143,6 +149,8 @@ val ChargingBattery =
 val ChargingAdvBattery = 
 val ChargingECrystal = 
 val ChargingLapCrystal = 
+
+// --- Wires
 
 val TinWire = 
 val InsuTinWire = 
@@ -159,6 +167,9 @@ val EUSplittWire =
 val CoalBall = 
 val CCoalBall = 
 val CoalChunk =*/
+
+val EjectorUp = <IC2:upgradeModule:3>;
+val FluidEjectorUp = <IC2:upgradeModule:4>;
 
 // --- Tools
 
@@ -241,12 +252,18 @@ val DoubleInvarPlate = <ore:plateDoubleInvar>;
 val DoubleBronzePlate = <ore:plateDoubleAnyBronze>;
 val DoubleSteelPlate = <ore:plateDoubleSteel>;
 val DoubleSSteelPlate = <ore:plateDoubleStainlessSteel>;
+val DoubleTSteelPlate = <ore:plateDoubleTungstenSteel>;
+val DoubleAlPlate = <ore:plateDoubleAluminium>;
+val DoubleTiPlate = <ore:plateDoubleTitanium>;
 val DoubleBatteryAlloyPlate = <ore:plateDoubleBatteryAlloy>;
+val DoubleSilverPlate = <ore:plateDoubleSilver>;
+val QuadSilverPlate = <ore:plateQuadrupleSilver>;
 
 val DenseCopperPlate = <ore:plateDenseCopper>;
 val DenseLeadPlate = <ore:plateDenseLead>;
 
 val SmallWoodGear = <ore:gearGtSmallWood>;
+val SteelGear = <ore:gearSteel>;
 val AlGear = <ore:gearAluminium>;
 val SSteelGear = <ore:gearStainlessSteel>;
 val TiGear = <ore:gearTitanium>;
@@ -262,6 +279,7 @@ val FinePlatinumWire = <ore:wireFinePlatinum>;
 val TiFoil = <ore:foilTitanium>;
 val SSilverFoil = <ore:foilSterlingSilver>;
 val DiamondDust = <ore:dustDiamond>;
+val Diamond = <ore:gemDiamond>;
 val DiamondBuzzBlade = <ore:toolHeadBuzzSawDiamond>;
 
 val WoodBolt = <ore:boltWood>;
@@ -271,10 +289,12 @@ val SteelScrew = <ore:screwSteel>;
 
 val CopperItemCasing = <ore:casingSmallCopper>;
 val LeadItemCasing = <ore:casingSmallLead>;
+val IronItemCasing = <ore:casingSmallIron>;
 val AlItemCasing = <ore:casingSmallAluminium>;
 val SteelItemCasing = <ore:casingSmallSteel>;
 val TinAlloyItemCasing = <ore:casingSmallTinAlloy>;
 val BronzeItemCasing = <ore:casingSmallBronze>;
+val TiItemCasing = <ore:casingSmallTitanium>;
 
 val ULVHull = <grindcore:tile.HullULV>;
 
@@ -287,14 +307,30 @@ val MVMotor = <grindcore:item.MVMotor>;
 val MVHull = <grindcore:tile.HullMV>;
 val MVPump = <grindcore:item.MVPump>;
 val MVPiston = <grindcore:item.MVPiston>;
+val MVRobotArm = <grindcore:item.MVRobotArm>;
+val MVConveyor = <grindcore:item.MVConveyor>;
 
 val HVMotor = <grindcore:item.HVMotor>;
 val HVPump = <grindcore:item.HVPump>;
+val HVConveyor = <grindcore:item.HVConveyor>;
 val HVHull = <grindcore:tile.HullHV>;
+val HVRobotArm = <grindcore:item.HVRobotArm>;
 
 val EVHull = <grindcore:tile.HullEV>;
+val EVMotor = <grindcore:item.EVMotor>;
+val EVPiston = <grindcore:item.EVPiston>;
+val EVRobotArm = <grindcore:item.EVRobotArm>;
+
+val LuVHull = <grindcore:tile.HullLuV>;
 val ZPMHull = <grindcore:tile.HullZPM>;
+val DataCircuit = <ore:circuitData>;
+val DataControlCircuit = <ore:circuitElite>;
+val EFlowCircuit = <ore:circuitMaster>;
+
+val SSteelRotor = <ore:rotorStainlessSteel>;
 val TiRotor = <ore:rotorTitanium>;
+val TiDrillTip = <ore:toolHeadDrillTitanium>;
+val IridiumDrillTip = <ore:toolHeadDrillIridium>;
 
 val Concrete = <Railcraft:cube:1>;
 val RedAlloyWire = <RedLogic:redlogic.wire>;
@@ -322,6 +358,8 @@ val OrangeDye = <ore:dyeOrange>;
 val GlassPane = <ore:paneGlass>;
 val Furnace = <minecraft:furnace>;
 val Plank = <ore:plankWood>;
+val Chest = <minecraft:chest>;
+val Hopper = <minecraft:hopper>;
 
 val Screwdriver = <ore:craftingToolScrewdriver>;
 val WireCutter = <ore:craftingToolWireCutter>;
@@ -518,19 +556,31 @@ recipes.remove(BlastFurnace);
 // --- Block Cutting Machine
 recipes.remove(BlockCutMachine);
 
-recipes.remove(SolarDistaller);
+// --- Solar Distiller
+recipes.remove(SolarDistiller);
 
 // --- Fluid Distributor
 recipes.remove(FluidDistributor);
 
+// --- Electric Sorting Machine
 recipes.remove(ElectricSortingMachine);
 
 // --- Item Buffer
 recipes.remove(ItemBuffer);
+
+// --- Crop Harvester
 recipes.remove(CropHarvester);
+
+// --- Turning Table
 recipes.remove(TurningTable);
+
+// --- Personal Safe
 recipes.remove(PSafe);
+
+// --- Trade-O-Mat
 recipes.remove(TradeOMat);
+
+// --- Energy-O-Mat
 recipes.remove(EnergyOMat);
 
 // --- Industrial TNT
@@ -539,28 +589,55 @@ recipes.remove(ITNT);
 // --- Nuke
 recipes.remove(Nuke);
 
+// --- Cropsticks
 recipes.remove(Crop);
 
-
+// --- Miner
 recipes.remove(Miner);
+
+// --- Pump
 recipes.remove(Pump);
+
+// --- Advanced Miner
 recipes.remove(AdvMiner);
 
-
+// --- Terraformer
 recipes.remove(Terraformer);
+
+// --- Teleporter
 recipes.remove(Teleporter);
+
+// --- Tesla Coil
 recipes.remove(TeslaCoil);
+
+// --- Crop-Matron
 recipes.remove(CropMatron);
 
-// --- Parts
 
+// ||||||| Parts |||||||
+
+
+// --- Coil
 recipes.remove(Coil);
+
+// --- Electric Motor
 recipes.remove(ElectricMotor);
+
+// --- Power Unit
 recipes.remove(PowerUnit);
+
+// --- Small Power Unit
 recipes.remove(SPowerUnit);
+
+// --- Heat Conductor
 recipes.remove(HeatConductor);
+
+// --- Copper Boiler
 recipes.remove(CopperBoiler);
+
+// --- Wooden Rotor Blade
 recipes.remove(WRotorBlade);
+
 recipes.remove(IRotorBlade);
 recipes.remove(CRotorBlade);
 recipes.remove(SRotorBlade);
@@ -595,6 +672,8 @@ recipes.remove(EUSplittWire);
 recipes.remove(CoalBall);
 recipes.remove(CCoalBall);
 recipes.remove(CoalChunk);
+
+recipes.remove(EjectorUp);
 
 
 // ||||||| Tools |||||||
@@ -796,6 +875,12 @@ recipes.addShaped(EUFurnace, [
 [Coil, IronFurnace, Coil],
 [DoubleSteelPlate, LVMotor, DoubleSteelPlate]]);
 
+// --- Induction Furnace
+recipes.addShaped(InductionFurnace, [
+[TiPlate, Coil, TiPlate],
+[TiItemCasing, EVHull, TiItemCasing],
+[DoubleTiPlate, HVMotor, DoubleTiPlate]]);
+
 // --- Compressor
 recipes.addShaped(Compressor, [
 [SteelPlate, BasicCircuit, SteelPlate],
@@ -815,14 +900,14 @@ recipes.addShaped(Extractor, [
 
 // --- Macerator
 recipes.addShaped(Macerator, [
-[SSteelPlate, GoodCircuit, SSteelPlate],
-[DiamondBuzzBlade, HVHull, MVPiston],
-[SSteelPlate, MVMotor, SSteelPlate]]);
+[DoubleAlPlate, BasicCircuit, DoubleAlPlate],
+[Diamond, MVHull, MVPiston],
+[DoubleAlPlate, MVMotor, DoubleAlPlate]]);
 // - Alternate Recipe
 recipes.addShaped(Macerator, [
-[SSteelPlate, GoodCircuit, SSteelPlate],
-[MVPiston, HVHull, DiamondBuzzBlade],
-[SSteelPlate, MVMotor, SSteelPlate]]);
+[DoubleAlPlate, BasicCircuit, DoubleAlPlate],
+[MVPiston, MVHull, Diamond],
+[DoubleAlPlate, MVMotor, DoubleAlPlate]]);
 
 // --- Fluid-Solid Canning Machine
 recipes.addShaped(FSCanning, [
@@ -853,11 +938,141 @@ recipes.addShaped(Recycler, [
 [LVPiston, LVHull, LVPiston],
 [SteelPlate, LVMotor, SteelPlate]]);
 
+// --- Thermal Centrifuge
+recipes.addShaped(ThermalCentrifuge, [
+[SSteelPlate, SSteelRotor, SSteelPlate],
+[Coil, MVHull, Coil],
+[DoubleSSteelPlate, MVMotor, DoubleSSteelPlate]]);
+
+// --- Metal Former
+recipes.addShaped(MetalFormer, [
+[DoubleTiPlate, DiamondBuzzBlade, DoubleTiPlate],
+[EVRobotArm, EVHull, EVPiston],
+[DoubleTiPlate, EVMotor, DoubleTiPlate]]);
+// - Alternate Recipe
+recipes.addShaped(MetalFormer, [
+[DoubleTiPlate, DiamondBuzzBlade, DoubleTiPlate],
+[EVPiston, EVHull, EVRobotArm],
+[DoubleTiPlate, EVMotor, DoubleTiPlate]]);
+
+// --- Ore-Washing Plant
+recipes.addShaped(OreWashingPlant, [
+[AlPlate, BasicCircuit, AlPlate],
+[LVPump, LVHull, LVPump],
+[BCTank, LVMotor, BCTank]]);
+
 // --- Fermenter
 recipes.addShaped(Fermenter, [
 [SteelPlate, BCTank, SteelPlate],
-[BCTank, ULVHull, BCTank],
+[BCTank, LVHull, BCTank],
 [SteelPlate, HeatConductor, SteelPlate]]);
+
+// --- Miner
+recipes.addShaped(Miner, [
+[DoubleSSteelPlate, AdvCircuit, DoubleSSteelPlate],
+[GoodCircuit, HVHull, GoodCircuit],
+[MiningPipe, TiDrillTip, MiningPipe]]);
+
+// --- Advanced Miner
+recipes.addShaped(AdvMiner, [
+[DoubleTSteelPlate, EFlowCircuit, DoubleTSteelPlate],
+[DataControlCircuit, LuVHull, DataControlCircuit],
+[MiningPipe, IridiumDrillTip, MiningPipe]]);
+
+// --- Pump
+recipes.addShaped(Pump, [
+[SteelPlate, NANDChip, SteelPlate],
+[BCTank, LVHull, BCTank],
+[MiningPipe, LVPump, MiningPipe]]);
+
+// --- Crop-Matron
+recipes.addShaped(CropMatron, [
+[BCTank, MVRobotArm, BCTank],
+[MVPump, HVHull, MVPump],
+[DoubleSSteelPlate, GoodCircuit, DoubleSSteelPlate]]);
+
+// --- Crop Harvester
+recipes.addShaped(CropHarvester, [
+[TiPlate, HVConveyor, TiPlate],
+[MVRobotArm, EVHull, MVRobotArm],
+[TiPlate, AdvCircuit, TiPlate]]);
+
+// --- Pattern Storage
+recipes.addShaped(PatternStorage, [
+[DoubleTiPlate, HVRobotArm, DoubleTiPlate],
+[CrystalMemory, EVHull, CrystalMemory],
+[DoubleTiPlate, DataCircuit, DoubleTiPlate]]);
+
+// --- Bottling Plant
+recipes.addShaped(BottlingPlant, [
+[IronPlate, LVPump, IronPlate],
+[BCTank, ULVHull, EmptyCell],
+[IronPlate, LVMotor, IronPlate]]);
+
+// --- Liquid Heat Exchanger
+recipes.addShaped(LiquidHUExchanger, [
+[DoubleCopperPlate, HeatConductor, DoubleCopperPlate],
+[BCTank, HVHull, BCTank],
+[DoubleSSteelPlate, MVMotor, DoubleSSteelPlate]]);
+
+// --- Fluid Regulator
+recipes.addShaped(FluidRegulator, [
+[IronPlate, LVPump, IronPlate],
+[BCTank, ULVHull, BCTank],
+[NANDChip, LVMotor, NANDChip]]);
+
+// --- Condenser
+recipes.addShaped(Condenser, [
+[HeatVent, BasicCircuit, HeatVent],
+[BCTank, LVHull, BCTank],
+[SteelPlate, LVMotor, SteelPlate]]);
+
+// --- Steam Generator
+recipes.addShaped(SteamGen, [
+[SteelPlate, LVPump, SteelPlate],
+[BCTank, LVHull, BCTank],
+[DoubleCopperPlate, HeatConductor, DoubleCopperPlate]]);
+
+// --- Block-Cutting Machine
+recipes.addShaped(BlockCutMachine, [
+[SSteelPlate, GoodCircuit, SSteelPlate],
+[MVConveyor, HVHull, MVConveyor],
+[DoubleSSteelPlate, MVMotor, DoubleSSteelPlate]]);
+
+// --- Solar Distiller
+recipes.addShaped(SolarDistiller, [
+[DoubleSilverPlate, QuadSilverPlate, DoubleSilverPlate],
+[CopperBoiler, ULVHull, CopperBoiler],
+[DoubleSteelPlate, SteelPlate, DoubleSteelPlate]]);
+
+// --- Fluid Distributor
+recipes.addShaped(FluidDistributor, [
+[IronPlate, FluidEjectorUp, IronPlate],
+[FluidEjectorUp, ULVHull, FluidEjectorUp],
+[IronPlate, BCTank, IronPlate]]);
+
+// --- Electric Sorting Machine
+recipes.addShaped(ElectricSortingMachine, [
+[SteelPlate, NANDChip, SteelPlate],
+[EjectorUp, LVHull, EjectorUp],
+[SteelPlate, SteelItemCasing, SteelPlate]]);
+
+// --- Item Buffer
+recipes.addShaped(ItemBuffer, [
+[IronPlate, Chest, IronPlate],
+[CopperItemCasing, ULVHull, CopperItemCasing],
+[IronPlate, Hopper, IronPlate]]);
+// - Alternate Recipe
+recipes.addShaped(ItemBuffer, [
+[IronPlate, Chest, IronPlate],
+[IronItemCasing, ULVHull, IronItemCasing],
+[IronPlate, Hopper, IronPlate]]);
+
+// --- Turning Table
+recipes.addShaped(TurningTable, [
+[SteelPlate, IronItemCasing, SteelPlate],
+[IronShaft, LVHull, IronShaft],
+[SteelPlate, SteelGear, SteelPlate]]);
 
 
 // ||||||| Generators |||||||
@@ -1119,6 +1334,16 @@ recipes.addShaped(SPowerUnit, [
 [SteelItemCasing, FineCopperWire, Screwdriver],
 [BasicCircuit, Battery, ElectricMotor],
 [SteelItemCasing, FineGoldWire, Wrench]]);
+
+
+// ||||||| Upgrades |||||||
+
+
+// --- Ejector Upgrade
+recipes.addShaped(EjectorUp, [
+[SteelItemCasing, NANDChip, SteelItemCasing],
+[FineCopperWire, LVPiston, FineCopperWire],
+[SteelItemCasing, NANDChip, SteelItemCasing]]);
 
 
 // ||||||| Tools |||||||
