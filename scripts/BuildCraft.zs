@@ -179,6 +179,8 @@ val SmallIronGear = <ore:gearGtSmallIron>;
 val RSTorch = <minecraft:redstone_torch>;
 val ClayBlock = <minecraft:clay>;
 val Plank = <ore:plankWood>;
+val IronBars = <minecraft:iron_bars>;
+val IronTankWall = <Railcraft:machine.beta>;
 
 val AlChest = <gregtech:gt.multitileentity:1>;
 
@@ -838,6 +840,12 @@ recipes.addShaped(BCTank, [
 [InvarRod, GlassPane, InvarRod],
 [GlassPane, Wrench, GlassPane],
 [InvarRod, GlassPane, InvarRod]]);
+
+// --- Flood Gate
+recipes.addShaped(FloodGate, [
+[IronTankWall, LVPump, IronTankWall],
+[IronBars, LVHull, IronBars],
+[IronTankWall, IronBars, IronTankWall]]);
 
 
 

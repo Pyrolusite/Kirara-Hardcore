@@ -11,6 +11,16 @@
 // *======= Variables =======*
 
 
+// --- Blocks
+
+val CopperBlock = <IC2:blockMetal>;
+val TinBlock = <IC2:blockMetal:1>;
+val BronzeBlock = <IC2:blockMetal:2>;
+val UraniumBlock = <IC2:blockMetal:3>;
+val LeadBlock = <IC2:blockMetal:4>;
+val RefinedIronBlock = <IC2:blockMetal:5>;
+
+
 // --- Generators
 
 val KUWindGen = <IC2:blockKineticGenerator>;
@@ -113,6 +123,7 @@ val CropMatron = <IC2:blockMachine2:2>;
 
 // --- Parts
 
+val BasicMachineCasing = <IC2:blockMachine>;
 val Coil = <IC2:itemRecipePart>;
 val ElectricMotor = <IC2:itemRecipePart:1>;
 val PowerUnit = <IC2:itemRecipePart:2>;
@@ -133,6 +144,9 @@ val CarbonMesh = <IC2:itemPartCarbonMesh>;
 val CarbonFibre = <IC2:itemPartCarbonFibre>;
 val MiningPipe = <IC2:blockMiningPipe>;
 val CrystalMemory = <IC2:itemcrystalmemory>;
+
+val Scaffold = <IC2:blockScaffold>;
+val IronScaffold = <IC2:blockIronScaffold>;
 
 // --- Reactor Components
 
@@ -228,6 +242,7 @@ val LeadFoil = <ore:foilLead>;
 val InvarFoil = <ore:foilInvar>;
 
 val RubberRod = <ore:stickRubber>;
+val LongIronRod = <ore:stickLongAnyIron>;
 val LongSteelRod = <ore:stickLongSteel>;
 val MagSteelRod = <ore:stickSteelMagnetic>;
 
@@ -269,6 +284,7 @@ val SSteelGear = <ore:gearStainlessSteel>;
 val TiGear = <ore:gearTitanium>;
 
 val BronzeBurningBox = <gregtech:gt.multitileentity:1102>;
+val IronBlockSlab = <Railcraft:slab:6>;
 
 val FineCopperWire = <ore:wireFineCopper>;
 val FineGoldWire = <ore:wireFineGold>;
@@ -284,6 +300,7 @@ val DiamondBuzzBlade = <ore:toolHeadBuzzSawDiamond>;
 
 val WoodBolt = <ore:boltWood>;
 val WoodScrew = <ore:screwWood>;
+val IronScrew = <ore:screwAnyIron>;
 val SteelBolt = <ore:boltSteel>;
 val SteelScrew = <ore:screwSteel>;
 
@@ -361,6 +378,7 @@ val Plank = <ore:plankWood>;
 val Chest = <minecraft:chest>;
 val Hopper = <minecraft:hopper>;
 
+val Saw = <ore:craftingToolSaw>;
 val Screwdriver = <ore:craftingToolScrewdriver>;
 val WireCutter = <ore:craftingToolWireCutter>;
 val Wrench = <ore:craftingToolWrench>;
@@ -617,6 +635,27 @@ recipes.remove(CropMatron);
 // ||||||| Parts |||||||
 
 
+// --- Copper Block
+recipes.remove(CopperBlock);
+
+// --- Tin Block
+recipes.remove(TinBlock);
+
+// --- Bronze Block
+recipes.remove(BronzeBlock);
+
+// --- Uranium Block
+recipes.remove(UraniumBlock);
+
+// --- Lead Block
+recipes.remove(LeadBlock);
+
+// --- Refined Iron Block
+recipes.remove(RefinedIronBlock);
+
+// --- Basic Machine Casing
+recipes.remove(BasicMachineCasing);
+
 // --- Coil
 recipes.remove(Coil);
 
@@ -638,15 +677,38 @@ recipes.remove(CopperBoiler);
 // --- Wooden Rotor Blade
 recipes.remove(WRotorBlade);
 
+// --- Iron Rotor Blade
 recipes.remove(IRotorBlade);
+
+// --- Carbon Rotor Blade
 recipes.remove(CRotorBlade);
+
+// --- Steel Rotor Blade
 recipes.remove(SRotorBlade);
+
+// --- Iron Turning Blank
 recipes.remove(ITurningBlank);
+
+// --- Wooden Turning Blank
 recipes.remove(WTurningBlank);
+
+// --- Electronic Circuit
 recipes.remove(Circuit);
+
+// --- Advanced Circuit
 recipes.remove(AdvancedCircuit);
+
+// --- Energium Dust
 recipes.remove(EnergiumDust);
+
+// --- Carbon Mesh
 recipes.remove(CarbonMesh);
+
+// --- Scaffold
+recipes.remove(Scaffold);
+
+// --- Iron Scaffold
+recipes.remove(IronScaffold);
 
 recipes.remove(Battery);
 recipes.remove(AdvBattery);
@@ -673,6 +735,7 @@ recipes.remove(CoalBall);
 recipes.remove(CCoalBall);
 recipes.remove(CoalChunk);
 
+// --- Ejector Upgrade
 recipes.remove(EjectorUp);
 
 
@@ -1179,6 +1242,11 @@ recipes.addShaped(KUEUGen, [
 [SSteelPlate, FinePlatinumWire, SSteelPlate],
 [SteelShaft, Gen, HVMotor],
 [DoubleSSteelPlate, FinePlatinumWire, DoubleSSteelPlate]]);
+// - Alternate Recipe
+recipes.addShaped(KUEUGen, [
+[SSteelPlate, FinePlatinumWire, SSteelPlate],
+[HVMotor, Gen, SteelShaft],
+[DoubleSSteelPlate, FinePlatinumWire, DoubleSSteelPlate]]);
 
 // --- Nuclear Reactor
 recipes.addShaped(Reactor, [
@@ -1230,6 +1298,28 @@ recipes.addShaped(ReactorVessel * 4, [
 
 // ||||||| Blocks |||||||
 
+
+// --- Scaffold
+recipes.addShaped(Scaffold, [
+[CarpentersBlock, CarpentersBlock, CarpentersBlock],
+[Saw, CarpentersBlock, Screwdriver],
+[CarpentersBlock, IronScrew, CarpentersBlock]]);
+// - Alternate Recipe
+recipes.addShaped(Scaffold, [
+[CarpentersBlock, CarpentersBlock, CarpentersBlock],
+[Screwdriver, CarpentersBlock, Saw],
+[CarpentersBlock, IronScrew, CarpentersBlock]]);
+
+// --- Iron Scaffold
+recipes.addShaped(IronScaffold, [
+[IronBlockSlab, IronBlockSlab, IronBlockSlab],
+[Saw, LongIronRod, Screwdriver],
+[LongIronRod, SteelScrew, LongIronRod]]);
+// - Alternate Recipe
+recipes.addShaped(IronScaffold, [
+[IronBlockSlab, IronBlockSlab, IronBlockSlab],
+[Screwdriver, LongIronRod, Saw],
+[LongIronRod, SteelScrew, LongIronRod]]);
 
 // --- Industrial TNT
 recipes.addShaped(ITNT * 8, [
