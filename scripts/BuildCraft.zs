@@ -78,7 +78,10 @@ val EmeraldPlate = <ore:plateGemEmerald>;
 val ObsidianPlate = <ore:plateDenseObsidian>;
 val LapisPlate = <ore:plateLapis>;
 val RedAlloyPlate = <ore:plateRedAlloy>;
+val DoubleRedAlloyPlate = <ore:plateDoubleRedAlloy>;
+val DenseObbyPlate = <ore:plateDenseObsidian>;
 
+val RedAlloyFoil = <ore:foilRedAlloy>;
 val IronScrew = <ore:screwAnyIron>;
 val IronBolt = <ore:boltAnyIron>;
 
@@ -150,6 +153,7 @@ val ZonePlanner = <BuildCraft|Robotics:zonePlan>;
 val Requester = <BuildCraft|Robotics:requester>;
 val Robot = <BuildCraft|Robotics:robot:*>;
 val FilterBuffer = <BuildCraft|Transport:filteredBufferBlock>;
+val AssemblyTable = <BuildCraft|Silicon:laserTableBlock>;
 
 val LVTransformer = <IC2:blockElectric:3>;
 
@@ -165,8 +169,10 @@ val LVPiston = <grindcore:item.LVPiston>;
 val LVHull = <grindcore:tile.HullLV>;
 val LVConveyor = <grindcore:item.LVConveyor>;
 
+val MVHull = <grindcore:tile.HullMV>;
 val MVPump = <grindcore:item.MVPump>;
 val MVMotor = <grindcore:item.MVMotor>;
+val MVRobotArm = <grindcore:item.MVRobotArm>;
 
 val SteelDrillTip = <ore:toolHeadDrillSteel>;
 val AlDrillTip = <ore:toolHeadDrillAluminium>;
@@ -175,12 +181,15 @@ val GoodCircuit = <ore:circuitGood>;
 val AdvCircuit = <ore:circuitAdvanced>;
 
 val SmallIronGear = <ore:gearGtSmallIron>;
+val FlawlessDiamond = <gregtech:gt.meta.gemFlawless:8300>;
+val ExquisiteDiamond = <gregtech:gt.meta.gemExquisite:8300>;
 
 val RSTorch = <minecraft:redstone_torch>;
 val ClayBlock = <minecraft:clay>;
 val Plank = <ore:plankWood>;
 val IronBars = <minecraft:iron_bars>;
 val IronTankWall = <Railcraft:machine.beta>;
+val BeamCore = <GalacticraftMars:item.itemBasicAsteroids:8>;
 
 val AlChest = <gregtech:gt.multitileentity:1>;
 
@@ -210,7 +219,7 @@ recipes.remove(Pump);
 recipes.remove(Laser);
 
 // --- Assembly Table
-recipes.remove(<BuildCraft|Silicon:laserTableBlock>);
+recipes.remove(AssemblyTable);
 
 // --- Refinery
 recipes.remove(Refinery);
@@ -846,6 +855,18 @@ recipes.addShaped(FloodGate, [
 [IronTankWall, LVPump, IronTankWall],
 [IronBars, LVHull, IronBars],
 [IronTankWall, IronBars, IronTankWall]]);
+
+// --- Laser
+recipes.addShaped(Laser, [
+[RedAlloyPlate, RedAlloyFoil, RedAlloyPlate],
+[DoubleRedAlloyPlate, DiamondPlate, DoubleRedAlloyPlate],
+[DenseObbyPlate, BeamCore, DenseObbyPlate]]);
+
+// --- Assembly Table
+recipes.addShaped(AssemblyTable, [
+[DenseObbyPlate, RedAlloyPlate, DenseObbyPlate],
+[MVRobotArm, MVHull, MVRobotArm],
+[DenseObbyPlate, AdvCircuit, DenseObbyPlate]]);
 
 
 

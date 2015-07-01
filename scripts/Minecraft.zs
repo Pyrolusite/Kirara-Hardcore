@@ -479,7 +479,7 @@ recipes.removeShaped(HopperCart);
 recipes.removeShaped(TNTCart);
 
 // --- Glass Pane
-recipes.remove(<minecraft:glass_pane>);
+//recipes.remove(<minecraft:glass_pane>);
 
 // --- Brewing Stand
 recipes.remove(BrewingStand);

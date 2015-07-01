@@ -142,6 +142,8 @@ val WovenSilk = <Forestry:craftingMaterial:3>;
 val ImpregnatedCasing = <Forestry:impregnatedCasing>;
 val ScentedPanel = <Forestry:craftingMaterial:6>;
 val ProvenFrame = <Forestry:frameProven>;
+val Fertilizer = <Forestry:fertilizerCompound>;
+val ICFertilizer = <IC2:itemFertilizer>;
 
 val GoldTube = <Forestry:thermionicTubes:4>;
 val DiamondTube = <Forestry:thermionicTubes:5>;
@@ -1447,19 +1449,22 @@ mods.forestry.Carpenter.addRecipe(800, <liquid:water> * 1500,
 mods.forestry.Carpenter.addRecipe(1600, <liquid:water> * 2500, 
 [<gregtech:gt.meta.plate:500>, LVSensor, <gregtech:gt.meta.plate:500>,
 <Railcraft:part.plate:1>, ScreenTierTwo, <Railcraft:part.plate:1>,
-DiamondChip, <grindcore:item.GoodCircuit>, DiamondChip], RefinedFCircuit, Beealyzer);
+DiamondChip, <grindcore:item.GoodCircuit>, DiamondChip], EnhancedFCircuit, Beealyzer);
 
 // --- Treealyzer
 mods.forestry.Carpenter.addRecipe(1600, <liquid:water> * 2500, 
 [<Railcraft:part.plate:3>, LVSensor, <Railcraft:part.plate:3>,
 <Railcraft:part.plate:1>, ScreenTierTwo, <Railcraft:part.plate:1>,
-DiamondChip, <grindcore:item.BasicCircuit>, DiamondChip], RefinedFCircuit, Treealyzer);
+DiamondChip, <grindcore:item.BasicCircuit>, DiamondChip], EnhancedFCircuit, Treealyzer);
 
 // --- Flutterlyzer
 mods.forestry.Carpenter.addRecipe(1600, <liquid:water> * 2500, 
 [<gregtech:gt.meta.plate:8610>, LVSensor, <gregtech:gt.meta.plate:8610>,
 <Railcraft:part.plate:1>, ScreenTierTwo, <Railcraft:part.plate:1>,
-DiamondChip, <grindcore:item.NANDChip>, DiamondChip], RefinedFCircuit, Flutterlyzer);
+DiamondChip, <grindcore:item.NANDChip>, DiamondChip], EnhancedFCircuit, Flutterlyzer);
+
+// --- Fertilizer
+recipes.addShapeless(Fertilizer, [ICFertilizer]);
 
 
 // ||||||| Backpacks |||||||

@@ -233,6 +233,8 @@ val RubberPlate = <ore:plateRubber>;
 val DSilverPlate = <ore:plateDenseSilver>;
 val DRedAlloyPlate = <ore:plateDenseRedAlloy>;
 val DiamondLens = <ore:lensDiamond>;
+val FlawlessDiamond = <gregtech:gt.meta.gemFlawless:8300>;
+val ExquisiteDiamond = <gregtech:gt.meta.gemExquisite:8300>;
 
 val LiquidOxygenCell = <IC2:itemFluidCell>.withTag({Fluid: {Amount: 1000, FluidName: "liquidoxygen"}});
 val LiquidNitrogenCell = <IC2:itemFluidCell>.withTag({Fluid: {Amount: 1000, FluidName: "liquidnitrogen"}});
@@ -282,6 +284,9 @@ val Carrot = <minecraft:carrot>;
 val Melon = <minecraft:melon>;
 val Potato = <minecraft:potato>;
 val Stone = <ore:stone>;
+
+val RedAlloyPlate = <ore:plateRedAlloy>;
+val DoubleRedAlloyPlate = <ore:plateDoubleRedAlloy>;
 
 val TOneAlloy = <minecraft:stick>;
 val TTwoAlloy = <minecraft:stick>;
@@ -778,3 +783,18 @@ NEI.hide(SolarWafer);
 
 // --- Hiding Raw Silicon
 NEI.hide(RawSilicon);
+
+
+// ----- Adding Back -----
+
+
+// --- Beam Core
+recipes.addShaped(BeamCore, [
+[RedAlloyPlate, DoubleRedAlloyPlate, RedAlloyPlate],
+[DoubleRedAlloyPlate, FlawlessDiamond, DoubleRedAlloyPlate],
+[RedAlloyPlate, DoubleRedAlloyPlate, RedAlloyPlate]]);
+// - Alternate Recipe
+recipes.addShaped(BeamCore, [
+[RedAlloyPlate, DoubleRedAlloyPlate, RedAlloyPlate],
+[DoubleRedAlloyPlate, ExquisiteDiamond, DoubleRedAlloyPlate],
+[RedAlloyPlate, DoubleRedAlloyPlate, RedAlloyPlate]]);

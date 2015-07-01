@@ -104,7 +104,8 @@ val TradeOMat = <IC2:blockPersonal:1>;
 val EnergyOMat = <IC2:blockPersonal:2>;
 val ITNT = <IC2:blockITNT>;
 val Nuke = <IC2:blockNuke>;
-val Crop = <IC2:blockCrop>;
+val Cropstick = <IC2:blockCrop>;
+val Fertilizer = <IC2:itemFertilizer>;
 
 val Flint = <minecraft:flint>;
 val GunpowderBlock = <gregtech:gt.meta.storage.dust:8220>;
@@ -132,8 +133,8 @@ val HeatConductor = <IC2:itemRecipePart:5>;
 val CopperBoiler = <IC2:itemRecipePart:6>;
 val WRotorBlade = <IC2:itemRecipePart:7>;
 val IRotorBlade = <IC2:itemRecipePart:8>;
-val CRotorBlade = <IC2:itemRecipePart:9>;
-val SRotorBlade = <IC2:itemRecipePart:10>;
+val CRotorBlade = <IC2:itemRecipePart:10>;
+val SRotorBlade = <IC2:itemRecipePart:9>;
 val ITurningBlank = <IC2:itemTurningBlanks:349525>.withTag({state: {l4: 5, l2: 5, l3: 5, l0: 5, l1: 5}});
 val WTurningBlank = <IC2:itemTurningBlanksWood:209715>.withTag({state: {l4: 3, l2: 3, l3: 3, l0: 3, l1: 3}});
 val Circuit = <IC2:itemPartCircuit>;
@@ -144,13 +145,23 @@ val CarbonMesh = <IC2:itemPartCarbonMesh>;
 val CarbonFibre = <IC2:itemPartCarbonFibre>;
 val MiningPipe = <IC2:blockMiningPipe>;
 val CrystalMemory = <IC2:itemcrystalmemory>;
+val RawCrystalMemory = <IC2:itemRecipePart:4>;
+val MFSUUpKit = <IC2:itemupgradekit>;
 
+val Luminator = <IC2:blockLuminatorDark>;
 val Scaffold = <IC2:blockScaffold>;
 val IronScaffold = <IC2:blockIronScaffold>;
+val EmptyBoozeBarrel = <IC2:itemBarrel>;
 
 // --- Reactor Components
 
+val Coolant10K = <IC2:reactorCoolantSimple>;
+val Coolant30K = <IC2:reactorCoolantTriple>;
+val Coolant60K = <IC2:reactorCoolantSix>;
+
 val HeatVent = <IC2:reactorVent>;
+val ThickNReflector = <IC2:reactorReflectorThick>;
+val RTGPellet = <IC2:itemRTGPellet>;
 
 // --- Batteries
 
@@ -168,22 +179,28 @@ val ChargingLapCrystal =
 
 val TinWire = 
 val InsuTinWire = 
-val CopperWire = 
-val InsuCopperWire = 
-val GoldWire = 
+val CopperWire = */
+val InsuCopperWire = <IC2:itemCable>;
+/* val GoldWire = 
 val InsuGoldWire = 
 val SteelWire = 
 val InsuSteelWire = 
 val GlassWire = 
-val EUDetWire = 
-val EUSplittWire = 
+val EUDetWire = */
+val EUSplittWire = <IC2:itemCable:12>;
 
-val CoalBall = 
+/*val CoalBall = 
 val CCoalBall = 
 val CoalChunk =*/
 
+val OverclockerUp = <IC2:upgradeModule>;
+val TransformerUp = <IC2:upgradeModule:1>;
+val EnergyUp = <IC2:upgradeModule:2>;
 val EjectorUp = <IC2:upgradeModule:3>;
 val FluidEjectorUp = <IC2:upgradeModule:4>;
+val InverterUp = <IC2:upgradeModule:5>;
+val PullingUp = <IC2:upgradeModule:6>;
+val EmptyTFPB = <IC2:itemTFBP>;
 
 // --- Tools
 
@@ -191,19 +208,19 @@ val Treetap = <IC2:itemTreetap>;
 val MiningDrill = <IC2:itemToolDrill:*>;
 val DiamondDrill = <IC2:itemToolDDrill:*>;
 val IridiumDrill = <IC2:itemToolIridiumDrill:*>;
-/*val Cutter = 
-val Wrench = 
-val Chainsaw = 
+val Cutter = <IC2:itemToolCutter>;
+val ICWrench = <IC2:itemToolWrench>;
+/*val Chainsaw = 
 val EWrench = 
 val ETreetap = 
 val Laser = 
 val EUReader = 
 val ODScanner = 
 val OVScanner = 
-val Obscurator = 
-val FTransmitter = 
-val NanoSaber = 
-val WindMeter = */
+val Obscurator = */
+val FreqTransmitter = <IC2:itemFreq>;
+val NanoSaber = <IC2:itemNanoSaber:26>;
+val WindMeter =<IC2:windmeter:26>;
 
 // --- Armor
 
@@ -235,6 +252,8 @@ val NightvisionGoggles = <IC2:itemNightvisionGoggles>;
 val RubberLog = <minecraft:log:3>;
 val JunglePlanks = <minecraft:planks:3>;
 
+val SiliconDioxideDust = <ore:dustSiliconDioxide>;
+val ObsidianDust = <ore:dustObsidian>;
 val RedAlloyDust = <ore:dustRedAlloy>;
 val RedAlloyDustBlock = <ore:blockDustRedAlloy>;
 
@@ -242,6 +261,7 @@ val LeadFoil = <ore:foilLead>;
 val InvarFoil = <ore:foilInvar>;
 
 val RubberRod = <ore:stickRubber>;
+val IronRod = <ore:stickAnyIron>;
 val LongIronRod = <ore:stickLongAnyIron>;
 val LongSteelRod = <ore:stickLongSteel>;
 val MagSteelRod = <ore:stickSteelMagnetic>;
@@ -249,6 +269,7 @@ val MagSteelRod = <ore:stickSteelMagnetic>;
 val RubberPlate = <ore:plateRubber>;
 val CopperPlate = <ore:plateCopper>;
 val LeadPlate = <ore:plateLead>;
+val TinPlate = <ore:plateTin>;
 val RedAlloyPlate = <ore:plateRedAlloy>;
 val InvarPlate = <ore:plateInvar>;
 val IronPlate = <ore:plateAnyIron>;
@@ -257,27 +278,40 @@ val SteelPlate = <ore:plateSteel>;
 val AlPlate = <ore:plateAluminium>;
 val SSteelPlate = <ore:plateStainlessSteel>;
 val TiPlate = <ore:plateTitanium>;
+val TSteelPlate = <ore:plateTungstenSteel>;
 val IridiumPlate = <ore:plateIridium>;
 val BatteryAlloyPlate = <ore:plateBatteryAlloy>;
 val MagNeodymiumPlate = <ore:plateNeodymiumMagnetic>;
 val SiliconPlate = <ore:plateSilicon>;
+val EnderPearlPlate = <ore:plateGemEnderPearl>;
+val Cobalt60Plate = <ore:plateCobalt60>;
+val Pu241Plate = <ore:platePlutonium241>;
 
 val DoubleCopperPlate = <ore:plateDoubleCopper>;
 val DoubleInvarPlate = <ore:plateDoubleInvar>;
+val DoubleIronPlate = <ore:plateDoubleIron>;
 val DoubleBronzePlate = <ore:plateDoubleAnyBronze>;
 val DoubleSteelPlate = <ore:plateDoubleSteel>;
 val DoubleSSteelPlate = <ore:plateDoubleStainlessSteel>;
-val DoubleTSteelPlate = <ore:plateDoubleTungstenSteel>;
 val DoubleAlPlate = <ore:plateDoubleAluminium>;
 val DoubleTiPlate = <ore:plateDoubleTitanium>;
+val DoubleTSteelPlate = <ore:plateDoubleTungstenSteel>;
 val DoubleBatteryAlloyPlate = <ore:plateDoubleBatteryAlloy>;
 val DoubleSilverPlate = <ore:plateDoubleSilver>;
+val DoubleCarbonPlate = <ore:plateAlloyCarbon>;
+val DoubleCobalt60Plate = <ore:plateDoubleCobalt60>;
+
+val TripleIronPlate = <ore:plateTripleIron>;
+val TripleSteelPlate = <ore:plateTripleSteel>;
 val QuadSilverPlate = <ore:plateQuadrupleSilver>;
+val QuadPu241Plate = <ore:plateQuadruplePlutonium241>;
 
 val DenseCopperPlate = <ore:plateDenseCopper>;
 val DenseLeadPlate = <ore:plateDenseLead>;
 
 val SmallWoodGear = <ore:gearGtSmallWood>;
+val IronGear = <ore:gearAnyIron>;
+val BronzeGear = <ore:gearBronze>;
 val SteelGear = <ore:gearSteel>;
 val AlGear = <ore:gearAluminium>;
 val SSteelGear = <ore:gearStainlessSteel>;
@@ -287,6 +321,7 @@ val BronzeBurningBox = <gregtech:gt.multitileentity:1102>;
 val IronBlockSlab = <Railcraft:slab:6>;
 
 val FineCopperWire = <ore:wireFineCopper>;
+val FineTinWire = <ore:wireFineTin>;
 val FineGoldWire = <ore:wireFineGold>;
 val FineSilverWire = <ore:wireFineSilver>;
 val FineElectrumWire = <ore:wireFineElectrum>;
@@ -303,6 +338,8 @@ val WoodScrew = <ore:screwWood>;
 val IronScrew = <ore:screwAnyIron>;
 val SteelBolt = <ore:boltSteel>;
 val SteelScrew = <ore:screwSteel>;
+val TinAlloyScrew = <ore:screwTinAlloy>;
+val TinAlloyBolt = <ore:boltTinAlloy>;
 
 val CopperItemCasing = <ore:casingSmallCopper>;
 val LeadItemCasing = <ore:casingSmallLead>;
@@ -327,6 +364,8 @@ val MVPiston = <grindcore:item.MVPiston>;
 val MVRobotArm = <grindcore:item.MVRobotArm>;
 val MVConveyor = <grindcore:item.MVConveyor>;
 
+val HVSensor = <grindcore:item.HVSensor>;
+val HVEmitter = <grindcore:item.HVEmitter>;
 val HVMotor = <grindcore:item.HVMotor>;
 val HVPump = <grindcore:item.HVPump>;
 val HVConveyor = <grindcore:item.HVConveyor>;
@@ -338,6 +377,7 @@ val EVMotor = <grindcore:item.EVMotor>;
 val EVPiston = <grindcore:item.EVPiston>;
 val EVRobotArm = <grindcore:item.EVRobotArm>;
 
+val IVHull = <grindcore:tile.HullIV>;
 val LuVHull = <grindcore:tile.HullLuV>;
 val ZPMHull = <grindcore:tile.HullZPM>;
 val DataCircuit = <ore:circuitData>;
@@ -365,19 +405,27 @@ val Slope = <CarpentersBlocks:blockCarpentersSlope>;
 val Respirator = <enviromine:airFilter>;
 val BCTank = <ore:craftingTank>;
 val IronFence = <IC2:blockFenceIron>;
-val EmptyCell = <ore:cellEmpty>;
+val EmptyCell = <IC2:itemCellEmpty>;
+val Scrap = <IC2:itemScrap>;
 
+val ScreenTierOne = <OpenComputers:screen1>;
 val WoodPressurePlate = <minecraft:wooden_pressure_plate>;
 val PressurePlate = <minecraft:stone_pressure_plate>;
 val HeavyPressurePlate = <minecraft:heavy_weighted_pressure_plate>;
 val AnyWool = <minecraft:wool:*>;
 val OrangeDye = <ore:dyeOrange>;
+val Bonemeal = <minecraft:dye:15>;
 val GlassPane = <ore:paneGlass>;
 val Furnace = <minecraft:furnace>;
 val Plank = <ore:plankWood>;
 val Chest = <minecraft:chest>;
 val Hopper = <minecraft:hopper>;
+val ImpregnatedStick = <Forestry:oakStick>;
+val Beeswax = <Forestry:beeswax>;
+val ForestryFertilizer = <Forestry:fertilizerCompound>;
+val CreosoteBlock = <Railcraft:cube:8>;
 
+val File = <ore:craftingToolFile>;
 val Saw = <ore:craftingToolSaw>;
 val Screwdriver = <ore:craftingToolScrewdriver>;
 val WireCutter = <ore:craftingToolWireCutter>;
@@ -608,7 +656,7 @@ recipes.remove(ITNT);
 recipes.remove(Nuke);
 
 // --- Cropsticks
-recipes.remove(Crop);
+recipes.remove(Cropstick);
 
 // --- Miner
 recipes.remove(Miner);
@@ -710,8 +758,12 @@ recipes.remove(Scaffold);
 // --- Iron Scaffold
 recipes.remove(IronScaffold);
 
+// --- RE-Battery
 recipes.remove(Battery);
+
+// --- Advanced RE-Battery
 recipes.remove(AdvBattery);
+
 /*recipes.remove(LapCrystal);
 recipes.remove(SingleBattery);
 recipes.remove(ChargingBattery);
@@ -733,10 +785,38 @@ recipes.remove(EUSplittWire);
 
 recipes.remove(CoalBall);
 recipes.remove(CCoalBall);
-recipes.remove(CoalChunk);
+recipes.remove(CoalChunk);*/
+
+// --- Pellet Of RTG Fuel
+recipes.remove(RTGPellet);
+
+
+// ||||||| Upgrades |||||||
+
+
+// --- Overclocker Upgrade
+recipes.remove(OverclockerUp);
+
+// --- Transformer Upgrade
+recipes.remove(TransformerUp);
+
+// --- Energy Storage Upgrade
+recipes.remove(EnergyUp);
 
 // --- Ejector Upgrade
 recipes.remove(EjectorUp);
+
+// --- Fluid Ejector Upgrade
+recipes.remove(FluidEjectorUp);
+
+// --- Redstone Signal Inverter Upgrade
+recipes.remove(InverterUp);
+
+// --- Pulling Upgrade
+recipes.remove(PullingUp);
+
+// --- MFSU Upgrade Kit
+recipes.remove(MFSUUpKit);
 
 
 // ||||||| Tools |||||||
@@ -745,11 +825,11 @@ recipes.remove(EjectorUp);
 // --- Treetap
 recipes.remove(Treetap);
 
-recipes.remove(MiningDrill);
+/* recipes.remove(MiningDrill);
 recipes.remove(DiamondDrill);
-recipes.remove(IridiumDrill);
+recipes.remove(IridiumDrill); */
 recipes.remove(Cutter);
-recipes.remove(Wrench);
+/* recipes.remove(ICWrench);
 recipes.remove(Chainsaw);
 recipes.remove(EWrench);
 recipes.remove(ETreetap);
@@ -786,6 +866,15 @@ recipes.remove(CFBackpack);
 recipes.remove(SolarHelmet);
 recipes.remove(StaticBoots);*/
 recipes.remove(NightvisionGoggles);
+
+// --- Luminator
+recipes.remove(Luminator);
+
+// --- Empty Booze Barrel
+recipes.remove(EmptyBoozeBarrel);
+
+// --- Fertilizer
+recipes.remove(Fertilizer);
 
 
 // *======= Adding Back Recipes =======*
@@ -1137,6 +1226,40 @@ recipes.addShaped(TurningTable, [
 [IronShaft, LVHull, IronShaft],
 [SteelPlate, SteelGear, SteelPlate]]);
 
+// --- Terraformer
+recipes.addShaped(Terraformer, [
+[SSteelPlate, EmptyTFPB, SSteelPlate],
+[HVRobotArm, HVHull, HVRobotArm],
+[DoubleSSteelPlate, HVMotor, DoubleSSteelPlate]]);
+
+// --- Teleporter
+recipes.addShaped(Teleporter, [
+[HVSensor, FreqTransmitter, HVEmitter],
+[EnderPearlPlate, IVHull, EnderPearlPlate],
+[DoubleTSteelPlate, EVMotor, DoubleTSteelPlate]]);
+
+// --- Trade-O-Mat
+recipes.addShaped(TradeOMat, [
+[IronPlate, ScreenTierOne, IronPlate],
+[BasicCircuit, ULVHull, NANDChip],
+[IronPlate, FineCopperWire, IronPlate]]);
+// - Alternate Recipe
+recipes.addShaped(TradeOMat, [
+[IronPlate, ScreenTierOne, IronPlate],
+[NANDChip, ULVHull, BasicCircuit],
+[IronPlate, FineCopperWire, IronPlate]]);
+
+// --- Energy-O-Mat
+recipes.addShaped(EnergyOMat, [
+[IronPlate, EUSplittWire, IronPlate],
+[NANDChip, ULVHull, BasicCircuit],
+[IronPlate, FineCopperWire, IronPlate]]);
+// - Alternate Recipe
+recipes.addShaped(TradeOMat, [
+[IronPlate, EUSplittWire, IronPlate],
+[BasicCircuit, ULVHull, NANDChip],
+[IronPlate, FineCopperWire, IronPlate]]);
+
 
 // ||||||| Generators |||||||
 
@@ -1201,6 +1324,7 @@ recipes.addShaped(IsotopeGen, [
 [DenseLeadPlate, HVHull, DenseLeadPlate],
 [DenseLeadPlate, Gen, DenseLeadPlate]]);
 
+// --- Semi-Fluid Generator
 // --- Semi-Fluid Generator
 recipes.addShaped(SemiFluidGen, [
 [AlPlate, EmptyCell, AlPlate],
@@ -1321,15 +1445,55 @@ recipes.addShaped(IronScaffold, [
 [Screwdriver, LongIronRod, Saw],
 [LongIronRod, SteelScrew, LongIronRod]]);
 
+// --- Personal Safe
+recipes.addShaped(PSafe, [
+[SteelPlate, NANDChip, SteelPlate],
+[Wrench, ULVHull, HardHammer],
+[SteelPlate, Chest, SteelPlate]]);
+// - Alternate Recipe
+recipes.addShaped(PSafe, [
+[SteelPlate, NANDChip, SteelPlate],
+[HardHammer, ULVHull, Wrench],
+[SteelPlate, Chest, SteelPlate]]);
+
 // --- Industrial TNT
 recipes.addShaped(ITNT * 8, [
 [Flint, TNT, Flint],
 [TNT, GunpowderBlock, TNT],
 [Flint, TNT, Flint]]);
 
+// --- Nuke
+recipes.addShaped(Nuke, [
+[ThickNReflector, Pu241Plate, ThickNReflector],
+[Pu241Plate, LVHull, Pu241Plate],
+[ThickNReflector, Pu241Plate, ThickNReflector]]);
+
+// --- Luminator
+recipes.addShaped(Luminator * 4, [
+[GlassPane, InsuCopperWire, GlassPane],
+[TinAlloyItemCasing, FineTinWire, TinAlloyItemCasing],
+[GlassPane, InsuCopperWire, GlassPane]]);
+
+// --- Empty Booze Barrel
+mods.forestry.Carpenter.addRecipe(360, <liquid:seedoil> * 400, 
+[RubberLog, CarpentersBlock, RubberLog,
+CarpentersBlock, Beeswax, CarpentersBlock,
+RubberLog, CarpentersBlock, RubberLog], null, EmptyBoozeBarrel);
+
 
 // ||||||| Items |||||||
 
+
+// --- Empty Cell
+recipes.addShaped(EmptyCell * 2, [
+[HardHammer, TinPlate, TinAlloyScrew],
+[TinPlate, GlassPane, TinPlate],
+[TinAlloyBolt, TinPlate, Screwdriver]]);
+// - Alternate Recipe
+recipes.addShaped(EmptyCell * 2, [
+[Screwdriver, TinPlate, TinAlloyScrew],
+[TinPlate, GlassPane, TinPlate],
+[TinAlloyBolt, TinPlate, HardHammer]]);
 
 // --- RE-Battery
 recipes.addShaped(Battery, [
@@ -1425,15 +1589,166 @@ recipes.addShaped(SPowerUnit, [
 [BasicCircuit, Battery, ElectricMotor],
 [SteelItemCasing, FineGoldWire, Wrench]]);
 
+// --- Raw Crystal Memory
+recipes.addShaped(RawCrystalMemory, [
+[SiliconDioxideDust, ObsidianDust, SiliconDioxideDust],
+[ObsidianDust, SiliconPlate, ObsidianDust],
+[SiliconDioxideDust, ObsidianDust, SiliconDioxideDust]]);
+
+// --- Wooden Rotor Blade
+recipes.addShaped(WRotorBlade, [
+[Wrench, CreosoteBlock, Saw],
+[CarpentersBlock, CreosoteBlock, CarpentersBlock],
+[CarpentersBlock, CreosoteBlock, CarpentersBlock]]);
+// - Alternate Recipe
+recipes.addShaped(WRotorBlade, [
+[Saw, CreosoteBlock, Wrench],
+[CarpentersBlock, CreosoteBlock, CarpentersBlock],
+[CarpentersBlock, CreosoteBlock, CarpentersBlock]]);
+
+// --- Iron Rotor Blade
+recipes.addShaped(IRotorBlade, [
+[Wrench, DoubleIronPlate, File],
+[IronPlate, DoubleIronPlate, IronPlate],
+[IronPlate, TripleIronPlate, IronPlate]]);
+// - Alternate Recipe
+recipes.addShaped(IRotorBlade, [
+[File, DoubleIronPlate, Wrench],
+[IronPlate, DoubleIronPlate, IronPlate],
+[IronPlate, TripleIronPlate, IronPlate]]);
+
+// --- Steel Rotor Blade
+recipes.addShaped(CRotorBlade, [
+[Wrench, DoubleSteelPlate, File],
+[SteelPlate, DoubleSteelPlate, SteelPlate],
+[SteelPlate, TripleSteelPlate, SteelPlate]]);
+// - Alternate Recipe
+recipes.addShaped(CRotorBlade, [
+[File, DoubleSteelPlate, Wrench],
+[SteelPlate, DoubleSteelPlate, SteelPlate],
+[SteelPlate, TripleSteelPlate, SteelPlate]]);
+
+// --- Carbon Rotor Blade
+recipes.addShaped(SRotorBlade, [
+[Wrench, CarbonPlate, File],
+[CarbonMesh, CarbonPlate, CarbonMesh],
+[CarbonMesh, DoubleCarbonPlate, CarbonMesh]]);
+// - Alternate Recipe
+recipes.addShaped(SRotorBlade, [
+[File, CarbonPlate, Wrench],
+[CarbonMesh, CarbonPlate, CarbonMesh],
+[CarbonMesh, DoubleCarbonPlate, CarbonMesh]]);
+
+// --- Pellet Of RTG Fuel
+recipes.addShaped(RTGPellet, [
+[Cobalt60Plate, DoubleCobalt60Plate, Cobalt60Plate],
+[DoubleCobalt60Plate, QuadPu241Plate, DoubleCobalt60Plate],
+[Cobalt60Plate, DoubleCobalt60Plate, Cobalt60Plate]]);
+
+// --- Fertilizer
+recipes.addShaped(Fertilizer * 2, [
+[Scrap, Scrap, Scrap],
+[Scrap, Fertilizer, Scrap],
+[Scrap, Scrap, Scrap]]);
+// - Alternate Recipe
+recipes.addShaped(Fertilizer * 3, [
+[Scrap, Bonemeal, Scrap],
+[Bonemeal, Fertilizer, Bonemeal],
+[Scrap, Bonemeal, Scrap]]);
+// -
+recipes.addShapeless(Fertilizer, [ForestryFertilizer]);
+
 
 // ||||||| Upgrades |||||||
 
+
+// --- Overclocker Upgrade
+recipes.addShaped(OverclockerUp, [
+[AlItemCasing, BasicCircuit, AlItemCasing],
+[Coolant10K, Coolant30K, Coolant10K],
+[AlItemCasing, BasicCircuit, AlItemCasing]]);
+// - Alternate Recipe
+recipes.addShaped(OverclockerUp, [
+[AlItemCasing, Coolant10K, AlItemCasing],
+[BasicCircuit, Coolant30K, BasicCircuit],
+[AlItemCasing, Coolant10K, AlItemCasing]]);
+
+// --- Transformer Upgrade
+recipes.addShaped(TransformerUp, [
+[SteelItemCasing, BasicCircuit, SteelItemCasing],
+[FineGoldWire, MVTransformer, FineGoldWire],
+[SteelItemCasing, BasicCircuit, SteelItemCasing]]);
+// - Alternate Recipe
+recipes.addShaped(TransformerUp, [
+[SteelItemCasing, FineGoldWire, SteelItemCasing],
+[BasicCircuit, MVTransformer, BasicCircuit],
+[SteelItemCasing, FineGoldWire, SteelItemCasing]]);
+
+// --- Energy Storage Upgrade
+recipes.addShaped(EnergyUp, [
+[SteelItemCasing, NANDChip, SteelItemCasing],
+[FineCopperWire, Battery, FineCopperWire],
+[SteelItemCasing, NANDChip, SteelItemCasing]]);
+// - Alternate Recipe
+recipes.addShaped(EnergyUp, [
+[SteelItemCasing, FineCopperWire, SteelItemCasing],
+[NANDChip, Battery, NANDChip],
+[SteelItemCasing, FineCopperWire, SteelItemCasing]]);
 
 // --- Ejector Upgrade
 recipes.addShaped(EjectorUp, [
 [SteelItemCasing, NANDChip, SteelItemCasing],
 [FineCopperWire, LVPiston, FineCopperWire],
 [SteelItemCasing, NANDChip, SteelItemCasing]]);
+// - Alternate Recipe
+recipes.addShaped(EjectorUp, [
+[SteelItemCasing, FineCopperWire, SteelItemCasing],
+[NANDChip, LVPiston, NANDChip],
+[SteelItemCasing, FineCopperWire, SteelItemCasing]]);
+
+// --- Fluid Ejector Upgrade
+recipes.addShaped(FluidEjectorUp, [
+[SteelItemCasing, NANDChip, SteelItemCasing],
+[FineCopperWire, LVPump, FineCopperWire],
+[SteelItemCasing, NANDChip, SteelItemCasing]]);
+// - Alternate Recipe
+recipes.addShaped(FluidEjectorUp, [
+[SteelItemCasing, FineCopperWire, SteelItemCasing],
+[NANDChip, LVPump, NANDChip],
+[SteelItemCasing, FineCopperWire, SteelItemCasing]]);
+
+// --- Redstone Signal Inverter Upgrade
+recipes.addShaped(InverterUp, [
+[TinAlloyItemCasing, RedAlloyWire, TinAlloyItemCasing],
+[RedAlloyWire, CarpentersLever, RedAlloyWire],
+[TinAlloyItemCasing, RedAlloyWire, TinAlloyItemCasing]]);
+
+// --- Pulling Upgrade
+recipes.addShaped(PullingUp, [
+[SteelItemCasing, FineCopperWire, SteelItemCasing],
+[LVPiston, BasicCircuit, LVPump],
+[SteelItemCasing, FineCopperWire, SteelItemCasing]]);
+// - Alternate Recipe
+recipes.addShaped(PullingUp, [
+[SteelItemCasing, FineCopperWire, SteelItemCasing],
+[LVPump, BasicCircuit, LVPiston],
+[SteelItemCasing, FineCopperWire, SteelItemCasing]]);
+// -
+recipes.addShaped(PullingUp, [
+[SteelItemCasing, LVPiston, SteelItemCasing],
+[FineCopperWire, BasicCircuit, FineCopperWire],
+[SteelItemCasing, LVPump, SteelItemCasing]]);
+// - Alternate Recipe
+recipes.addShaped(PullingUp, [
+[SteelItemCasing, LVPump, SteelItemCasing],
+[FineCopperWire, BasicCircuit, FineCopperWire],
+[SteelItemCasing, LVPiston, SteelItemCasing]]);
+
+// --- MFSU Upgrade Kit
+recipes.addShaped(MFSUUpKit, [
+[SSteelPlate, LapCrystal, SSteelPlate],
+[LapCrystal, Wrench, LapCrystal],
+[DoubleSSteelPlate, EVHull, DoubleSSteelPlate]]);
 
 
 // ||||||| Tools |||||||
@@ -1449,6 +1764,24 @@ recipes.addShaped(Treetap, [
 [WoodBolt, SmallWoodGear, WoodScrew],
 [Slope, CarpentersBlock, Plank],
 [Plank, Wrench, Screwdriver]]);
+
+// --- Cropsticks
+mods.forestry.Carpenter.addRecipe(200, <liquid:seedoil> * 200, 
+[ImpregnatedStick, Beeswax, ImpregnatedStick,
+ImpregnatedStick, Beeswax, ImpregnatedStick,
+null, null, null], null, Cropstick);
+
+// --- Wrench
+recipes.addShaped(ICWrench, [
+[BronzePlate, HardHammer, BronzePlate],
+[BronzePlate, BronzeGear, BronzePlate],
+[null, BronzePlate, null]]);
+
+// --- Cutter
+recipes.addShaped(Cutter, [
+[IronPlate, File, IronPlate],
+[HardHammer, IronGear, Screwdriver],
+[IronRod, IronScrew, IronRod]]);
 
 
 // ||||||| Weapons And Armors |||||||

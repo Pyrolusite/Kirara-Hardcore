@@ -171,7 +171,7 @@ val TiScrew = <ore:screwTitanium>;
 val SteelItemCasing = <ore:casingSmallSteel>;
 val AlItemCasing = <ore:casingSmallAluminium>;
 val SSteelItemCasing = <ore:casingSmallStainlessSteel>;
-val TiItemCasing = <ore:casingSmallTitanium>;
+val TiItemCasing = <ore:casingSmallTitan>;
 val TSteelItemCasing = <ore:casingSmallTungstenSteel>;
 val ChromeItemCasing = <ore:casingSmallChrome>;
 val IridiumItemCasing = <ore:casingSmallIridium>;
@@ -209,9 +209,11 @@ val DataOrb = <grindcore:item.DataOrb>;
 val EFlowCircuit = <grindcore:item.EnergyFlowCircuit>;
 val DataControlCircuit = <grindcore:item.DataControlCircuit>;
 val DataCircuit = <grindcore:item.DataCircuit>;
-val AdvCircuit = <grindcore:item.AdvancedCircuit>;
+val KKAdvCircuit = <grindcore:item.AdvancedCircuit>;
+val AdvCircuit = <ore:circuitAdvanced>;
 val GoodCircuit = <grindcore:item.GoodCircuit>;
-val BasicCircuit = <grindcore:item.BasicCircuit>;
+val KKBasicCircuit = <grindcore:item.BasicCircuit>;
+val BasicCircuit = <ore:circuitBasic>;
 val NANDChip = <grindcore:item.NANDChip>;
 
 
@@ -536,7 +538,7 @@ recipes.addShaped(NANDChip, [
 [FineCopperWire, RedAlloyDust, FineCopperWire]]);
 
 // --- Basic Circuit
-recipes.addShaped(BasicCircuit, [
+recipes.addShaped(KKBasicCircuit, [
 [FineGoldWire, Transistor, FineGoldWire],
 [RedAlloyDust, AlItemCasing, RedAlloyDust],
 [FineGoldWire, Transistor, FineGoldWire]]);
@@ -548,7 +550,7 @@ recipes.addShaped(GoodCircuit, [
 [FineSilverWire, NANDChip, FineSilverWire]]);
 
 // --- Advanced Circuit
-recipes.addShaped(AdvCircuit, [
+recipes.addShaped(KKAdvCircuit, [
 [FinePlatinumWire, BasicCircuit, FinePlatinumWire],
 [RedAlloyWire, TiItemCasing, RedAlloyWire],
 [FinePlatinumWire, BasicCircuit, FinePlatinumWire]]);
